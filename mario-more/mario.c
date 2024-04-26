@@ -18,6 +18,7 @@ int main(void)
             j equal number of #
             int blank = input - j
             int block = j
+            printf(" ")
         }
     }
 }
