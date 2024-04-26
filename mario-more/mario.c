@@ -3,10 +3,13 @@
 
 int main(void)
 {
+    int input = -1;
     do
     {
-        int input = get_int("Height : ");
+        input = get_int("Height : ");
         printf("hello, %d\n", input);
     }
-    while ((input >= 1) && (input <= 8));
+    while (input >= 1 && input <= 8);
 }
+
+
