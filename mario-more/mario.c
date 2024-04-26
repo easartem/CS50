@@ -15,9 +15,9 @@ int main(void)
     {
         for (int j=1; j<=input; j++)
         {
-
             int size = (input+1)*2;
-            char test[size] = "\0";
+            char test[size];
+            test[0] = " ";
             if (j <= (i+1))
             {
                 test = strcopy(test, "#");
