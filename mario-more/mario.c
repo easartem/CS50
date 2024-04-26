@@ -15,10 +15,27 @@ int main(void)
     {
         for (int j=0; j<input; j++)
         {
-            j equal number of #
             int blank = input - j
             int block = j
             int size = (input+1)*2
+            if (j <=)
+            {
+                printf(" ");
+            }
+            else if ()
+            {
+                printf(" ");
+            }
+            else if ()
+            {
+                printf(" ");
+            }
+            else
+            {
+
+            }
+            j equal number of #
+
             printf(" ")
             char row[size] = {'H', 'e', 'l', 'l', 'o',};
         }
