@@ -15,26 +15,16 @@ int main(void)
     {
         for (int j=1; j<=input; j++)
         {
-            int blank = input - j;
-            int block = (input/2)+i;
             int size = (input+1)*2;
-            if (j <= blank)
-            {
-                printf(" ");
-            }
-            else if (j == block)
+            start by " "
+            if (j <= (i+1))
             {
                 printf("#");
             }
-            else if (j > block && j < (block+2))
+            else if (j > (i+1))
             {
                 printf(" ");
             }
-            else
-            {
-                printf("#");
-            }
-            
             char start[input+1] =  "";
             char reverse[input+1] =  "";
             for(int k = 0; k < (input+1); k++)
