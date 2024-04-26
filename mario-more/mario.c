@@ -15,7 +15,9 @@ int main(void)
     {
         for (int j=0; j<input; j++)
         {
-            
+            j equal number of #
+            int blank = input - j
+            int block = j
         }
     }
 }
