@@ -36,6 +36,7 @@ int main(void)
             }
         }
         printf("\n");
+        char row[size]
     }
 }
 
