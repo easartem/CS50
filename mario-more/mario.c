@@ -13,7 +13,7 @@ int main(void)
 
     for (int i=0; i<input; i++)
     {
-        for (int j=0; j<input; j++)
+        for (int j=1; j<=input; j++)
         {
             int blank = input - j
             int block = j
