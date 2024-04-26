@@ -34,9 +34,18 @@ int main(void)
             {
                 printf("#");
             }
+            
+            char start[input+1] =  "";
+            char reverse[input+1] =  "";
+            for(int k = 0; k < (input+1); k++)
+            {
+                reverse[ik] = start[input - k];
+            }
+            char result[size] = strcpy(result, start);
+            char result[size] = strcpy(result, reverse);
+            printf(%s, result)
         }
         printf("\n");
-        char row[size] =  "";
     }
 }
 
