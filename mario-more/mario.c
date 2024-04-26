@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int input = 10;
+    int input;
     do
     {
         input = get_int("Height : ");
@@ -20,7 +20,7 @@ int main(void)
             test[0] = ' ';
             if (j <= (i+1))
             {
-                test = strcopy(test, "#");
+                test = strcopy(test, '#');
             }
             else if (j > (i+1))
             {
