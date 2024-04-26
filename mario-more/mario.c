@@ -3,12 +3,10 @@
 
 int main(void)
 {
-    int input = get_int("Height : ");
-    printf("hello, %d\n", input);
-
     do
     {
-        //
+        int input = get_int("Height : ");
+        printf("hello, %d\n", input);
     }
-    while (condition);
+    while ((input >= 1) && (input <= 8));
 }
