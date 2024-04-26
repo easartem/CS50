@@ -11,7 +11,7 @@ int main(void)
     }
     while (input < 1 || input > 8);
 
-    for (int i=1; i<=input; i++)
+    for (int i=0; i<input; i++)
     {
         if(i<)
         {
