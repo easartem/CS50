@@ -16,7 +16,7 @@ int main(void)
         for (int j=1; j<=input; j++)
         {
             int blank = input - j;
-            int block = input/2;
+            int block = (input/2)+i;
             int size = (input+1)*2;
             if (j <= blank)
             {
