@@ -13,7 +13,14 @@ int main(void)
 
     for (int i=1; i<=input; i++)
     {
-        printf("\n");
         if(i<)
+        {
+            printf(" ")
+        }
+        else
+        {
+            printf("#")
+        }
+        printf("\n");
     }
 }
