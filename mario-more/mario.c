@@ -15,23 +15,24 @@ int main(void)
     {
         for (int j=1; j<=input; j++)
         {
+
             int size = (input+1)*2;
-            start by " "
+            char test[size] = " ";
             if (j <= (i+1))
             {
-                printf("#");
+                test = strcopy(test, "#");
             }
             else if (j > (i+1))
             {
-                printf(" ");
+                test = strcopy(test, " ");
             }
-            char start[input+1] =  "";
+
             char reverse[input+1] =  "";
             for(int k = 0; k < (input+1); k++)
             {
-                reverse[ik] = start[input - k];
+                reverse[k] = test[input - k];
             }
-            char result[size] = strcpy(result, start);
+            char result[size] = strcpy(result, test);
             char result[size] = strcpy(result, reverse);
             printf(%s, result)
         }
