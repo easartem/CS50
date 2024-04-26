@@ -7,9 +7,9 @@ int main(void)
     do
     {
         input = get_int("Height : ");
-        printf("hello, %d\n", input);
+        printf("Type a number between 1 and 8 included\n");
     }
-    while (input < 1 && input > 8);
+    while (input < 1 || input > 8);
 }
 
 
