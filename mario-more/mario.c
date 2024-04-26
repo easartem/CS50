@@ -3,6 +3,12 @@
 
 int main(void)
 {
-    int input = get_int("Enter your name : ");
-    printf("hello, %s\n", input);
+    int input = get_int("Height : ");
+    printf("hello, %d\n", input);
+
+    do
+    {
+        //
+    }
+    while (condition);
 }
