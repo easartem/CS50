@@ -18,7 +18,9 @@ int main(void)
             j equal number of #
             int blank = input - j
             int block = j
+            int size = (input+1)*2
             printf(" ")
+            char row[size] = {'H', 'e', 'l', 'l', 'o',};
         }
     }
 }
