@@ -8,9 +8,11 @@ def main():
 
     # TODO: Read database file into a variable
     rows = []
+    header = None
     # database_path = "databases/" + str(name_db)
     with open("databases/small.csv", 'r') as file:
         reader = csv.DictReader(file)
+        header = reader.fieldnames
         for row in reader:
             rows.append(row)
     print(rows[0])
@@ -24,6 +26,7 @@ def main():
     print(seq)
 
     # TODO: Find longest match of each STR in DNA sequence
+    print(header)
     for key in rows:
         print(key)
 
