@@ -1,5 +1,7 @@
 from cs50 import get_string
+import re
 
+words = re.split(';|,| ', text)
 def main():
     # Prompt the user for some text
     text = get_string("Text: ")
@@ -22,6 +24,11 @@ def main():
 
 def count_words(text):
     words = text.split(" ")
+    count = len(words)
+    return count
+
+def count_sentences(text):
+    words = re.split('.|?|!', text)
     count = len(words)
     return count
 
