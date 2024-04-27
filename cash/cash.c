@@ -9,5 +9,5 @@ int main(void)
         printf("Type a change >0\n");
         input = get_int("Change owed: ");
     }
-    while (input <=0);
+    while (input <0);
 }
