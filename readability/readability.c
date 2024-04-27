@@ -17,13 +17,27 @@ int main(void)
 
     // get array of words by splitting with " " "," "."
     // get number of sentences by splitting with " " "," "."
+    // beware cast int to float for division
     int L = (count_letters(text) / count_words(text)) * 100; // average number of letters per 100 words : the number of letters divided by the number of words, all multiplied by 100.
     int S = sum / 100; // average number of sentences per 100 words
 
     // Compute the Coleman-Liau index
     index = 0.0588 * L - 0.296 * S - 15.8;
 
-    // Print the grade level
+    // Print the grade level by rounding the resuylt
+    result = round(index)
+    if(index < 1)
+    {
+        printf("Before Grade 1");
+    }
+    else if (index >= 16)
+    {
+        printf("Grade 16+");
+    }
+    else
+    {
+        printf("Grade %i", result);
+    }
 }
 
 int count_letters(string text)
