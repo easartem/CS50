@@ -11,8 +11,8 @@ def main():
     # Calculate how many coins you should give customer
     quarters, dollars = calculate_cash(dollars, 0.25)
     dimes, dollars = calculate_cash(dollars, 0.10)
-    nickels, dollars = calculate_cash(dollars, 0.5)
-    pennies, dollars = calculate_cash(dollars, 0.1)
+    nickels, dollars = calculate_cash(dollars, 0.05)
+    pennies, dollars = calculate_cash(dollars, 0.01)
     # Sum the number of quarters, dimes, nickels, and pennies used
     sum = 0
     sum = quarters + dimes + nickels + pennies
