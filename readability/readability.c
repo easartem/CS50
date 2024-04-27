@@ -21,7 +21,7 @@ int main(void)
     // Compute the Coleman-Liau index
     float index = 0.0588 * L - 0.296 * S - 15.8;
 
-    // Print the grade level by rounding the resuylt
+    // Print the grade level by rounding the result
     int result = round(index);
     if (index < 1)
     {
