@@ -13,7 +13,7 @@ int main(void)
 
 
     // Print a pyramid of that height
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < input; i++)
     {
         // Print row of bricks
         print_row(i + 1);
