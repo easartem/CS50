@@ -1,13 +1,13 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
 #include <string.h>
 
 int compute_score(string word);
 
 int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10, 0};
-char ALPHABET[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-
+char ALPHABET[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+                   'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
 int main(void)
 {
@@ -34,18 +34,17 @@ int main(void)
     printf("\n");
 }
 
-
 int compute_score(string word)
 {
     int score = 0;
     int lenword = strlen(word);
-    for (int i=0 ; i<lenword ; i++)
+    for (int i = 0; i < lenword; i++)
     {
         word[i] = tolower(word[i]);
     }
 
     // Compute and return score for word
-    for (int j=0 ; j<lenword ; j++)
+    for (int j = 0; j < lenword; j++)
     {
         int index = -1;
         do
@@ -57,7 +56,8 @@ int compute_score(string word)
             {
                 break;
             }
-        } while(word[j] != ALPHABET[index]);
+        }
+        while (word[j] != ALPHABET[index]);
         score = score + POINTS[index];
     }
     return score;
