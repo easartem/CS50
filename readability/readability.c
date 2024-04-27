@@ -35,6 +35,7 @@ int main(void)
     {
         printf("Grade %i", result);
     }
+    printf("\n");
 }
 
 
