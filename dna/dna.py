@@ -8,10 +8,13 @@ def main():
 
     # TODO: Read database file into a variable
     rows = []
-    with open("dna/databases/small.csv") as file:
+    with open("databases/small.csv") as file:
         reader = csv.DictReader(file)
         for row in reader:
             rows.append(row)
+    print(rows[0])
+    print(rows[1])
+    print(rows[2])
     # TODO: Read DNA sequence file into a variable
 
     # TODO: Find longest match of each STR in DNA sequence
