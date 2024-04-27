@@ -40,7 +40,7 @@ int main(int argc, string argv[])
     printf("ciphertext: ");
     for (int i = 0; i < size; i++)
     {
-        printf("%i", rotate(plaintext[i], key));
+        printf("%c", rotate(plaintext[i], key));
     }
     // Rotate the character if it's a letter
     // Output the result
@@ -55,7 +55,7 @@ char rotate(char p, int k)
     if(isalpha(p))
     {
         c = (p + k) % 26;
-        return c;
+        return (char) c;
     }
     else
     {
