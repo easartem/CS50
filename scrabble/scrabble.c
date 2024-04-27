@@ -31,6 +31,7 @@ int main(void)
     {
         printf("Player 2 wins!");
     }
+    printf("\n");
 }
 
 
