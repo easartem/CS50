@@ -1,18 +1,18 @@
 from cs50 import get_string
 import re
 
+
 def main():
     # Prompt the user for some text
     text = get_string("Text: ")
 
     # Compute L and S for the Coleman-Liau index
-    # L = (count_letters(text) / (float) count_words(text)) * 100
-    # S = (count_sentences(text) / (float) count_words(text)) * 100
-    print(count_words(text))
-    print(count_sentences(text))
+    L = (count_letters(text) / count_words(text)) * 100
+    S = (count_sentences(text) / count_words(text)) * 100
+
     # Compute the Coleman-Liau index
-    # index = 0.0588 * L - 0.296 * S - 15.8
-    index = 4
+    index = 0.0588 * L - 0.296 * S - 15.8
+
     # Print the grade level by rounding the result
     result = round(index)
     if (index < 1):
@@ -22,24 +22,27 @@ def main():
     else:
         print("Grade ", result)
 
+
 def count_letters(text):
-    words = text.split(" ")
-    count = len(words)
+    count = 0
+    for char in text:
+        if (char.isalpha()):
+            count += 1
     return count
+
 
 def count_words(text):
     words = text.split(" ")
     count = len(words)
     return count
 
+
 def count_sentences(text):
     count = 0
-    for i in text:
-        if ((i == '.') | (i == '?') | (i == '!')):
+    for char in text:
+        if ((char == '.') | (char == '?') | (char == '!')):
             count += 1
     return count
 
 
 main()
-
-
