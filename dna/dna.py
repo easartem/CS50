@@ -41,6 +41,14 @@ def main():
 
     return
 
+def check_argument():
+    while True:
+        Try:
+            return 0
+        except xx:
+            print("Error, wrong command line argument number")
+            return 1
+
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
