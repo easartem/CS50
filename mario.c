@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <cs50.h>
+#include <stdio.h>
 
 void print_row(int bricks, int blank);
 
@@ -13,11 +13,10 @@ int main(void)
     }
     while (input < 1 || input > 8);
 
-
     // Print a pyramid of that height
     for (int i = 0; i < input; i++)
     {
-        int blank = input - (i+1);
+        int blank = input - (i + 1);
         int bricks = i + 1;
         // Print row of bricks
         print_row(bricks, blank);
@@ -36,4 +35,3 @@ void print_row(int bricks, int blank)
     }
     printf("\n");
 }
-
