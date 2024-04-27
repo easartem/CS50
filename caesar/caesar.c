@@ -51,6 +51,7 @@ int main(int argc, string argv[])
 char rotate(char p, int k)
 {
     char c;
+    printf("The char %c is %i", p, p);
     if(isalpha(p))
     {
         c = (p + k) % 26;
