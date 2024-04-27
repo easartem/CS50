@@ -2,8 +2,8 @@
 #include <ctype.h>
 #include <math.h>
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
 char rotate(char c, int k);
 
@@ -41,9 +41,6 @@ int main(int argc, string argv[])
     {
         printf("%c", rotate(plaintext[i], key));
     }
-    // Rotate the character if it's a letter
-    // Output the result
-    //printf("plaintext: %s", ciphertext);
     printf("\n");
     return 0;
 }
