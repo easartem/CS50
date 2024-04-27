@@ -12,4 +12,5 @@ def main():
         for j in range(answer):
             print(" "*(answer-i), end="")
             print("#"*i, end="")
+        print("\n")
 main()
