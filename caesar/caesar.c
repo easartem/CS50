@@ -17,6 +17,7 @@ int main(int argc, string argv[])
     // Convert argv[1] from a `string` to an `int`
 
     // Prompt user for plaintext
+    string plaintext = get_string("plaintext: ")
 
     // For each character in the plaintext:
 
