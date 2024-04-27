@@ -56,13 +56,15 @@ char rotate(char p, int k)
     {
         int p_new = p - 'A';
         c = (p_new + k) % 26;
-        return (char) c;
+        int c_new = c + 'A';
+        return (char) c_new;
     }
     else if (isalpha(p) && islower(p))
     {
         int p_new = p - 'a';
         c = (p_new + k) % 26;
-        return (char) c;
+        int c_new = c + 'a';
+        return (char) c_new;
     }
     else
     {
