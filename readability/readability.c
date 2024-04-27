@@ -6,6 +6,7 @@
 
 int count_letters(string text);
 int count_words(string text);
+int count_sentences(string text);
 
 int main(void)
 {
@@ -16,26 +17,37 @@ int main(void)
 
     // get array of words by splitting with " " "," "."
     // get number of sentences by splitting with " " "," "."
-    int letter_per_word[];
-    int letter_per_word[];
-    int L = sum / 100; // average number of letters per 100 words : the number of letters divided by the number of words, all multiplied by 100.
+    int L = (count_letters(text) / count_words(text)) * 100; // average number of letters per 100 words : the number of letters divided by the number of words, all multiplied by 100.
     int S = sum / 100; // average number of sentences per 100 words
 
     // Compute the Coleman-Liau index
-    index = 0.0588 * L - 0.296 * S - 15.8
+    index = 0.0588 * L - 0.296 * S - 15.8;
 
     // Print the grade level
 }
 
 int count_letters(string text)
 {
-    isalpha - check whether a character is alphabetical
-
+    int len_text = strlen(text);
+    int count = 0;
+    for (int i = 0; i < len; i++)
+    {
+        if (isalpha(text[i]))
+        {
+            count++;
+        }
+    }
+    return count;
 }
 
 int count_words(string text)
 {
 
+}
+
+int count_sentences(string text)
+{
+    // Return the number of sentences in text
 }
 
 main()
