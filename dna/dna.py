@@ -2,7 +2,7 @@ import csv
 import sys
 
 
-def main():
+def main(argc, argv[]):
 
     # TODO: Check for command-line usage
 
