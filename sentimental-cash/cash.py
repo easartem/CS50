@@ -9,35 +9,23 @@ def main():
 
     # Initialize the change number to 0
     # Calculate how many coins you should give customer
-    print("Initial nb ", dollars)
     quarters, dollars = calculate_cash(dollars, 0.25)
-    print("after quarter ", dollars)
     dimes, dollars = calculate_cash(dollars, 0.10)
-    print("after dimes ", dollars)
     nickels, dollars = calculate_cash(dollars, 0.05)
-    print("after nickels ", dollars)
     pennies, dollars = calculate_cash(dollars, 0.01)
-    print("after pennies ", dollars)
-    # Sum the number of quarters, dimes, nickels, and pennies used
+    # Initialize the sum number to 0
     sum = 0
+    # Sum the number of quarters, dimes, nickels, and pennies used
     sum = quarters + dimes + nickels + pennies
     print(sum)
-    print(quarters)
-    print(dimes)
-    print(nickels)
-    print(pennies)
-
-
-
-
 
 
 def calculate_cash(dollars, type):
     nb = 0
-    while(round(dollars, 3) >= type):
+    while (round(dollars, 3) >= type):
         nb += 1
         dollars = dollars - type
     return nb, dollars
 
-main()
 
+main()
