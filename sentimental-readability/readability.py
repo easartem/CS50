@@ -28,8 +28,8 @@ def count_words(text):
     return count
 
 def count_sentences(text):
-    words = re.split('.|?| ', text)
-    count = len(words)
+    cpt = 0
+    count = [cpt + 1 for i in text if ((i == '.') | (i == '?') | (i == '!'))]
     return count
 
 main()
