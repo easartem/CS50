@@ -7,8 +7,7 @@ def main():
     # TODO: Check for command-line usage
     n = len(sys.argv)
     print("Total arguments passed:", n)
-    try:
-        //
+
 
     # TODO: Read database file into a variable
     rows = []
@@ -44,6 +43,7 @@ def main():
 def check_argument():
     while True:
         Try:
+            n = len(sys.argv) # if != 3
             return 0
         except xx:
             print("Error, wrong command line argument number")
