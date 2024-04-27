@@ -36,7 +36,11 @@ int main(void)
 
 int compute_score(string word)
 {
-    word = 
+    int lenword = strlen(word);
+    for (int i=0 ; i<lenword ; i++)
+    {
+        word[i] = tolower(word[i]);
+    }
     // Compute and return score for word
     return score
 }
