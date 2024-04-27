@@ -18,7 +18,7 @@ int main(void)
     // get number of sentences by splitting with " " "," "."
     int letter_per_word[];
     int letter_per_word[];
-    int L = sum / 100; // average number of letters per 100 words
+    int L = sum / 100; // average number of letters per 100 words : the number of letters divided by the number of words, all multiplied by 100.
     int S = sum / 100; // average number of sentences per 100 words
 
     // Compute the Coleman-Liau index
@@ -29,6 +29,7 @@ int main(void)
 
 int count_letters(string text)
 {
+    isalpha - check whether a character is alphabetical
 
 }
 
