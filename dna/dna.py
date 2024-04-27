@@ -2,14 +2,14 @@ import csv
 import sys
 
 
-def main(argc, argv[]):
+def main():
 
     # TODO: Check for command-line usage
 
     # TODO: Read database file into a variable
     rows = []
-    database_path = "databases/" + str(name_db)
-    with open("databases/small.csv") as file:
+    # database_path = "databases/" + str(name_db)
+    with open("databases/small.csv", 'r') as file:
         reader = csv.DictReader(file)
         for row in reader:
             rows.append(row)
@@ -18,11 +18,11 @@ def main(argc, argv[]):
     print(rows[2])
     # TODO: Read DNA sequence file into a variable
     seq = []
-    sequence_path = "sequences/" + str(name_seq)
-    with open("sequences/small.csv") as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            rows.append(row)
+    # sequence_path = "sequences/" + str(name_seq)
+    with open("sequences/1.txt", 'r') as file:
+        seq = file.read()
+    print(seq)
+
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
