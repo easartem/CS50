@@ -1,5 +1,5 @@
-#include <ctype.h>
 #include <cs50.h>
+#include <ctype.h>
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
@@ -14,16 +14,16 @@ int main(void)
     string text = get_string("Text: ");
 
     // Count the number of letters, words, and sentences in the text
-    // beware cast int to float for division
-    float L = (count_letters(text) / (float) count_words(text)) * 100; // average number of letters per 100 words : the number of letters divided by the number of words, all multiplied by 100.
-    float S = (count_sentences(text) / (float) count_words(text)) * 100; // average number of sentences per 100 words : the number of sentences divided by the number of words, all multiplied by 100
-
+    // average number of letters per 100 words
+    float L = (count_letters(text) / (float) count_words(text)) * 100;
+    // average number of sentences per 100 words
+    float S = (count_sentences(text) / (float) count_words(text)) * 100;
     // Compute the Coleman-Liau index
     float index = 0.0588 * L - 0.296 * S - 15.8;
 
     // Print the grade level by rounding the resuylt
     int result = round(index);
-    if(index < 1)
+    if (index < 1)
     {
         printf("Before Grade 1");
     }
@@ -37,7 +37,6 @@ int main(void)
     }
     printf("\n");
 }
-
 
 int count_letters(string text)
 {
@@ -53,7 +52,6 @@ int count_letters(string text)
     return count;
 }
 
-
 int count_words(string text)
 {
     int len = strlen(text);
@@ -65,9 +63,8 @@ int count_words(string text)
             count++;
         }
     }
-    return count+1;
+    return count + 1;
 }
-
 
 int count_sentences(string text)
 {
