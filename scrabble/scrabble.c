@@ -42,5 +42,14 @@ int compute_score(string word)
         word[i] = tolower(word[i]);
     }
     // Compute and return score for word
+    int index = -1
+    do
+    {
+        for (int i=0 ; i<26 ; i++)
+        {
+            if (word[i] == ALPHABET[i])
+        }
+    }
+    while(word[i] != ALPHABET[i]);
     return score
 }
