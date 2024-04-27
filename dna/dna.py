@@ -26,7 +26,8 @@ def main():
     print(seq)
 
     # TODO: Find longest match of each STR in DNA sequence
-    print(header)
+    STRs = header[1,:]
+    print(STRs)
     for key in rows:
         print(key)
 
