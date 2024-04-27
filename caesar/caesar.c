@@ -28,6 +28,7 @@ int main(int argc, string argv[])
     // Convert argv[1] from a `string` to an `int`
     int key = atoi(argv[1]);
     printf("The key is : %i\n", key);
+
     // Prompt user for plaintext
     string plaintext = get_string("plaintext:  ");
     printf("\n");
@@ -38,7 +39,7 @@ int main(int argc, string argv[])
 
     // Output the result
     //printf("plaintext: %s", ciphertext);
-    printf("plaintext: ");
+    printf("ciphertext: ");
     printf("\n");
     return 0;
 }
