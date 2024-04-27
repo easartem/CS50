@@ -29,7 +29,7 @@ int main(void)
     cents = cents - (dimes * 10);
 
     // Calculate how many nickels you should give customer (5c)
-    int nickels = calculate_quarters(cents);
+    int nickels = calculate_nickels(cents);
     // Subtract the value of those nickels from remaining cents
     cents = cents - (nickels * 5);
 
@@ -43,7 +43,6 @@ int main(void)
     sum = quarters + dimes + nickels + pennies;
     // Print that sum
     printf("%d\n", sum);
-    printf("%d,  %d, %d, %d\n", quarters, dimes, nickels, pennies);
 }
 
 
