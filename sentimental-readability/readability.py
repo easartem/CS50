@@ -22,15 +22,23 @@ def main():
     else:
         print("Grade ", result)
 
+def count_letters(text):
+    words = text.split(" ")
+    count = len(words)
+    return count
+
 def count_words(text):
     words = text.split(" ")
     count = len(words)
     return count
 
 def count_sentences(text):
-    cpt = 0
-    count = [cpt + 1 for i in text if ((i == '.') | (i == '?') | (i == '!'))]
+    count = 0
+    for i in text:
+        if ((i == '.') | (i == '?') | (i == '!')):
+            count += 1
     return count
+
 
 main()
 
