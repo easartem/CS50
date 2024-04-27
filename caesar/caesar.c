@@ -39,7 +39,7 @@ int main(int argc, string argv[])
     printf("ciphertext: ");
     for (int i = 0; i < size; i++)
     {
-        printf("%i", rotate(plaintext[i], key));
+        printf("%c", rotate(plaintext[i], key));
     }
     // Rotate the character if it's a letter
     // Output the result
@@ -51,7 +51,7 @@ int main(int argc, string argv[])
 char rotate(char p, int k)
 {
     char c;
-    printf("The char %c is %i \n", p, p);
+    // printf("The char %c is %i \n", p, p);
     if (isalpha(p) && isupper(p))
     {
         int p_new = p - 'A';
