@@ -7,7 +7,7 @@ def main():
     # Compute L and S for the Coleman-Liau index
     # L = (count_letters(text) / (float) count_words(text)) * 100
     # S = (count_sentences(text) / (float) count_words(text)) * 100
-
+    print(count_words(text))
     # Compute the Coleman-Liau index
     # index = 0.0588 * L - 0.296 * S - 15.8
     index = 4
@@ -18,7 +18,7 @@ def main():
     elif (index >= 16):
         print("Grade 16+")
     else:
-        print("Grade %i", result)
+        print("Grade ", result)
 
 def count_words(text):
     words = text.split(" ")
