@@ -43,6 +43,7 @@ int main(void)
     sum = quarters + dimes + nickels + pennies;
     // Print that sum
     printf("%d\n", sum);
+    printf("%d,  %d, %d, %d\n", quarters, dimes, nickels, pennies);
 }
 
 
