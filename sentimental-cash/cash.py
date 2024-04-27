@@ -9,10 +9,10 @@ def main():
 
     # Initialize the change number to 0
     # Calculate how many coins you should give customer
-    quarters, dollars = calculate_cash(dollars, 25)
-    dimes, dollars = calculate_cash(dollars, 10)
-    nickels, dollars = calculate_cash(dollars, 5)
-    pennies, dollars = calculate_cash(dollars, 1)
+    quarters, dollars = calculate_cash(dollars, 0.25)
+    dimes, dollars = calculate_cash(dollars, 0.10)
+    nickels, dollars = calculate_cash(dollars, 0.5)
+    pennies, dollars = calculate_cash(dollars, 0.1)
     # Sum the number of quarters, dimes, nickels, and pennies used
     sum = 0
     sum = quarters + dimes + nickels + pennies
