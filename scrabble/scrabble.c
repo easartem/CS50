@@ -11,8 +11,8 @@ char ALPHABET[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', '
 
 int main(void)
 {
-    int input1 = get_string("Player 1: ");
-    int input2 = get_string("Player 2: ");
+    string word1 = get_string("Player 1: ");
+    string word2 = get_string("Player 2: ");
 
     // Compute the score of each word
     int score1 = compute_score(word1);
@@ -36,20 +36,23 @@ int main(void)
 
 int compute_score(string word)
 {
+    int score = 0;
     int lenword = strlen(word);
     for (int i=0 ; i<lenword ; i++)
     {
         word[i] = tolower(word[i]);
     }
+
     // Compute and return score for word
-    int index = -1
-    do
+    for (int j=0 ; j<lenword ; j++)
     {
-        for (int i=0 ; i<26 ; i++)
+        int index = -1;
+        do
         {
-            if (word[i] == ALPHABET[i])
+            index++;
         }
+        while(word[index] != ALPHABET[index]);
+        score = score + POINTS[index];
     }
-    while(word[i] != ALPHABET[i]);
-    return score
+    return score;
 }
