@@ -56,12 +56,21 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-
+    int len_text = strlen(text);
+    int count = 0;
+    for (int i = 0; i < len; i++)
+    {
+        if (isalpha(text[i]))
+        {
+            count++;
+        }
+    }
+    return count;
 }
 
 int count_sentences(string text)
 {
-    // Return the number of sentences in text
+    // Return the number of sentences in text . ! ?
 }
 
 main()
