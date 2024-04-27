@@ -33,14 +33,13 @@ int main(int argc, string argv[])
 
     // Prompt user for plaintext
     string plaintext = get_string("plaintext:  ");
-    printf("\n");
 
     // For each character in the plaintext:
     int size = strlen(plaintext);
     printf("ciphertext: ");
     for (int i = 0; i < size; i++)
     {
-        printf("%c", rotate(plaintext[i], key));
+        printf("%i", rotate(plaintext[i], key));
     }
     // Rotate the character if it's a letter
     // Output the result
