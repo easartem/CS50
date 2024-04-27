@@ -12,6 +12,5 @@ def main():
         print(" "*(answer-i), end="")
         print("#"*i, end="")
         print(" "*2, end="")
-        print("#"*i, end="")
-        print(" "*(answer-i))
+        print("#"*i)
 main()
