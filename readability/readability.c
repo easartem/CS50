@@ -37,6 +37,7 @@ int main(void)
     }
 }
 
+
 int count_letters(string text)
 {
     int len = strlen(text);
@@ -50,6 +51,7 @@ int count_letters(string text)
     }
     return count;
 }
+
 
 int count_words(string text)
 {
@@ -65,6 +67,7 @@ int count_words(string text)
     return count;
 }
 
+
 int count_sentences(string text)
 {
     // Return the number of sentences in text . ! ?
@@ -79,5 +82,3 @@ int count_sentences(string text)
     }
     return count;
 }
-
-main();
