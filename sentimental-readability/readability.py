@@ -28,7 +28,7 @@ def count_words(text):
     return count
 
 def count_sentences(text):
-    words = re.split('.|?|!', text)
+    words = re.split('.'|'?'|'!', text)
     count = len(words)
     return count
 
