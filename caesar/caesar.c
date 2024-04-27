@@ -36,17 +36,29 @@ int main(int argc, string argv[])
     printf("\n");
 
     // For each character in the plaintext:
-
+    int size = strlen(plaintext);
+    printf("ciphertext: ");
+    for (int i = 0; i < size; i++)
+    {
+        printf("%i", rotate(plaintext[i], key));
+    }
     // Rotate the character if it's a letter
-
     // Output the result
     //printf("plaintext: %s", ciphertext);
-    printf("ciphertext: ");
     printf("\n");
     return 0;
 }
 
-char rotate(char c, int k)
+char rotate(char p, int k)
 {
-
+    char c;
+    if(isalpha(p))
+    {
+        c = (p + k) % 26;
+        return c;
+    }
+    else
+    {
+        return p;
+    }
 }
