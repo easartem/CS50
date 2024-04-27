@@ -1,10 +1,11 @@
 from cs50 import get_int
 
+
 def main():
     # Get the desired height
     print("entered")
     answer = get_int("Height: ")
-    while((answer <= 0) | (answer > 8)):
+    while ((answer <= 0) | (answer > 8)):
         answer = get_int("Height: ")
 
     # Construct the pyramide
@@ -13,4 +14,6 @@ def main():
         print("#"*i, end="")
         print(" "*2, end="")
         print("#"*i)
+
+
 main()
