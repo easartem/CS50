@@ -1,7 +1,6 @@
 from cs50 import get_string
 import re
 
-words = re.split(';|,| ', text)
 def main():
     # Prompt the user for some text
     text = get_string("Text: ")
@@ -10,6 +9,7 @@ def main():
     # L = (count_letters(text) / (float) count_words(text)) * 100
     # S = (count_sentences(text) / (float) count_words(text)) * 100
     print(count_words(text))
+    print(count_sentences(text))
     # Compute the Coleman-Liau index
     # index = 0.0588 * L - 0.296 * S - 15.8
     index = 4
