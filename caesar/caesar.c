@@ -14,12 +14,15 @@ int main(int argc, string argv[])
     }
 
     // Make sure every character in argv[1] is a digit
-    isdigit
+    int len = strlen(argv[1])
     for (int i = 0; i < len; i++)
     {
-        if (isdigit(argv[1][i]))
+        if (isdigit(argv[1][i]) == 0)
+        {
+            printf("Usage: ./caesar key");
+            return 1;
+        }
     }
-        // If not, print "Usage: ./caesar key" and main return 1
 
     // Convert argv[1] from a `string` to an `int`
 
