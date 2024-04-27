@@ -14,7 +14,11 @@ int main(int argc, string argv[])
     }
 
     // Make sure every character in argv[1] is a digit
-
+    isdigit
+    for (int i = 0; i < len; i++)
+    {
+        if (isdigit(argv[1][i]))
+    }
         // If not, print "Usage: ./caesar key" and main return 1
 
     // Convert argv[1] from a `string` to an `int`
