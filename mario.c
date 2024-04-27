@@ -11,7 +11,7 @@ int main(void)
     }
     while (input < 1 || input > 8);
 
-    for (int i=0; i<input; i++)
+    for (int i=input; i>0; i--)
     {
         if(i<)
         {
@@ -23,4 +23,21 @@ int main(void)
         }
         printf("\n");
     }
+
+    // Print a pyramid of that height
+    for (int i = 0; i < n; i++)
+    {
+        // Print row of bricks
+        print_row(i + 1);
+    }
 }
+
+void print_row(int bricks)
+{
+    for (int i = 0; i < bricks; i++)
+    {
+        printf("#");
+    }
+    printf("\n");
+}
+
