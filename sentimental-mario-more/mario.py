@@ -10,7 +10,6 @@ def main():
     # Construct the pyramide
     for i in range(answer):
         for j in range(answer):
-            print(" "*())
-            print-
-
+            print(" "*(answer-i), end="")
+            print("#"*i, end="")
 main()
