@@ -34,7 +34,7 @@ def main():
 
 def calculate_cash(dollars, type):
     nb = 0
-    while(dollars >= type):
+    while(round(dollars, 3) >= type):
         nb += 1
         dollars = dollars - type
     return nb, dollars
