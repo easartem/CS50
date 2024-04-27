@@ -5,6 +5,10 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
+    n = len(sys.argv)
+    print("Total arguments passed:", n)
+    try:
+        //
 
     # TODO: Read database file into a variable
     rows = []
@@ -32,7 +36,7 @@ def main():
         str_match.append(longest_match(seq, str))
     print(STRs)
     print(str_match)
-    
+
     # TODO: Check database for matching profiles
 
     return
