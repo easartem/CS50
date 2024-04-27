@@ -89,7 +89,7 @@ int calculate_pennies(int cents)
 {
     // Calculate how many pennies you should give customer
     int pennies = 0;
-    while (pennies >= 1)
+    while (cents >= 1)
     {
         pennies++;
         cents = cents - 1;
