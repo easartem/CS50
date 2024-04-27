@@ -54,13 +54,13 @@ char rotate(char p, int k)
     printf("The char %c is %i \n", p, p);
     if (isalpha(p) && isupper(p))
     {
-        int p_new = (int) p - 'A';
+        int p_new = p - 'A';
         c = (p_new + k) % 26;
         return (char) c;
     }
     else if (isalpha(p) && islower(p))
     {
-        int p_new = (int) p - 'a';
+        int p_new = p - 'a';
         c = (p_new + k) % 26;
         return (char) c;
     }
