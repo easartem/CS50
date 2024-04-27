@@ -5,6 +5,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+char rotate(char c, int k);
+
 int main(int argc, string argv[])
 {
     // Make sure program was run with just one command-line argument
@@ -42,4 +44,9 @@ int main(int argc, string argv[])
     printf("ciphertext: ");
     printf("\n");
     return 0;
+}
+
+char rotate(char c, int k)
+{
+
 }
