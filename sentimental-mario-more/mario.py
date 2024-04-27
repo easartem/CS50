@@ -8,9 +8,10 @@ def main():
         answer = get_int("Height: ")
 
     # Construct the pyramide
-    for i in range(answer):
-        for j in range(answer):
-            print(" "*(answer-i), end="")
-            print("#"*i, end="")
-        print("\n")
+    for i in range(1, answer+1):
+        print(" "*(answer-i), end="")
+        print("#"*i, end="")
+        print(" "*2, end="")
+        print("#"*i, end="")
+        print(" "*(answer-i))
 main()
