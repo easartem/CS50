@@ -60,7 +60,7 @@ int count_words(string text)
     int count = 0;
     for (int i = 0; i < len; i++)
     {
-        if (isalpha(text[i]))
+        if (isblank(text[i]))
         {
             count++;
         }
