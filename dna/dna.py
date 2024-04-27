@@ -8,6 +8,7 @@ def main(argc, argv[]):
 
     # TODO: Read database file into a variable
     rows = []
+    database_path = "databases/" + str(name_db)
     with open("databases/small.csv") as file:
         reader = csv.DictReader(file)
         for row in reader:
@@ -17,6 +18,7 @@ def main(argc, argv[]):
     print(rows[2])
     # TODO: Read DNA sequence file into a variable
     seq = []
+    sequence_path = "sequences/" + str(name_seq)
     with open("sequences/small.csv") as file:
         reader = csv.DictReader(file)
         for row in reader:
