@@ -52,6 +52,8 @@ int compute_score(string word)
         {
             index++;
         }
+        printf("word: %c", word[index])
+        printf("alphabet: %c", ALPHABET[index])
         while(word[index] != ALPHABET[index]);
         score = score + POINTS[index];
     }
