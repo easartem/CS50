@@ -22,7 +22,7 @@ int main(void)
     float index = 0.0588 * L - 0.296 * S - 15.8;
 
     // Print the grade level by rounding the resuylt
-    int result = round(index)
+    int result = round(index);
     if(index < 1)
     {
         printf("Before Grade 1");
@@ -39,7 +39,7 @@ int main(void)
 
 int count_letters(string text)
 {
-    int len_text = strlen(text);
+    int len = strlen(text);
     int count = 0;
     for (int i = 0; i < len; i++)
     {
@@ -53,7 +53,7 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-    int len_text = strlen(text);
+    int len = strlen(text);
     int count = 0;
     for (int i = 0; i < len; i++)
     {
@@ -68,7 +68,7 @@ int count_words(string text)
 int count_sentences(string text)
 {
     // Return the number of sentences in text . ! ?
-    int len_text = strlen(text);
+    int len = strlen(text);
     int count = 0;
     for (int i = 0; i < len; i++)
     {
@@ -80,4 +80,4 @@ int count_sentences(string text)
     return count;
 }
 
-main()
+main();
