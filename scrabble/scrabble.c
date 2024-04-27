@@ -5,12 +5,6 @@ void print_row(int bricks, int blank);
 
 int main(void)
 {
-    int input1;
-    int input2;
-    do
-    {
-        input1 = get_s("Player 1: ");
-        input2 = get_int("Player 2: ");
-    }
-    while (input < 1 || input > 8);
+    int input1 = get_string("Player 1: ");
+    int input2 = get_string("Player 2: ");
 }
