@@ -56,6 +56,10 @@ int main(int argc, string argv[])
         {
             printf("Invalid vote.\n");
         }
+        else
+        {
+
+        }
     }
 
     // Display winner of election
@@ -72,6 +76,9 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    // TODO
+    // TOD
+    if
+    string name;
+    printf("%s\n", name);
     return;
 }
