@@ -123,6 +123,11 @@ int main(int argc, string argv[])
     return 0;
 }
 // -----------------------------------------------------------------------------------------------------
+// preferences[i][j] is jth preference for voter i
+// int preferences[MAX_VOTERS][MAX_CANDIDATES];
+// Array of candidates
+// candidate candidates[MAX_CANDIDATES];
+
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
