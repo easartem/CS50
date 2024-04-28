@@ -148,9 +148,11 @@ void tabulate(void)
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < voter_count; j++)
-        if (preferences[j][0] == i)
         {
-            candidates[i].votes++;
+            if (preferences[j][0] == i)
+            {
+                candidates[i].votes++;
+            }
         }
     }
     return;
@@ -202,6 +204,10 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
+    for (int i = 0; i < voter_count; i++)
+    {
+        preferences[i][0];
+    }
     return 0;
 }
 
