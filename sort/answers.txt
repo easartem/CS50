@@ -1,21 +1,19 @@
-sort1 uses: TODO
+sort1 uses: Bubble sort
 
-How do you know?: TODO
-we have three methods and 4 variables :
-- random order
-- reversed order
-- sorted order
-- size of the sample (5k, 10k, 50k)
+How do you know?: We have three methods and 2 variables at our disposition to analyse the results.
+The variables are the size of the input (5k, 10k, 50k) as well as its order style (random, reversed, sorted).
+Bubble sort is not the overall fastest but it performs the best on small and sorted input.
+First, when we compare the real running time of sort1 using different input text. We notice that it is 
+
 Without running the test files, we can already make assumptions.
 selection sort should take the longest in any given situations.
-bubble sort can be the fastest for small sample and sorted sample
 
 
-sort2 uses: TODO
+sort2 uses: Merge sort
 
 How do you know?: TODO
 
-sort3 uses: TODO
+sort3 uses: Selection sort
 
 How do you know?: TODO
 
