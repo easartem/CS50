@@ -122,7 +122,7 @@ int main(int argc, string argv[])
     }
     return 0;
 }
-
+// -----------------------------------------------------------------------------------------------------
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
@@ -137,12 +137,11 @@ bool vote(int voter, int rank, string name)
         }
     }
     // no name
-    return false;
-
-
 
     return false;
 }
+// -----------------------------------------------------------------------------------------------------
+
 
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
