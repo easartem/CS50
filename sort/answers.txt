@@ -21,7 +21,9 @@ Furthermore, the times for each text are quite consistent. The upper and lower b
 
 sort3 uses: Selection sort
 
-How do you know?: TODO
+How do you know?: This script have the overall worst results which concurs with a selection sort.
+Selection sort performs at best and at worst as a quadratic search. Since the result of using this script with different inputs
+don't differs much, and are worst than script2, we can conclude that it is a selection sort.
 
 -----------------------------------------------------------------
 
