@@ -6,6 +6,8 @@ we have three methods and 4 variables :
 - reversed order
 - sorted order
 - size of the sample (5k, 10k, 50k)
+Without running the test files, we can already make assumptions.
+
 
 sort2 uses: TODO
 
