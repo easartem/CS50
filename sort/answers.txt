@@ -14,7 +14,8 @@ Bubble sort has O(n^2) and omega(n).
 
 sort2 uses: Merge sort
 
-How do you know?: TODO
+How do you know?: This script have the overall best results which concurs with a merge sort.
+Furthermore, the times for each text are quite consistent. The upper and lower bounds of the running time are the same : O(nlogn).
 
 -----------------------------------------------------------------
 
