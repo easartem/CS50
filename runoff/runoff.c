@@ -165,6 +165,8 @@ bool print_winner(void)
     int maxvote = 0;
     int winnerscpt = 0;
     int winnerindex = 0;
+    bool fifty;
+
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes >= maxvote)
@@ -181,7 +183,7 @@ bool print_winner(void)
             winnerindex = i;
         }
     }
-
+    fifty = voter_count
     if (winnerscpt == 1)
     {
         printf("%s\n", candidates[winnerindex].name);
