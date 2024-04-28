@@ -43,26 +43,44 @@ time ./sort1 sorted50000.txt
 
 --------------------------------------------------------------
 time ./sort2 random5000.txt
+0.031
 time ./sort2 random10000.txt
+0.099
 time ./sort2 random50000.txt
+0.428
 
 time ./sort2 reversed5000.txt
+0.036
 time ./sort2 reversed10000.txt
+0.195
 time ./sort2 reversed50000.txt
+0.728
 
 time ./sort2 sorted5000.txt
+0.043
 time ./sort2 sorted10000.txt
+0.094
 time ./sort2 sorted50000.txt
+0.457
 ----------------------------------------------------------------
 
 time ./sort3 random5000.txt
+0.060
 time ./sort3 random10000.txt
+0.144
 time ./sort3 random50000.txt
+2.572
 
 time ./sort3 reversed5000.txt
+0.050
 time ./sort3 reversed10000.txt
+0.161
 time ./sort3 reversed50000.txt
+2.647
 
 time ./sort3 sorted5000.txt
+0.062
 time ./sort3 sorted10000.txt
+0.170
 time ./sort3 sorted50000.txt
+2.248
