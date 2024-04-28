@@ -70,7 +70,7 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // find name, access attribute and add1
-    for (int i = 0; i<candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (strcmp(candidates[i].name, name) == 0)
         {
@@ -86,7 +86,7 @@ bool vote(string name)
 void print_winner(void)
 {
     int maxvote = 0;
-    for (int i = 0; i<candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes >= maxvote)
         {
@@ -94,7 +94,7 @@ void print_winner(void)
         }
     }
 
-    for (int i = 0; i<candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes == maxvote)
         {
