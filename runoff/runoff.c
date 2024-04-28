@@ -122,11 +122,7 @@ int main(int argc, string argv[])
     }
     return 0;
 }
-// -----------------------------------------------------------------------------------------------------
-// preferences[i][j] is jth preference for voter i
-// int preferences[MAX_VOTERS][MAX_CANDIDATES];
-// Array of candidates
-// candidate candidates[MAX_CANDIDATES];
+
 
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
@@ -143,8 +139,12 @@ bool vote(int voter, int rank, string name)
     // no name
     return false;
 }
-// -----------------------------------------------------------------------------------------------------
 
+// -----------------------------------------------------------------------------------------------------
+// preferences[i][j] is jth preference for voter i
+// int preferences[MAX_VOTERS][MAX_CANDIDATES];
+// Array of candidates
+// candidate candidates[MAX_CANDIDATES];
 
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
@@ -152,6 +152,9 @@ void tabulate(void)
     // TODO
     return;
 }
+
+// -----------------------------------------------------------------------------------------------------
+
 
 // Print the winner of the election, if there is one
 bool print_winner(void)
