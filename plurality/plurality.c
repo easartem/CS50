@@ -69,14 +69,15 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
+    // find name, access attribute and add1
     for (int i = 0; i<candidate_count; i++)
     {
-        if (candidates[i].name)
-        strcmp
+        if (strcmp(candidates[i].name, name) == 0)
+        {
+            candidates[i].votes++;
+            return true;
+        }
     }
-    candidates[].name
-    // find name
-    // access attribute and add1
     // no name
     return false;
 }
