@@ -1,6 +1,11 @@
 sort1 uses: TODO
 
 How do you know?: TODO
+we have three methods and 4 variables :
+- random order
+- reversed order
+- sorted order
+- size of the sample (5k, 10k, 50k)
 
 sort2 uses: TODO
 
@@ -9,3 +14,6 @@ How do you know?: TODO
 sort3 uses: TODO
 
 How do you know?: TODO
+
+
+time ./sort1 random5000.txt
