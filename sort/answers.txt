@@ -7,6 +7,8 @@ we have three methods and 4 variables :
 - sorted order
 - size of the sample (5k, 10k, 50k)
 Without running the test files, we can already make assumptions.
+selection sort should take the longest in any given situations.
+bubble sort can be the fastest for small sample and sorted sample
 
 
 sort2 uses: TODO
