@@ -3,6 +3,7 @@
     "files.associations": {
         "cs50.h": "c",
         "ctype.h": "c",
-        "random": "c"
+        "random": "c",
+        "typeinfo": "c"
     }
 }
