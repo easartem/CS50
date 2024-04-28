@@ -229,7 +229,10 @@ bool is_tie(int min)
             tiecpt++;
         }
     }
-    if ()
+    if (tiecpt == candidate_count)
+    {
+        return true
+    }
     return false;
 }
 
