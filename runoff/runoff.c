@@ -156,16 +156,13 @@ void tabulate(void)
     return;
 }
 
-// -----------------------------------------------------------------------------------------------------
-// preferences[i][j] is jth preference for voter i
-// int preferences[MAX_VOTERS][MAX_CANDIDATES];
-// Array of candidates
-// candidate candidates[MAX_CANDIDATES];
 
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
     int maxvote = 0;
+    int winnerscpt = 0;
+    int winnerindex = 0;
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes >= maxvote)
@@ -178,14 +175,28 @@ bool print_winner(void)
     {
         if (candidates[i].votes == maxvote)
         {
-            printf("%s\n", candidates[i].name);
+            winnerscpt++;
+            winnerindex = i;
         }
     }
-    return false;
+
+    if (winnerscpt == 1)
+    {
+        printf("%s\n", candidates[winnerindex].name);
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+
 }
 
 // -----------------------------------------------------------------------------------------------------
-
+// preferences[i][j] is jth preference for voter i
+// int preferences[MAX_VOTERS][MAX_CANDIDATES];
+// Array of candidates
+// candidate candidates[MAX_CANDIDATES];
 
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
@@ -193,6 +204,9 @@ int find_min(void)
     // TODO
     return 0;
 }
+
+// -----------------------------------------------------------------------------------------------------
+
 
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
