@@ -82,8 +82,7 @@ void print_winner(void)
         candidates[i].name
         candidates[i].votes
     }
-    if
-    string name;
-    printf("%s\n", name);
+    string winner;
+    printf("%s\n", winner);
     return;
 }
