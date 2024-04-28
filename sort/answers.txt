@@ -52,7 +52,7 @@ time ./sort2 random50000.txt
 time ./sort2 reversed5000.txt
 0.036
 time ./sort2 reversed10000.txt
-0.195
+0.136
 time ./sort2 reversed50000.txt
 0.728
 
