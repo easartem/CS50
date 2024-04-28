@@ -194,25 +194,29 @@ bool print_winner(void)
 
 }
 
-// -----------------------------------------------------------------------------------------------------
-// preferences[i][j] is jth preference for voter i
-// int preferences[MAX_VOTERS][MAX_CANDIDATES];
-// Array of candidates
-// candidate candidates[MAX_CANDIDATES];
 
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
     // TODO
-    for (int i = 0; i < voter_count; i++)
+    int minvote = MAX_VOTERS;
+    for (int i = 0; i < candidate_count; i++)
     {
-        preferences[i][0];
+        if (candidates[i].votes <= min)
+        {
+            minvote = candidates[i].votes;
+        }
     }
-    return 0;
+    return minvote;
+
 }
 
 // -----------------------------------------------------------------------------------------------------
-
+// -----------------------------------------------------------------------------------------------------
+// preferences[i][j] is jth preference for voter i
+// int preferences[MAX_VOTERS][MAX_CANDIDATES];
+// Array of candidates
+// candidate candidates[MAX_CANDIDATES];
 
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
@@ -224,6 +228,12 @@ bool is_tie(int min)
 // Eliminate the candidate (or candidates) in last place
 void eliminate(int min)
 {
-    // TODO
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes == min)
+        {
+            //delete
+        }
+    }
     return;
 }
