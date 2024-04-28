@@ -3,19 +3,27 @@ sort1 uses: Bubble sort
 How do you know?: We have three methods and 2 variables at our disposition to analyse the results.
 The variables are the size of the input (5k, 10k, 50k) as well as its order style (random, reversed, sorted).
 Bubble sort is not the overall fastest but it performs the best on small and sorted input.
-First, when we compare the real running time of sort1 using different input text. We notice that it is 
+First, when comparing the output of the 3 scripts for the sorted text, we found that sort1 is the fastest.
+Second, when we compare the real running time of sort1 using different input text. We notice that it is way faster for the 5k abd 10k sample.
+It's about 20 times to 50 times faster.
+Since sort1 is the slowest of the 3 scripts for random and reversed order but fastest for the sorted order, we can conclude that it performs bubble sort.
+In bubble sort, the running time is quadratic for its upper bound but can be as low as linear if everything is sorted.
+Bubble sort has O(n^2) and omega(n).
 
-Without running the test files, we can already make assumptions.
-selection sort should take the longest in any given situations.
-
+-----------------------------------------------------------------
 
 sort2 uses: Merge sort
 
 How do you know?: TODO
 
+-----------------------------------------------------------------
+
 sort3 uses: Selection sort
 
 How do you know?: TODO
+
+-----------------------------------------------------------------
+
 
 
 time ./sort1 random5000.txt
