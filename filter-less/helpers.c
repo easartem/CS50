@@ -94,8 +94,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             for (int k = row-1; k < row+2; k++)
             {
                 avgRed = (copy[k][col-1].rgbtRed + copy[k][col].rgbtRed + copy[k][col+1].rgbtRed) / 3.0;
-                avgGreen;
-                avgBlue;
+                avgGreen = (copy[k][col-1].rgbtGreen + copy[k][col].rgbtGreen + copy[k][col+1].rgbtGreen) / 3.0;
+                avgBlue = (copy[k][col-1].rgbtBlue + copy[k][col].rgbtBlue + copy[k][col+1].rgbtBlue) / 3.0;
                 pxvalue = pxvalue + avg;
             }
             pxvalue = round(pxvalue / 3);
