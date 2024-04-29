@@ -83,8 +83,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
     // blurring the original picture based on the copy values
-    // new value = average value of surronding pixel
-    // beware padding
     for (int i = 1; i < height-1; i++)
     {
         for (int j = 1; j < width-1; j++)
@@ -103,5 +101,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtBlue = round(avgBlue / 9.0);
         }
     }
+    // beware corners and edges
+    image[0][width]
+    image[height-1][width]
+    image[height][0]
+    image[height][width-1]
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 1; j < width-1; j++)
+        {
+            // If border or edges
+            if(i == 0 | i == height-1 | j == 0 | j == width-1)
+            {
+
+            }
     return;
 }
