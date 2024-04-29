@@ -21,17 +21,20 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE px;
+    int sepiaRed, sepiaGreen, sepiaBlue;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            px.rgbtRed = (0.393 *  image[i][j].rgbtRed) + (0.769 *  image[i][j].rgbtGreen) + (0.189 *  image[i][j].rgbtBlue);
-            px.rgbtGreen = (0.349 *  image[i][j].rgbtRed) + (0.686 *  image[i][j].rgbtGreen) + (0.168 *  image[i][j].rgbtBlue);
-            px.rgbtBlue = (0.272 *  image[i][j].rgbtRed) + (0.534 *  image[i][j].rgbtGreen) + (0.131 *  image[i][j].rgbtBlue);
-            image[i][j].rgbtBlue = round(px.rgbtRed);
-            image[i][j].rgbtGreen = round(px.rgbtGreen);
-            image[i][j].rgbtRed = round(px.rgbtBlue);
-            //0-255 inclusve
+            sepiaRed = round((0.393 *  image[i][j].rgbtRed) + (0.769 *  image[i][j].rgbtGreen) + (0.189 *  image[i][j].rgbtBlue));
+            sepiaGreen = round((0.349 *  image[i][j].rgbtRed) + (0.686 *  image[i][j].rgbtGreen) + (0.168 *  image[i][j].rgbtBlue));
+            sepiaBlue = round((0.272 *  image[i][j].rgbtRed) + (0.534 *  image[i][j].rgbtGreen) + (0.131 *  image[i][j].rgbtBlue));
+            // check for values outside of bound [0-255]
+            
+            // load new values into original pixel
+            image[i][j].rgbtBlue = sepiaBlue;
+            image[i][j].rgbtGreen = sepiaGreen;
+            image[i][j].rgbtRed = sepiaRed;
         }
     }
     return;
