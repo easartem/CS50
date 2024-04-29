@@ -93,6 +93,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             col = j;
             for (int k = row-1; k < row+2; k++)
             {
+                if (row >= 1 | row < height-1) & (col >= 1 | col < width-1)
+                {
+                    
+                }
                 avgRed = (copy[k][col-1].rgbtRed + copy[k][col].rgbtRed + copy[k][col+1].rgbtRed) / 3.0;
                 avgGreen = (copy[k][col-1].rgbtGreen + copy[k][col].rgbtGreen + copy[k][col+1].rgbtGreen) / 3.0;
                 avgBlue = (copy[k][col-1].rgbtBlue + copy[k][col].rgbtBlue + copy[k][col+1].rgbtBlue) / 3.0;
