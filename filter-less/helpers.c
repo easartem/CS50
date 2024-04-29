@@ -55,12 +55,13 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     int temp;
+    int stop = round(width/2);
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < width; j++)
+
+        for (int j = 0; j < stop; j++)
         {
-            // pair impair
-            avg = round((image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed) / 3.0);
+            temp = image[i][j]
             image[i][j].rgbtBlue = avg;
             image[i][j].rgbtGreen = avg;
             image[i][j].rgbtRed = avg;
