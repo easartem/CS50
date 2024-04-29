@@ -4,6 +4,9 @@
         "cs50.h": "c",
         "ctype.h": "c",
         "random": "c",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "*.tcc": "c",
+        "string": "c",
+        "string_view": "c"
     }
 }
