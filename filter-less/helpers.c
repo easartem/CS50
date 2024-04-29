@@ -75,6 +75,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE px;
     int row, col;
     int pxvalueRed, pxvalueGreen, pxvalueBlue, avgRed, avgGreen, avgBlue;
+    float divider;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -83,29 +84,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
     // blurring the original picture based on the copy values
-    for (int i = 1; i < height-1; i++)
-    {
-        for (int j = 1; j < width-1; j++)
-        {
-            avgRed = 0;
-            avgGreen = 0;
-            avgBlue = 0;
-            for (int k = i-1; k < i+2; k++)
-            {
-                    avgRed = avgRed + copy[k][j-1].rgbtRed + copy[k][j].rgbtRed + copy[k][j+1].rgbtRed;
-                    avgGreen = avgGreen + copy[k][j-1].rgbtGreen + copy[k][j].rgbtGreen + copy[k][j+1].rgbtGreen;
-                    avgBlue = avgBlue + copy[k][j-1].rgbtBlue + copy[k][j].rgbtBlue + copy[k][j+1].rgbtBlue;
-            }
-            image[i][j].rgbtRed = round(avgRed / 9.0);
-            image[i][j].rgbtGreen = round(avgGreen / 9.0);
-            image[i][j].rgbtBlue = round(avgBlue / 9.0);
-        }
-    }
-    // beware corners and edges
-    image[0][width]
-    image[height-1][width]
-    image[height][0]
-    image[height][width-1]
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -113,6 +91,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             avgRed = 0;
             avgGreen = 0;
             avgBlue = 0;
+            divider = 0;
             for (int k = i-1; k < i+2; k++)
             {
                 if (k < 0 | k > height-1) // top and bottom edges
@@ -120,47 +99,29 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     // change divider
                     divider = divider + 0;
                 }
-                else if (j-1 < 0)
-                {
-                    avgRed = avgRed + copy[k][j].rgbtRed + copy[k][j+1].rgbtRed;
-                    avgGreen = avgGreen + copy[k][j].rgbtGreen + copy[k][j+1].rgbtGreen;
-                    avgBlue = avgBlue + copy[k][j].rgbtBlue + copy[k][j+1].rgbtBlue;
-                    divider = divider + 2.0;
-                }
-                else if (j+1 > width-1)
-                {
-                    avgRed = avgRed + copy[k][j-1].rgbtRed + copy[k][j].rgbtRed;
-                    avgGreen = avgGreen + copy[k][j-1].rgbtGreen + copy[k][j].rgbtGreen;
-                    avgBlue = avgBlue + copy[k][j-1].rgbtBlue + copy[k][j].rgbtBlue;
-                    divider = divider + 2.0;
-                }
                 else
                 {
-                    avgRed = avgRed + copy[k][j-1].rgbtRed + copy[k][j].rgbtRed + copy[k][j+1].rgbtRed;
-                    avgGreen = avgGreen + copy[k][j-1].rgbtGreen + copy[k][j].rgbtGreen + copy[k][j+1].rgbtGreen;
-                    avgBlue = avgBlue + copy[k][j-1].rgbtBlue + copy[k][j].rgbtBlue + copy[k][j+1].rgbtBlue;
-                    divider = divider + 3.0;
+                    for (int l = j-1; l < l+2; l++)
+                    {
+                        if (j < 0 | j > width-1)
+                        {
+                            // change divider
+                            divider = divider + 0;
+                        }
+                        else
+                        {
+                            avgRed = avgRed + copy[k][j].rgbtRed;
+                            avgGreen = avgGreen + copy[k][j].rgbtGreen;
+                            avgBlue = avgBlue + copy[k][j].rgbtBlue;
+                            divider = divider + 3.0;
+                        }
+                    }
                 }
             }
             image[i][j].rgbtRed = round(avgRed / 9.0);
             image[i][j].rgbtGreen = round(avgGreen / 9.0);
             image[i][j].rgbtBlue = round(avgBlue / 9.0);
-            // If border
-            if(i-1 < 0 | )
-            {
-
-            }
-            else if (i == 0 & j == width-1)
-            {
-
-            }
-            else if (i == height-1 & j == 0)
-            else if (i == height-1 & j == width-1)
-
-            // If edges
-            if(i == 0 | i == height-1 | j == 0 | j == width-1)
-            {
-
-            }
+        }
+    }
     return;
 }
