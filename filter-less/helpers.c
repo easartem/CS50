@@ -28,9 +28,12 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             // apply sepia formula
-            sepiaRed = round((0.393 *  image[i][j].rgbtRed) + (0.769 *  image[i][j].rgbtGreen) + (0.189 *  image[i][j].rgbtBlue));
-            sepiaGreen = round((0.349 *  image[i][j].rgbtRed) + (0.686 *  image[i][j].rgbtGreen) + (0.168 *  image[i][j].rgbtBlue));
-            sepiaBlue = round((0.272 *  image[i][j].rgbtRed) + (0.534 *  image[i][j].rgbtGreen) + (0.131 *  image[i][j].rgbtBlue));
+            sepiaRed = round((0.393 * image[i][j].rgbtRed) + (0.769 * image[i][j].rgbtGreen) +
+                             (0.189 * image[i][j].rgbtBlue));
+            sepiaGreen = round((0.349 * image[i][j].rgbtRed) + (0.686 * image[i][j].rgbtGreen) +
+                               (0.168 * image[i][j].rgbtBlue));
+            sepiaBlue = round((0.272 * image[i][j].rgbtRed) + (0.534 * image[i][j].rgbtGreen) +
+                              (0.131 * image[i][j].rgbtBlue));
             // check for values outside of bound [0-255]
             if (sepiaRed > 255)
             {
@@ -57,14 +60,14 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE temp;
-    int stop = round(width/2);
+    int stop = round(width / 2);
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < stop; j++)
         {
             temp = image[i][j];
-            image[i][j] = image[i][width-(j+1)];
-            image[i][width-(j+1)] = temp;
+            image[i][j] = image[i][width - (j + 1)];
+            image[i][width - (j + 1)] = temp;
         }
     }
     return;
@@ -94,13 +97,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             avgGreen = 0;
             avgBlue = 0;
             divider = 0;
-            col_minus = j-1;
-            col_plus = j+1;
-            row_minus = i-1;
-            row_plus = i+1;
+            col_minus = j - 1;
+            col_plus = j + 1;
+            row_minus = i - 1;
+            row_plus = i + 1;
             for (int k = row_minus; k <= row_plus; k++)
             {
-                if (k < 0 | k > height-1) // top and bottom edges
+                if (k<0 | k> height - 1) // top and bottom edges
                 {
                     // change divider
                     divider = divider + 0;
@@ -109,7 +112,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for (int l = col_minus; l <= col_plus; l++)
                     {
-                        if (l < 0 | l > width-1)
+                        if (l<0 | l> width - 1)
                         {
                             // change divider
                             divider = divider + 0;
