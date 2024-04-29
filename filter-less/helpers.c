@@ -118,8 +118,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         }
                     }
                 }
-                printf("\n");
             }
+            printf("\n");
             image[i][j].rgbtRed = round(avgRed / 9.0);
             image[i][j].rgbtGreen = round(avgGreen / 9.0);
             image[i][j].rgbtBlue = round(avgBlue / 9.0);
