@@ -62,6 +62,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < stop; j++)
         {
             temp = image[i][j]
+            image[i][j].rgbtBlue = image[i][width-(j+1)].rgbtBlue;
+
             image[i][j].rgbtBlue = avg;
             image[i][j].rgbtGreen = avg;
             image[i][j].rgbtRed = avg;
