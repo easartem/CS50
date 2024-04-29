@@ -97,6 +97,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 if (k < 0 | k > height-1) // top and bottom edges
                 {
                     // change divider
+                    printf("x");
                     divider = divider + 0;
                 }
                 else
@@ -117,6 +118,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         }
                     }
                 }
+                printf("\n");
             }
             image[i][j].rgbtRed = round(avgRed / 9.0);
             image[i][j].rgbtGreen = round(avgGreen / 9.0);
