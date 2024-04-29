@@ -120,7 +120,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     // change divider
                     divider = divider + 0;
                 }
-                else if (k > height-1)
+
+                else if (j < 0)
+                {
+
+                }
+                else if (k > width-1)
                 {
 
                 }
