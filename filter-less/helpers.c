@@ -73,7 +73,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE copy[height][width];
     RGBTRIPLE px;
-    int row, col;
+    int row_minus, row_plus, col_minus, col_plus;
     int pxvalueRed, pxvalueGreen, pxvalueBlue, avgRed, avgGreen, avgBlue;
     float divider;
     for (int i = 0; i < height; i++)
@@ -92,17 +92,20 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             avgGreen = 0;
             avgBlue = 0;
             divider = 0;
-            for (int k = i-1; k < i+2; k++)
+            col_minus = j-1;
+            col_plus = j+1;
+            row_minus = i-1;
+            row_plus = i+1;
+            for (int k = row_minus; k <= row_plus; k++)
             {
                 if (k < 0 | k > height-1) // top and bottom edges
                 {
                     // change divider
-                    printf("x");
                     divider = divider + 0;
                 }
                 else
                 {
-                    for (int l = j-1; l < l+2; l++)
+                    for (int l = col_minus; l < col_plus; l++)
                     {
                         if (j < 0 | j > width-1)
                         {
@@ -120,7 +123,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
             printf("\n");
-            image[i][j].rgbtRed = round(avgRed / 9.0);
+            image[i][j].rgbtRed = round(avgRed / divider);
             image[i][j].rgbtGreen = round(avgGreen / 9.0);
             image[i][j].rgbtBlue = round(avgBlue / 9.0);
         }
