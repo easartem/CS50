@@ -98,14 +98,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 avgBlue = (copy[k][col-1].rgbtBlue + copy[k][col].rgbtBlue + copy[k][col+1].rgbtBlue) / 3.0;
                 pxvalue = pxvalue + avg;
             }
-            pxvalue = round(pxvalue / 3);
-            px.
-            copy[row][col];
-            // load new values into original pixel
-            image[i][j].rgbtBlue = sepiaBlue;
-            image[i][j].rgbtGreen = sepiaGreen;
-            image[i][j].rgbtRed = sepiaRed;
-
+            image[i][j].rgbtRed = round(px.rgbtRed / 3);
+            image[i][j].rgbtGreen = round(px.rgbtGreen / 3);
+            image[i][j].rgbtBlue = round(px.rgbtBlue / 3);
         }
     }
     return;
