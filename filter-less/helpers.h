@@ -1,6 +1,4 @@
 #include "bmp.h"
-#include <math.h>
-#include <stdio.h>
 
 
 // Convert image to grayscale
