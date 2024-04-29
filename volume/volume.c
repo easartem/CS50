@@ -41,7 +41,8 @@ int main(int argc, char *argv[])
     // TODO: Read samples from input file and write updated data to output file
     // Create a buffer for a single sample
     int16_t buffer;
-    fread(&buffer, sizeof(int16_t), 1, input)
+    int size_int16 = 2; //
+    fread(&buffer, 2, 1, input) //2bytes
     // modify by factor
 
     // Close files
