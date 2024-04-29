@@ -100,7 +100,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             row_plus = i+1;
             for (int k = row_minus; k <= row_plus; k++)
             {
-                if (k < 0 | k > height) // top and bottom edges
+                if (k < 0 | k > height-1) // top and bottom edges
                 {
                     // change divider
                     divider = divider + 0;
@@ -109,7 +109,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for (int l = col_minus; l <= col_plus; l++)
                     {
-                        if (l < 0 | l > width)
+                        if (l < 0 | l > width-1)
                         {
                             // change divider
                             divider = divider + 0;
