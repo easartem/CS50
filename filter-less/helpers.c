@@ -110,12 +110,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 1; j < width-1; j++)
         {
-            // If border or edges
-            if(i == 0 | i == height-1 | j == 0 | j == width-1)
+            // If border
+            if(i == 0 & j == 0)
             {
 
             }
-            // If border or edges
+            else if (i == 0 & j == width-1)
+            {
+
+            }
+            else if (i == height-1 & j == 0)
+            else if (i == height-1 & j == width-1)
+
+            // If edges
             if(i == 0 | i == height-1 | j == 0 | j == width-1)
             {
 
