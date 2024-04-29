@@ -73,7 +73,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     // new value = average value of surronding pixel
     // beware padding
-    RGBTRIPLE temp;
+    RGBTRIPLE px;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
