@@ -109,16 +109,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for (int l = col_minus; l <= col_plus; l++)
                     {
-                        if (j < 0 | j > width)
+                        if (l < 0 | l > width)
                         {
                             // change divider
                             divider = divider + 0;
                         }
                         else
                         {
-                            avgRed = avgRed + copy[k][j].rgbtRed;
-                            avgGreen = avgGreen + copy[k][j].rgbtGreen;
-                            avgBlue = avgBlue + copy[k][j].rgbtBlue;
+                            avgRed = avgRed + copy[k][l].rgbtRed;
+                            avgGreen = avgGreen + copy[k][l].rgbtGreen;
+                            avgBlue = avgBlue + copy[k][l].rgbtBlue;
                             divider = divider + 1.0;
                         }
                     }
