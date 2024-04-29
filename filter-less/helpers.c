@@ -26,11 +26,12 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
+            // apply sepia formula
             sepiaRed = round((0.393 *  image[i][j].rgbtRed) + (0.769 *  image[i][j].rgbtGreen) + (0.189 *  image[i][j].rgbtBlue));
             sepiaGreen = round((0.349 *  image[i][j].rgbtRed) + (0.686 *  image[i][j].rgbtGreen) + (0.168 *  image[i][j].rgbtBlue));
             sepiaBlue = round((0.272 *  image[i][j].rgbtRed) + (0.534 *  image[i][j].rgbtGreen) + (0.131 *  image[i][j].rgbtBlue));
             // check for values outside of bound [0-255]
-            
+
             // load new values into original pixel
             image[i][j].rgbtBlue = sepiaBlue;
             image[i][j].rgbtGreen = sepiaGreen;
