@@ -115,5 +115,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
 
             }
+            // If border or edges
+            if(i == 0 | i == height-1 | j == 0 | j == width-1)
+            {
+
+            }
     return;
 }
