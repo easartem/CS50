@@ -115,7 +115,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             avgBlue = 0;
             for (int k = i-1; k < i+2; k++)
             {
-                if (k < 0)
+                if (k < 0 | k > height-1) // top and bottom edges
                 {
                     // change divider
                     divider = divider + 0;
