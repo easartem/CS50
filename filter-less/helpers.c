@@ -74,7 +74,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE copy[height][width];
     RGBTRIPLE px;
     int row, col;
-    float pxvalue, avgRed, avgGreen, avgBlue;
+    float pxvalueRed, pxvalueGreen, pxvalueBlue, avgRed, avgGreen, avgBlue;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -96,11 +96,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 avgRed = (copy[k][col-1].rgbtRed + copy[k][col].rgbtRed + copy[k][col+1].rgbtRed) / 3.0;
                 avgGreen = (copy[k][col-1].rgbtGreen + copy[k][col].rgbtGreen + copy[k][col+1].rgbtGreen) / 3.0;
                 avgBlue = (copy[k][col-1].rgbtBlue + copy[k][col].rgbtBlue + copy[k][col+1].rgbtBlue) / 3.0;
-                pxvalue = pxvalue + avg;
+
+                pxvalueRed = pxvalueRed + avgRed;
+                pxvalueGreen = pxvalueGreen + avgGreen;
+                pxvalueBlue = pxvalueBlue + avgBlue;
             }
-            image[i][j].rgbtRed = round(px.rgbtRed / 3);
-            image[i][j].rgbtGreen = round(px.rgbtGreen / 3);
-            image[i][j].rgbtBlue = round(px.rgbtBlue / 3);
+            image[i][j].rgbtRed = round(px.rgbtRed / 3.0);
+            image[i][j].rgbtGreen = round(px.rgbtGreen / 3.0);
+            image[i][j].rgbtBlue = round(px.rgbtBlue / 3.0);
         }
     }
     return;
