@@ -85,25 +85,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     // blurring the original picture based on the copy values
     // new value = average value of surronding pixel
     // beware padding
-    for (int i = 0; i < height; i++)
+    for (int i = 1; i < height-1; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 1; j < width-1; j++)
         {
-            row = i;
-            col = j;
-            for (int k = row-1; k < row+2; k++)
+            for (int k = i-1; k < i+2; k++)
             {
-                if ((row >= 1 | row < height-1) & (col >= 1 | col < width-1))
-                {
-                    avgRed = (copy[k][col-1].rgbtRed + copy[k][col].rgbtRed + copy[k][col+1].rgbtRed) / 3.0;
-                    avgGreen = (copy[k][col-1].rgbtGreen + copy[k][col].rgbtGreen + copy[k][col+1].rgbtGreen) / 3.0;
-                    avgBlue = (copy[k][col-1].rgbtBlue + copy[k][col].rgbtBlue + copy[k][col+1].rgbtBlue) / 3.0;
+                    avgRed = (copy[k][j-1].rgbtRed + copy[k][j].rgbtRed + copy[k][j+1].rgbtRed) / 3.0;
+                    avgGreen = (copy[k][j-1].rgbtGreen + copy[k][j].rgbtGreen + copy[k][j+1].rgbtGreen) / 3.0;
+                    avgBlue = (copy[k][j-1].rgbtBlue + copy[k][j].rgbtBlue + copy[k][j+1].rgbtBlue) / 3.0;
 
                     pxvalueRed = pxvalueRed + avgRed;
                     pxvalueGreen = pxvalueGreen + avgGreen;
                     pxvalueBlue = pxvalueBlue + avgBlue;
-                }
-
             }
             image[i][j].rgbtRed = round(pxvalueRed / 3.0);
             image[i][j].rgbtGreen = round(pxvalueGreen / 3.0);
