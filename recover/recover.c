@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 {
     uint8_t buffer[BLOCK_SIZE];
     int jpgcpt = 0;
+    int readcpt = 0;
     char filename[8];
     sprintf(filename, "%03i.jpg", jpgcpt); // filenames : ###.jpg starting from 000.jpg
     FILE *img = fopen(filename, "w");
@@ -28,10 +29,11 @@ int main(int argc, char *argv[])
         printf("Could not open file.\n");
         return 2;
     }
-
+    printf("%i\n", readcpt);
     // Read 512 bytes into a buffer and repeat until the end of card:
-    while (fread(buffer, BLOCK_SIZE, 1, f) == 512)
+    while (fread(buffer, BLOCK_SIZE, 1, f))
     {
+        printf("%i\n", readcpt);
         // If start of new JPEG (each JPEG starts with a distinct header)
         if (buffer[0] == 0xff & buffer[1] == 0xd8 & buffer[2] == 0xff & (buffer[3] & 0xf0) == 0xe0)
         {
