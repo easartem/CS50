@@ -43,15 +43,18 @@ bool load(const char *dictionary)
         return false;
     }
     // Read each word in the file
-    char buffer;
-    while (fread(&buffer, sizeof(char), 1, f))
+    char c;
+    while (fread(&c, sizeof(char), 1, f))
     {
+        // if \n new word, iterate until \n
         // 1. Create space for a new hash table node
         node *new = malloc(sizeof(node));
         // 2. Copy the word into the new node
-        new ->
+        new -> word[0] = c;
         // 3. Hash the word to obtain its hash value
+        unsigned int hv = hash(new -> word[0]);
         // 4. Insert the new node into the hash table (using the index specified by its hash value)
+        table[hv] = word[0]
     }
     // Close the dictionary file
     fclose(f);
