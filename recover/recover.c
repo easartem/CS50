@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 const int HEADER_SIZE = 4;
 const int BLOCK_SIZE = 512;
@@ -10,6 +11,7 @@ int main(int argc, char *argv[])
 {
     char buffer[BLOCK_SIZE];
     int jpgcpt = 0;
+    string
 
     if (argc != 2)
     {
