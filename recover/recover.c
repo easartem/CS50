@@ -62,9 +62,9 @@ int main(int argc, char *argv[])
         else
         {
             // keep moving on, one block at a time, until you find one JPEGs are stored back-to-back in memory card
-            if () // If already found JPEG
+            if (jpgcpt > 0) // If already found JPEG
             {
-
+                // store info in file
             }
         }
     }
