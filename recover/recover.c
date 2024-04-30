@@ -24,6 +24,16 @@ int main(int argc, char *argv[])
      That is, you need only look for those signatures in a block’s first four bytes.
       I’ve only imaged the first few megabytes of the memory card. But you should ultimately find that the image contains 50 JPEGs.
     // Open memory card
-    
+    // Repeat until the end of card:
+        // Read 512 bytes into a buffer
+        // If start of new JPEG
+            // If first JPEG
+                // ...
+            // Else
+                // ...
+        // Else
+            // If already found JPEG
+                // ...
+
 
 }
