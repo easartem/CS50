@@ -2,6 +2,8 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 #include "dictionary.h"
 
@@ -39,7 +41,7 @@ bool load(const char *dictionary)
     FILE *f = fopen(dictionary, "r");
     if (f == NULL)
     {
-        printf("Could not open %s.\n", infile);
+        printf("Could not open %s.\n", dictionary);
         return false;
     }
     // Read each word in the file
@@ -54,7 +56,7 @@ bool load(const char *dictionary)
         // 3. Hash the word to obtain its hash value
         unsigned int hv = hash(new -> word[0]);
         // 4. Insert the new node into the hash table (using the index specified by its hash value)
-        table[hv] = word[0]
+        table[hv] = new -> word[0];
     }
     // Close the dictionary file
     fclose(f);
