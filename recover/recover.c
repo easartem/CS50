@@ -9,7 +9,7 @@ const int JPEG_NB = 50;
 
 int main(int argc, char *argv[])
 {
-    char buffer[BLOCK_SIZE];
+    uint8_t buffer[BLOCK_SIZE];
     int jpgcpt = 0;
     char filename[7];
 
