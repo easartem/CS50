@@ -8,8 +8,8 @@ int main(int argc, char *argv[])
         printf("There can be only one command-line argument.\n");
         return 1;
     }
-    FILE *input = fopen(argv[1], "r");
-    if (input == NULL)
+    FILE *f = fopen(argv[1], "r");
+    if (f == NULL)
     {
         printf("Could not open file.\n");
         return 2;
@@ -26,10 +26,12 @@ int main(int argc, char *argv[])
     // Open memory card
     // Repeat until the end of card:
         // Read 512 bytes into a buffer
-        // If start of new JPEG
+        // If start of new JPEG (each JPEG starts with a distinct header)
+    first byte of every jpeg file is 0xff second is 0xd8 third 0xff
+    the fourth one can vary (0xe0, 0xe1, 0xe2, ..., oxef) but always start with 0xe + some char
             // If first JPEG
                 // ...
-            // Else
+            // Else // JPEGs are stored back-to-back in memory card
                 // ...
         // Else
             // If already found JPEG
