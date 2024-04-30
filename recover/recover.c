@@ -33,19 +33,23 @@ int main(int argc, char *argv[])
         // If start of new JPEG (each JPEG starts with a distinct header)
         if (buffer[0] == 0xff & buffer[1] == 0xd8 & buffer[2] == 0xff & (buffer[3] & 0xf0) == 0xe0)
         {
-            // make a new file
+            // Open a new jpeg file for writing
             // filenames : ###.jpg starting from 000.jpg
             sprintf(filename, "%03i.jpg", jpgcpt);
+            FILE *img = fopen(filename, 'w');
+            start filling that file with bytes from my memory card
+            closing that file only once you encounter another signature
             // If first JPEG
                 // ...
             // Else // JPEGs are stored back-to-back in memory card
-                // keep moving on, one block at a time, until you find one
         }
-        // Else
-            // If already found JPEG
-                // ...
+        else
+        {
+            // keep moving on, one block at a time, until you find one
+            if () // If already found JPEG
+            {
+
+            }
+        }
     }
-    open a new jpeg file for writing
-    start filling that file with bytes from my memory card
-    closing that file only once you encounter another signature
 }
