@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     }
 
     // Read 512 bytes into a buffer and repeat until the end of card:
-    while (fread(buffer, BLOCK_SIZE, 1, f) == 512)
+    while (fread(&buffer, BLOCK_SIZE, 1, f) == 512)
     {
         // If start of new JPEG (each JPEG starts with a distinct header)
         if (buffer[0] == 0xff & buffer[1] == 0xd8 & buffer[2] == 0xff & (buffer[3] & 0xf0) == 0xe0)
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
             if (jpgcpt == 0)
             {
                 // Writing the 1rst block into the file
-                fwrite(buffer, BLOCK_SIZE, 1, img);
+                fwrite(&buffer, BLOCK_SIZE, 1, img);
                 // Increasing the counter
                 jpgcpt++;
             }
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.jpg", jpgcpt);
                 img = fopen(filename, "w");
                 // Writing the 1rst block into the file
-                fwrite(buffer, BLOCK_SIZE, 1, img);
+                fwrite(&buffer, BLOCK_SIZE, 1, img);
                 // Increasing the counter
                 jpgcpt++;
             }
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
             if (jpgcpt > 0)
             {
                 // Writing the 1rst block into the file
-                fwrite(buffer, BLOCK_SIZE, 1, img);
+                fwrite(&buffer, BLOCK_SIZE, 1, img);
             }
         }
     }
