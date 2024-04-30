@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
                 // // Open a new jpeg file for writing
                 // filenames : ###.jpg starting from 000.jpg
                 sprintf(filename, "%03i.jpg", jpgcpt);
-                FILE *img = fopen(filename, "w");
+                img = fopen(filename, "w");
                 // Writing the 1rst block into the file
                 fwrite(buffer, BLOCK_SIZE, 1, img);
                 // Increasing the counter
