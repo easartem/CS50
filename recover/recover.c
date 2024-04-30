@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
     char buffer[BLOCK_SIZE];
     int jpgcpt = 0;
-    string filename;
+    char filename[7];
 
     if (argc != 2)
     {
