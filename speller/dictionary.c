@@ -35,13 +35,17 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO
+    // Open the dictionary file
     FILE *f = fopen(dictionary, "r");
     if (f == NULL)
     {
         printf("Could not open %s.\n", infile);
         return false;
     }
+    // Read each word in the file
+    while (fread())
+    // Close the dictionary file
+    fclose(f);
 
     return true;
 }
