@@ -22,6 +22,8 @@ int main(int argc, char *argv[])
      you can read 512 of them at a time into a buffer for efficiency’s sake.
      Thanks to FAT, you can trust that JPEGs’ signatures will be “block-aligned.”
      That is, you need only look for those signatures in a block’s first four bytes.
-
+      I’ve only imaged the first few megabytes of the memory card. But you should ultimately find that the image contains 50 JPEGs.
+    // Open memory card
+    
 
 }
