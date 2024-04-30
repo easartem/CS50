@@ -54,21 +54,21 @@ person *create_family(int generations)
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
         int r1 = rand() % 2;
-        newperson -> alleles[0] = parent0 -> alleles[r1];
+        newperson->alleles[0] = parent0->alleles[r1];
         int r2 = rand() % 2;
-        newperson -> alleles[1] = parent1 -> alleles[r2];
+        newperson->alleles[1] = parent1->alleles[r2];
     }
 
     // If there are no generations left to create
     else
     {
         // TODO: Set parent pointers to NULL
-        newperson -> parents[0] = NULL;
-        newperson -> parents[1] = NULL;
+        newperson->parents[0] = NULL;
+        newperson->parents[1] = NULL;
 
         // TODO: Randomly assign alleles
-        newperson -> alleles[0] = random_allele();
-        newperson -> alleles[1] = random_allele();
+        newperson->alleles[0] = random_allele();
+        newperson->alleles[1] = random_allele();
     }
 
     // TODO: Return newly created person
@@ -115,11 +115,13 @@ void print_family(person *p, int generation)
     // Print person
     if (generation == 0)
     {
-        printf("Child (Generation %i): blood type %c%c\n", generation, p->alleles[0], p->alleles[1]);
+        printf("Child (Generation %i): blood type %c%c\n", generation, p->alleles[0],
+               p->alleles[1]);
     }
     else if (generation == 1)
     {
-        printf("Parent (Generation %i): blood type %c%c\n", generation, p->alleles[0], p->alleles[1]);
+        printf("Parent (Generation %i): blood type %c%c\n", generation, p->alleles[0],
+               p->alleles[1]);
     }
     else
     {
@@ -127,7 +129,8 @@ void print_family(person *p, int generation)
         {
             printf("Great-");
         }
-        printf("Grandparent (Generation %i): blood type %c%c\n", generation, p->alleles[0], p->alleles[1]);
+        printf("Grandparent (Generation %i): blood type %c%c\n", generation, p->alleles[0],
+               p->alleles[1]);
     }
 
     // Print parents of current generation
