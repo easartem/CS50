@@ -20,9 +20,10 @@ int main(int argc, char *argv[])
     // Open memory card
     FILE *f = fopen(argv[1], "r");
     // Repeat until the end of card:
+    
     while ()
     {
-        
+
     }
         // Read 512 bytes into a buffer
         // If start of new JPEG (each JPEG starts with a distinct header)
