@@ -40,23 +40,34 @@ int main(int argc, char *argv[])
                 // filenames : ###.jpg starting from 000.jpg
                 sprintf(filename, "%03i.jpg", jpgcpt);
                 FILE *img = fopen(filename, 'w');
+                // Writing the 1rst block into the file
                 fwrite(*buffer, BLOCK_SIZE, 1, img);
-                fclose(img);
-                closing that file only once you encounter another signature
+                // Increasing the counter
+                jpgcpt++;
             }
             else
             {
-                
+                // closing that file only once you encounter another signature
+                fclose(img);
+                // // Open a new jpeg file for writing
+                // filenames : ###.jpg starting from 000.jpg
+                sprintf(filename, "%03i.jpg", jpgcpt);
+                FILE *img = fopen(filename, 'w');
+                // Writing the 1rst block into the file
+                fwrite(*buffer, BLOCK_SIZE, 1, img);
+                // Increasing the counter
+                jpgcpt++;
             }
-            // Else // JPEGs are stored back-to-back in memory card
         }
         else
         {
-            // keep moving on, one block at a time, until you find one
+            // keep moving on, one block at a time, until you find one JPEGs are stored back-to-back in memory card
             if () // If already found JPEG
             {
 
             }
         }
     }
+    fclose(f);
+    fclose(img);
 }
