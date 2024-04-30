@@ -56,7 +56,7 @@ person *create_family(int generations)
         int r1 = rand() % 2;
         newperson -> alleles[0] = parent0 -> alleles[r1];
         int r2 = rand() % 2;
-        newperson -> alleles[1] = parent0 -> alleles[r2];
+        newperson -> alleles[1] = parent1 -> alleles[r2];
     }
 
     // If there are no generations left to create
