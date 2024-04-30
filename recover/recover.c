@@ -41,7 +41,10 @@ int main(int argc, char *argv[])
             fclose(img);
             closing that file only once you encounter another signature
             // If first JPEG
-                // ...
+            if (jpgcpt == 0)
+            {
+                // 
+            }
             // Else // JPEGs are stored back-to-back in memory card
         }
         else
