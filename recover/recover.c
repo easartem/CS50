@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     }
 
     // Read 512 bytes into a buffer and repeat until the end of card:
-    while (fread(*buffer, BLOCK_SIZE, 1, f))
+    while (fread(*buffer, BLOCK_SIZE, 1, f) == 512)
     {
         // If start of new JPEG (each JPEG starts with a distinct header)
         if (buffer[0] == 0xff & buffer[1] == 0xd8 & buffer[2] == 0xff & (buffer[3] & 0xf0) == 0xe0)
