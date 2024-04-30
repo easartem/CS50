@@ -78,20 +78,19 @@ void get_word()
         // if letter
         else if (isalpha(c))
         {
-            
+            // 1. Create space for a new hash table node
+            node *new = malloc(sizeof(node));
+            // 2. Copy the word into the new node
+            new -> word[0] = c;
+            // 3. Hash the word to obtain its hash value
+            unsigned int hv = hash(&c);
+            // 4. Insert the new node into the hash table (using the index specified by its hash value)
+            table[hv] = new;
         }
-        else
+        else // ponctuation
         {
 
         }
-        // 1. Create space for a new hash table node
-        node *new = malloc(sizeof(node));
-        // 2. Copy the word into the new node
-        new -> word[0] = c;
-        // 3. Hash the word to obtain its hash value
-        unsigned int hv = hash(&c);
-        // 4. Insert the new node into the hash table (using the index specified by its hash value)
-        table[hv] = new;
     }
 
 }
