@@ -1,6 +1,6 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 const int HEADER_SIZE = 4;
 const int BLOCK_SIZE = 512;
