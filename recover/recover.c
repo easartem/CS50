@@ -14,4 +14,14 @@ int main(int argc, char *argv[])
         printf("Could not open file.\n");
         return 2;
     }
+    a program that iterates over a copy of my memory card, looking for JPEGs’ signatures.
+    Each time you find a signature, you can open a new file for writing
+     and start filling that file with bytes from my memory card,
+     closing that file only once you encounter another signature. Moreover,
+     rather than read my memory card’s bytes one at a time,
+     you can read 512 of them at a time into a buffer for efficiency’s sake.
+     Thanks to FAT, you can trust that JPEGs’ signatures will be “block-aligned.”
+     That is, you need only look for those signatures in a block’s first four bytes.
+
+
 }
