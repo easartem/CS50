@@ -64,7 +64,25 @@ bool load(const char *dictionary)
     return true;
 }
 
-char 
+void get_word()
+{
+        // Read each word in the file
+    char c;
+    while (fread(&c, sizeof(char), 1, f))
+    {
+        // if \n new word, iterate until \n
+        if (c == )
+        // 1. Create space for a new hash table node
+        node *new = malloc(sizeof(node));
+        // 2. Copy the word into the new node
+        new -> word[0] = c;
+        // 3. Hash the word to obtain its hash value
+        unsigned int hv = hash(&c);
+        // 4. Insert the new node into the hash table (using the index specified by its hash value)
+        table[hv] = new;
+    }
+
+}
 
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
