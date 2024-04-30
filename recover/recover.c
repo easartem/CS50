@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
     char buffer[BLOCK_SIZE];
     int jpgcpt = 0;
-    string
+    string filename;
 
     if (argc != 2)
     {
@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
         {
             // make a new file
             // filenames : ###.jpg starting from 000.jpg
+            sprintf(filename, "%03i.jpg", jpgcpt);
             // If first JPEG
                 // ...
             // Else // JPEGs are stored back-to-back in memory card
