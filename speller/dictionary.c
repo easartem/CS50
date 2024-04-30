@@ -70,8 +70,16 @@ void get_word()
     char c;
     while (fread(&c, sizeof(char), 1, f))
     {
-        // if \n new word, iterate until \n
-        if (c == )
+        // if end of word
+        if (isspace(c))
+        {
+
+        }
+        else if (isalpha(c))
+        else
+        {
+
+        }
         // 1. Create space for a new hash table node
         node *new = malloc(sizeof(node));
         // 2. Copy the word into the new node
