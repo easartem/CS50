@@ -20,8 +20,8 @@ int main(int argc, char *argv[])
     // Open memory card
     FILE *f = fopen(argv[1], "r");
     // Repeat until the end of card:
-    
-    while ()
+    char block[512];
+    while (fread)
     {
 
     }
@@ -29,13 +29,13 @@ int main(int argc, char *argv[])
         // If start of new JPEG (each JPEG starts with a distinct header)
     first byte of every jpeg file is 0xff second is 0xd8 third 0xff
     the fourth one can vary (0xe0, 0xe1, 0xe2, ..., oxef) but always start with 0xe + some char
-    open a new file for writing
+    open a new jpeg file for writing
     start filling that file with bytes from my memory card
     closing that file only once you encounter another signature
             // If first JPEG
                 // ...
             // Else // JPEGs are stored back-to-back in memory card
-                // ...
+                // keep moving on, one block at a time, until you find one
         // Else
             // If already found JPEG
                 // ...
