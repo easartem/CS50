@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-const int HEADER_SIZE = 44;
+const int HEADER_SIZE = 4;
+const int BLOCK_SIZE = 512;
 
 
 int main(int argc, char *argv[])
@@ -23,8 +24,8 @@ int main(int argc, char *argv[])
     // Open memory card
     FILE *f = fopen(argv[1], "r");
     // Repeat until the end of card:
-    char block[512];
-    while (fread(*block, ))
+    char buffer[BLOCK_SIZE];
+    while (fread(*buffer, BLOCK_SIZE, 1, f))
     {
 
     }
