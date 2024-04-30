@@ -75,7 +75,11 @@ void get_word()
         {
 
         }
+        // if letter
         else if (isalpha(c))
+        {
+            
+        }
         else
         {
 
