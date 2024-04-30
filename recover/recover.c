@@ -59,12 +59,14 @@ int main(int argc, char *argv[])
                 jpgcpt++;
             }
         }
+        // keep moving on, one block at a time, until you find one JPEGs are stored back-to-back in memory card
         else
         {
-            // keep moving on, one block at a time, until you find one JPEGs are stored back-to-back in memory card
-            if (jpgcpt > 0) // If already found JPEG
+            // If a JPEG was already found, keep writing the block into the output file
+            if (jpgcpt > 0)
             {
-                // store info in file
+                // Writing the 1rst block into the file
+                fwrite(*buffer, BLOCK_SIZE, 1, img);
             }
         }
     }
