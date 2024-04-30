@@ -49,6 +49,7 @@ bool load(const char *dictionary)
         // 1. Create space for a new hash table node
         node *new = malloc(sizeof(node));
         // 2. Copy the word into the new node
+        new ->
         // 3. Hash the word to obtain its hash value
         // 4. Insert the new node into the hash table (using the index specified by its hash value)
     }
