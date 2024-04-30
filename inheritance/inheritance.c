@@ -57,7 +57,7 @@ person *create_family(int generations)
     else
     {
         // TODO: Set parent pointers to NULL
-
+        newperson = 
         // TODO: Randomly assign alleles
     }
 
