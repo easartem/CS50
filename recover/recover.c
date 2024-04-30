@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+const int HEADER_SIZE = 44;
+
+
 int main(int argc, char *argv[])
 {
     if (argc != 2)
@@ -21,7 +24,7 @@ int main(int argc, char *argv[])
     FILE *f = fopen(argv[1], "r");
     // Repeat until the end of card:
     char block[512];
-    while (fread)
+    while (fread(*block, ))
     {
 
     }
