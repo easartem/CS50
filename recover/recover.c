@@ -12,6 +12,8 @@ int main(int argc, char *argv[])
     uint8_t buffer[BLOCK_SIZE];
     int jpgcpt = 0;
     char filename[8];
+    sprintf(filename, "%03i.jpg", jpgcpt); // filenames : ###.jpg starting from 000.jpg
+    FILE *img = fopen(filename, "w");
 
     if (argc != 2)
     {
@@ -36,10 +38,6 @@ int main(int argc, char *argv[])
             // If first JPEG
             if (jpgcpt == 0)
             {
-                // // Open a new jpeg file for writing
-                // filenames : ###.jpg starting from 000.jpg
-                sprintf(filename, "%03i.jpg", jpgcpt);
-                FILE *img = fopen(filename, "w");
                 // Writing the 1rst block into the file
                 fwrite(buffer, BLOCK_SIZE, 1, img);
                 // Increasing the counter
