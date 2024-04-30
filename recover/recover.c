@@ -6,7 +6,6 @@ const int HEADER_SIZE = 4;
 const int BLOCK_SIZE = 512;
 const int JPEG_NB = 50;
 
-
 int main(int argc, char *argv[])
 {
     uint8_t buffer[BLOCK_SIZE];
@@ -59,7 +58,8 @@ int main(int argc, char *argv[])
                 jpgcpt++;
             }
         }
-        // keep moving on, one block at a time, until you find one JPEGs are stored back-to-back in memory card
+        // keep moving on, one block at a time, until you find one JPEGs are stored back-to-back in
+        // memory card
         else
         {
             // If a JPEG was already found, keep writing the block into the output file
