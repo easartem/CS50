@@ -25,11 +25,17 @@ int main(int argc, char *argv[])
     FILE *f = fopen(argv[1], "r");
     // Repeat until the end of card:
     char buffer[BLOCK_SIZE];
+    // Read 512 bytes into a buffer
     while (fread(*buffer, BLOCK_SIZE, 1, f))
     {
-
+        // If start of new JPEG (each JPEG starts with a distinct header)
+        if (buffer[0] == 0xff)
+        buffer[0] == 0xff
+        buffer[1] == 0xd8
+        buffer[2] == 0xff
+        (buffer[3] & 0xf0) == 0xe0 + ? 16 different values
+            // If first JPEG
     }
-        // Read 512 bytes into a buffer
         // If start of new JPEG (each JPEG starts with a distinct header)
     first byte of every jpeg file is 0xff second is 0xd8 third 0xff
     the fourth one can vary (0xe0, 0xe1, 0xe2, ..., oxef) but always start with 0xe + some char
