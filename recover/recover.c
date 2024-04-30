@@ -37,7 +37,8 @@ int main(int argc, char *argv[])
             // filenames : ###.jpg starting from 000.jpg
             sprintf(filename, "%03i.jpg", jpgcpt);
             FILE *img = fopen(filename, 'w');
-            start filling that file with bytes from my memory card
+            fwrite(*buffer, BLOCK_SIZE, 1, img);
+            fclose(img);
             closing that file only once you encounter another signature
             // If first JPEG
                 // ...
