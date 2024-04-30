@@ -43,7 +43,7 @@ bool load(const char *dictionary)
         return false;
     }
     // Read each word in the file
-    while (fread())
+    while (fread(f, size, step, output))
     // Close the dictionary file
     fclose(f);
 
