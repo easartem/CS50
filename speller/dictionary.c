@@ -156,11 +156,7 @@ bool unload(void)
     {
         free_node(table[i]);
     }
-    // free last element
-    free(table);
     return true;
-
-
 }
 
 void free_node(node *block)
