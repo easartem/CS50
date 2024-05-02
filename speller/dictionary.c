@@ -8,13 +8,6 @@
 
 #include "dictionary.h"
 
-// Represents a node in a hash table
-typedef struct node
-{
-    char word[LENGTH + 1];
-    struct node *next;
-} node;
-
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
 
@@ -178,7 +171,7 @@ void free_node(node *block)
         }
         else if (block->next != NULL)
         {
-            free_node(index, block->next);
+            free_node(block->next);
         }
         else
         {

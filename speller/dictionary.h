@@ -8,6 +8,8 @@
 // Maximum length for a word
 // (e.g., pneumonoultramicroscopicsilicovolcanoconiosis)
 #define LENGTH 45
+
+// Represents a node in a hash table
 typedef struct node
 {
     char word[LENGTH + 1];
