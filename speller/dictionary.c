@@ -160,4 +160,17 @@ bool unload(void)
 {
     // TODO
     return false;
+
+    if (break condidition)
+    {
+
+    }
+    else if (condition for recursivity)
+    {
+        unload()
+    }
+    else
+    {
+        // free last element 
+    }
 }
