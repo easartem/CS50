@@ -112,16 +112,15 @@ void get_word(void)
         else if (isspace(c))
         {
             // Hash the word to obtain its hash value
-            unsigned int hv = hash(&c);
+            unsigned int hv = hash(new -> word[0]);
             // Insert the new node into the hash table (using the index specified by its hash value)
             table[hv] = new;
         }
         else // ponctuation
         {
-
+            printf("ponctuatioin");
         }
     }
-
 }
 
 
