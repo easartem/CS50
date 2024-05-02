@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "dictionary.h"
 
@@ -26,8 +27,20 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    // 1. Hash the word to obtain its hash value
+    int hv = hash(word);
+    // 2. Search the hash table at the location specified by the word’s hash value
+    while (table[hv]->next != NULL)
+    {
+        // 3. Check if the words are the same
+        if (strcasecmp(table[hv]->word, word)) // case-insensitive comparaison
+        {
+            return true;
+        }
+    }
     return false;
 }
+
 
 // Hashes word to a number
 unsigned int hash(const char *word)
