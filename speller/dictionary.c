@@ -85,9 +85,7 @@ void get_word(FILE *f)
 {
     // Read each word in the file
     char c;
-    // first word
-    int i = 0;
-    node *new = malloc(sizeof(node));
+    int i =0;
 
     while (fread(&c, sizeof(char), 1, f))
     {
@@ -95,7 +93,7 @@ void get_word(FILE *f)
         if (isalpha(c))
         {
             // if first letter
-            if (i == -1)
+            if (i < 1)
             {
                 // 1. Create space for a new hash table node
                 node *new = malloc(sizeof(node));
@@ -103,9 +101,9 @@ void get_word(FILE *f)
                 new -> word[0] = c;
                 new->next = NULL;
                 // 3. Increase the letter counter
-                i = 1;
+                i++;
             }
-            else if (i >= 0)
+            else if (i > 1)
             {
                 // keep copying the following letter of the word
                 new -> word[i] = c;
@@ -116,10 +114,10 @@ void get_word(FILE *f)
         else if (isspace(c))
         {
             // Hash the word to obtain its hash value
-            unsigned int hv = hash(new -> word[0]);
+            unsigned int hv = hash(&(new -> word[0]));
             // Insert the new node into the hash table (using the index specified by its hash value)
             table[hv]->next = new;
-            i = -1;
+            i = 0;
         }
         else // ponctuation
         {
