@@ -47,7 +47,7 @@ bool load(const char *dictionary)
 
     int letter = 65;
     // instantiate hash table size N=26 (A-Z)
-    for (int i = 0, i < N, i++)
+    for (int i = 0; i < N; i++)
     {
         table[i]->word[0] = (char) letter;
         table[i]->next = NULL;
@@ -66,7 +66,7 @@ bool load(const char *dictionary)
 
 void check_dict_init(void)
 {
-    for (int j = 0, j < N, j++)
+    for (int j = 0; j < N; j++)
     {
         printf("%c", table[j]->word[0]);
     }
