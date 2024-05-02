@@ -66,18 +66,20 @@ bool load(const char *dictionary)
 
 void get_word()
 {
-        // Read each word in the file
+    // instantiate hash table size N=26
+    for (i = 0, i < N, i++)
+    {
+        
+    }
+    // Read each word in the file
     char c;
     while (fread(&c, sizeof(char), 1, f))
     {
-        // if end of word
-        if (isspace(c))
-        {
 
-        }
         // if letter
-        else if (isalpha(c))
+        if (isalpha(c))
         {
+            // if first word create dictionnary nodes
             // 1. Create space for a new hash table node
             node *new = malloc(sizeof(node));
             // 2. Copy the word into the new node
@@ -86,6 +88,11 @@ void get_word()
             unsigned int hv = hash(&c);
             // 4. Insert the new node into the hash table (using the index specified by its hash value)
             table[hv] = new;
+        }
+        // if end of word
+        else if (isspace(c))
+        {
+
         }
         else // ponctuation
         {
