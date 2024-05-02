@@ -171,7 +171,7 @@ bool unload(void)
 
 }
 
-void free_node(int index)
+void free_node(int index, node *w)
 {
         if (table[i] == NULL)
         {
@@ -179,7 +179,7 @@ void free_node(int index)
         }
         else if (table[i]->next != NULL)
         {
-            free_node(index);
+            free_node(index, );
         }
         else
         {
