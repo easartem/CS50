@@ -83,13 +83,11 @@ void check_dict_init(void)
 
 void get_word(void)
 {
-
     // Read each word in the file
     char c;
     int i = 0;
     while (fread(&c, sizeof(char), 1, f))
     {
-
         // if letter
         if (isalpha(c))
         {
@@ -98,30 +96,25 @@ void get_word(void)
             {
                 // 1. Create space for a new hash table node
                 node *new = malloc(sizeof(node));
-                // 2. Copy first char in node
+                // 2. Copy the first char into the new node
                 new -> word[0] = c;
-                // 3. Increase the counter
+                // 3. Increase the letter counter
                 i++;
             }
             else if (i > 1)
             {
+                // keep copying the following letter of the word
                 new -> word[i] = c;
                 i++;
             }
-            // if first word create dictionnary nodes
-            // 1. Create space for a new hash table node
-            node *new = malloc(sizeof(node));
-            // 2. Copy the word into the new node
-            new -> word[0] = c;
-            // 3. Hash the word to obtain its hash value
-            unsigned int hv = hash(&c);
-            // 4. Insert the new node into the hash table (using the index specified by its hash value)
-            table[hv] = new;
         }
         // if end of word
         else if (isspace(c))
         {
-
+            // Hash the word to obtain its hash value
+            unsigned int hv = hash(&c);
+            // Insert the new node into the hash table (using the index specified by its hash value)
+            table[hv] = new;
         }
         else // ponctuation
         {
