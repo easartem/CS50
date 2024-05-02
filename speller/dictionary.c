@@ -44,19 +44,23 @@ bool load(const char *dictionary)
         printf("Could not open %s.\n", dictionary);
         return false;
     }
+    else
+    {
+        printf("Could open %s.\n", dictionary);
+    }
 
     int letter = 65;
     // instantiate hash table size N=26 (A-Z)
     for (int i = 0; i < N; i++)
     {
-        table[i]->word[0] = (char) letter;
+        table[i]->word[0] = letter;
         table[i]->next = NULL;
         letter++;
     }
 
     // Read each word in the file
     // get_word();
-    check_dict_init();
+    // check_dict_init();
 
     // Close the dictionary file
     fclose(f);
