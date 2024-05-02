@@ -86,6 +86,7 @@ void get_word(FILE *f)
     // Read each word in the file
     char c;
     int i =0;
+    node new;
 
     while (fread(&c, sizeof(char), 1, f))
     {
