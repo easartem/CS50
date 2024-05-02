@@ -161,20 +161,28 @@ bool unload(void)
     // TODO
     for (int i = 0; i < N; i++)
     {
-        table[i]->next
-        if (table[i]->next == NULL)
-        {
+        free_node(i);
+    }
+    // free base array
+    // free last element
+    free(table);
+    return true;
 
-        }
-        else if (condition for recursivity)
+
+}
+
+void free_node(int index)
+{
+        if (table[i] == NULL)
         {
-            unload()
+            return;
+        }
+        else if (table[i]->next != NULL)
+        {
+            free_node(index);
         }
         else
         {
-            // free last element
-            return true;
+            free(table[i]);
         }
-    }
-
 }
