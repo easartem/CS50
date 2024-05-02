@@ -128,7 +128,7 @@ void get_word(FILE *f)
             }
         }
         // if end of word
-        else if (isspace(c))
+        if (isspace(c))
         {
             // Hash the word to obtain its hash value
             unsigned int hv = hash(&(new->word[0]));
@@ -136,10 +136,6 @@ void get_word(FILE *f)
             table[hv]->next = new;
             i = 0;
             size_dict++;
-        }
-        else // ponctuation
-        {
-            printf("ponctuatioin");
         }
     }
 }
