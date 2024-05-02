@@ -81,7 +81,7 @@ void check_dict_init(void)
     return;
 }
 
-void get_word(void)
+void get_word(FILE *f)
 {
     // Read each word in the file
     char c;
