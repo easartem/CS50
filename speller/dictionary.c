@@ -49,8 +49,8 @@ bool load(const char *dictionary)
         printf("Could open %s.\n", dictionary);
     }
 
-    char letter = 65;
     // instantiate hash table size N=26 (A-Z)
+    char letter = 65;
     for (int i = 0; i < N; i++)
     {
         printf("%c  %d\n", letter, letter);
