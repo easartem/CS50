@@ -86,12 +86,28 @@ void get_word(void)
 
     // Read each word in the file
     char c;
+    int i = 0;
     while (fread(&c, sizeof(char), 1, f))
     {
 
         // if letter
         if (isalpha(c))
         {
+            // if first letter
+            if (i < 1)
+            {
+                // 1. Create space for a new hash table node
+                node *new = malloc(sizeof(node));
+                // 2. Copy first char in node
+                new -> word[0] = c;
+                // 3. Increase the counter
+                i++;
+            }
+            else if (i > 1)
+            {
+                new -> word[i] = c;
+                i++;
+            }
             // if first word create dictionnary nodes
             // 1. Create space for a new hash table node
             node *new = malloc(sizeof(node));
