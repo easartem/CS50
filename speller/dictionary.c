@@ -49,13 +49,15 @@ bool load(const char *dictionary)
         printf("Could open %s.\n", dictionary);
     }
 
-    int letter = 65;
+    char letter = 65;
     // instantiate hash table size N=26 (A-Z)
     for (int i = 0; i < N; i++)
     {
+        printf("%c  %d\n", letter, letter);
+        node *base = malloc(sizeof(node));
         table[i]->word[0] = letter;
         table[i]->next = NULL;
-        letter++;
+        letter = letter + 1;
     }
 
     // Read each word in the file
