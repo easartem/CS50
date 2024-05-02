@@ -69,7 +69,8 @@ void get_word()
     // instantiate hash table size N=26
     for (i = 0, i < N, i++)
     {
-        table[0]
+        table[i]->word[0] =
+        table[i]->next = NULL;
     }
     // Read each word in the file
     char c;
