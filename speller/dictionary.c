@@ -62,8 +62,8 @@ bool load(const char *dictionary)
     }
 
     // Read each word in the file
-    // get_word();
     check_dict_init();
+    get_word(f);
 
     // Close the dictionary file
     fclose(f);
@@ -98,6 +98,7 @@ void get_word(FILE *f)
                 node *new = malloc(sizeof(node));
                 // 2. Copy the first char into the new node
                 new -> word[0] = c;
+                new->next = NULL;
                 // 3. Increase the letter counter
                 i++;
             }
@@ -114,7 +115,7 @@ void get_word(FILE *f)
             // Hash the word to obtain its hash value
             unsigned int hv = hash(new -> word[0]);
             // Insert the new node into the hash table (using the index specified by its hash value)
-            table[hv] = new;
+            table[hv]->next = new;
         }
         else // ponctuation
         {
