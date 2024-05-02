@@ -63,7 +63,7 @@ bool load(const char *dictionary)
 
     // Read each word in the file
     // get_word();
-    // check_dict_init();
+    check_dict_init();
 
     // Close the dictionary file
     fclose(f);
@@ -77,6 +77,7 @@ void check_dict_init(void)
     {
         printf("%c", table[j]->word[0]);
     }
+    printf("\n");
     return;
 }
 
