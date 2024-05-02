@@ -17,6 +17,8 @@ typedef struct node
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
 
+int size_dict;
+
 // Hash table
 node *table[N];
 
@@ -87,6 +89,7 @@ void get_word(FILE *f)
     char c;
     int i =0;
     node *new;
+    size_dict = 0;
 
     while (fread(&c, sizeof(char), 1, f))
     {
@@ -119,6 +122,7 @@ void get_word(FILE *f)
             // Insert the new node into the hash table (using the index specified by its hash value)
             table[hv]->next = new;
             i = 0;
+            size_dict++;
         }
         else // ponctuation
         {
