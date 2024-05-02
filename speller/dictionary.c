@@ -66,15 +66,16 @@ bool load(const char *dictionary)
 
 void get_word()
 {
-    A + 65
+    // do not let this in get_word
     int letter = 65;
-    // instantiate hash table size N=26
+    // instantiate hash table size N=26 (A-Z)
     for (i = 0, i < N, i++)
     {
-        table[i]->word[0] = letter;
+        table[i]->word[0] = (char) letter;
         table[i]->next = NULL;
         letter++;
     }
+    
     // Read each word in the file
     char c;
     while (fread(&c, sizeof(char), 1, f))
