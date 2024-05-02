@@ -85,9 +85,10 @@ void get_word(FILE *f)
 {
     // Read each word in the file
     char c;
-    int i = 0;
     // first word
-    
+    int i = 1;
+    node *new = malloc(sizeof(node));
+
     while (fread(&c, sizeof(char), 1, f))
     {
         // if letter
@@ -118,6 +119,7 @@ void get_word(FILE *f)
             unsigned int hv = hash(new -> word[0]);
             // Insert the new node into the hash table (using the index specified by its hash value)
             table[hv]->next = new;
+            i = 0;
         }
         else // ponctuation
         {
