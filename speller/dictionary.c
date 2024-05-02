@@ -159,18 +159,22 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    return false;
+    for (int i = 0; i < N; i++)
+    {
+        table[i]->next
+        if (table[i]->next == NULL)
+        {
 
-    if (break condidition)
-    {
+        }
+        else if (condition for recursivity)
+        {
+            unload()
+        }
+        else
+        {
+            // free last element
+            return true;
+        }
+    }
 
-    }
-    else if (condition for recursivity)
-    {
-        unload()
-    }
-    else
-    {
-        // free last element 
-    }
 }
