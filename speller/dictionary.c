@@ -161,9 +161,8 @@ bool unload(void)
     // TODO
     for (int i = 0; i < N; i++)
     {
-        free_node(i);
+        free_node(table[i]);
     }
-    // free base array
     // free last element
     free(table);
     return true;
@@ -171,18 +170,18 @@ bool unload(void)
 
 }
 
-void free_node(int index, node *w)
+void free_node(node *block)
 {
-        if (table[i] == NULL)
+        if (block == NULL)
         {
             return;
         }
-        else if (table[i]->next != NULL)
+        else if (block->next != NULL)
         {
-            free_node(index, );
+            free_node(index, block->next);
         }
         else
         {
-            free(table[i]);
+            free(block);
         }
 }
