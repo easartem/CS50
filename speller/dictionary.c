@@ -5,11 +5,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <strings.h>
+#include <string.h>
+
 
 #include "dictionary.h"
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 26;
+// const unsigned int N = 26;
+const unsigned int N = 130;
+
 
 int size_dict;
 
@@ -41,7 +45,9 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return toupper(word[0]) - 'A';
+    unsigned int index = toupper(word[0]) - 'A';
+    index = index + strlen(word) % 5;
+    return index;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
