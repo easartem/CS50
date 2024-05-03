@@ -61,11 +61,14 @@ bool load(const char *dictionary)
     char letter = 65;
     for (int i = 0; i < N; i++)
     {
-        printf("%c  %d\n", letter, letter);
-        node *base = malloc(sizeof(node));
-        base->word[0] = letter;
-        base->next = NULL;
-        table[i] = base;
+        // printf("%c  %d\n", letter, letter);
+        // node *base = malloc(sizeof(node));
+        // base->word[0] = letter;
+        // base->next = NULL;
+        // table[i] = base;
+        // letter = letter + 1;
+        table[i]->word[0] = letter;
+        table[i]->next = NULL;
         letter = letter + 1;
     }
 
