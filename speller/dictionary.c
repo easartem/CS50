@@ -46,6 +46,10 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     unsigned int index = toupper(word[0]) - 'A';
+    if (index > 0)
+    {
+        index = index + 5;
+    }
     index = index + strlen(word) % 5;
     return index;
 }
