@@ -121,7 +121,8 @@ void get_word(FILE *f)
             }
             else
             {
-                table[hv]->next = new;
+                new->next = table[hv];
+                table[hv] = new;
             }
             i = 0;
             size_dict++;
