@@ -58,15 +58,19 @@ bool load(const char *dictionary)
     }
 
     // instantiate hash table size N=26 (A-Z)
-    char letter = 65;
+    // char letter = 65;
+    // for (int i = 0; i < N; i++)
+    // {
+    //     printf("%c  %d\n", letter, letter);
+    //     node *base = malloc(sizeof(node));
+    //     base->word[0] = letter;
+    //     base->next = NULL;
+    //     table[i] = base;
+    //     letter = letter + 1;
+    // }
     for (int i = 0; i < N; i++)
     {
-        printf("%c  %d\n", letter, letter);
-        node *base = malloc(sizeof(node));
-        base->word[0] = letter;
-        base->next = NULL;
-        table[i] = base;
-        letter = letter + 1;
+        table[i] = NULL;
     }
 
     // Read each word in the file
