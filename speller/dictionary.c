@@ -90,6 +90,11 @@ void get_word(FILE *f)
             {
                 // 1. Create space for a new hash table node
                 new = malloc(sizeof(node));
+                if (new == NULL)
+                {
+                    printf("Allocation error of node during loading\n");
+                    return;
+                }
                 // 2. Copy the first char into the new node
                 new -> word[0] = c;
                 new->next = NULL;
