@@ -85,7 +85,8 @@ void get_word(FILE *f)
     while (fread(&c, sizeof(char), 1, f))
     {
         // if letter
-        if (isalpha(c))
+        if (isalpha(c) | c == '\'')
+
         {
             // if first letter
             if (i < 1)
