@@ -115,7 +115,14 @@ void get_word(FILE *f)
             // Hash the word to obtain its hash value
             unsigned int hv = hash(&(new->word[0]));
             // Insert the new node into the hash table (using the index specified by its hash value)
-            table[hv]->next = new;
+            if (table[hv] == NULL)
+            {
+                table[hv] = new;
+            }
+            else
+            {
+                table[hv]->next = new;
+            }
             i = 0;
             size_dict++;
         }
