@@ -17763,8 +17763,8 @@ WORDS MISSPELLED:     17756
 WORDS IN DICTIONARY:  143091
 WORDS IN TEXT:        17756
 TIME IN load:         0.04
-TIME IN check:        0.99
+TIME IN check:        0.88
 TIME IN size:         0.00
 TIME IN unload:       0.00
-TIME IN TOTAL:        1.03
+TIME IN TOTAL:        0.92
 
