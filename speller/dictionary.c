@@ -23,13 +23,15 @@ bool check(const char *word)
     // 1. Hash the word to obtain its hash value
     int hv = hash(word);
     // 2. Search the hash table at the location specified by the word’s hash value
-    while (table[hv]->next != NULL)
+    node *cursor = table[hv];
+    while (cursor != NULL)
     {
         // 3. Check if the words are the same
-        if (strcasecmp(table[hv]->word, word)) // case-insensitive comparaison
+        if (strcasecmp(table[hv]->word, word) == 0) // case-insensitive comparaison
         {
             return true;
         }
+        cursor = cursor->next;
     }
     return false;
 }
