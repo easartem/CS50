@@ -27,7 +27,7 @@ bool check(const char *word)
     while (cursor != NULL)
     {
         // 3. Check if the words are the same
-        if (strcasecmp(table[hv]->word, word) == 0) // case-insensitive comparaison
+        if (strcasecmp(cursor->word, word) == 0) // case-insensitive comparaison
         {
             return true;
         }
