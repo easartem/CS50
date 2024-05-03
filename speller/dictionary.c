@@ -85,7 +85,7 @@ void get_word(FILE *f)
     while (fread(&c, sizeof(char), 1, f))
     {
         // if letter
-        if (isalpha(c) | c == '\'')
+        if ((isalpha(c)) | (c == 39))
 
         {
             // if first letter
