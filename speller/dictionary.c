@@ -101,7 +101,7 @@ void get_word(FILE *f)
                 // 3. Increase the letter counter
                 i++;
             }
-            else if (i > 1)
+            else if (i >= 1)
             {
                 // keep copying the following letter of the word
                 new -> word[i] = c;
