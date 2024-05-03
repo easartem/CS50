@@ -40,6 +40,11 @@ bool check(const char *word)
     return false;
 }
 
+// Print the length of each block of the dict
+void size_block(void)
+{
+    
+}
 
 // Hashes word to a number
 unsigned int hash(const char *word)
