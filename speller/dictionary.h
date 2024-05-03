@@ -24,6 +24,7 @@ unsigned int size(void);
 bool unload(void);
 void get_word(FILE *f);
 void free_node(struct node *block);
+void size_block(void);
 
 
 #endif // DICTIONARY_H

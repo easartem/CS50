@@ -45,7 +45,14 @@ void size_block(void)
 {
     for (int i = 0; i < N; i++)
     {
-        table[i]
+        int cpt = 0;
+        node *cursor = table[i];
+        while (cursor != NULL)
+        {
+            cpt++;
+            cursor = cursor->next;
+        }
+        printf("index : %i, size : %i\n", i, cpt);
     }
 }
 
