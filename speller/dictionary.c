@@ -111,6 +111,7 @@ void get_word(FILE *f)
         // if end of word
         if (isspace(c))
         {
+            new->word[i] = '\0';
             // Hash the word to obtain its hash value
             unsigned int hv = hash(&(new->word[0]));
             // Insert the new node into the hash table (using the index specified by its hash value)
