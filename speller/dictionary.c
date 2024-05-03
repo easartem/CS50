@@ -12,7 +12,7 @@
 
 // TODO: Choose number of buckets in hash table
 // const unsigned int N = 26;
-const unsigned int N = 130;
+const unsigned int N = 52;
 
 
 int size_dict;
@@ -43,7 +43,10 @@ bool check(const char *word)
 // Print the length of each block of the dict
 void size_block(void)
 {
-    
+    for (int i = 0; i < N; i++)
+    {
+        table[i]
+    }
 }
 
 // Hashes word to a number
