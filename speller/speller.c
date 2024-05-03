@@ -46,7 +46,8 @@ int main(int argc, char *argv[])
         printf("Could not load %s.\n", dictionary);
         return 1;
     }
-    
+    size_block();
+    return 400;
 
     // Calculate time to load dictionary
     time_load = calculate(&before, &after);
