@@ -57,24 +57,12 @@ bool load(const char *dictionary)
         printf("Could open %s.\n", dictionary);
     }
 
-    // instantiate hash table size N=26 (A-Z)
-    // char letter = 65;
-    // for (int i = 0; i < N; i++)
-    // {
-    //     printf("%c  %d\n", letter, letter);
-    //     node *base = malloc(sizeof(node));
-    //     base->word[0] = letter;
-    //     base->next = NULL;
-    //     table[i] = base;
-    //     letter = letter + 1;
-    // }
     for (int i = 0; i < N; i++)
     {
         table[i] = NULL;
     }
 
     // Read each word in the file
-    check_dict_init();
     get_word(f);
 
     // Close the dictionary file
@@ -83,15 +71,6 @@ bool load(const char *dictionary)
     return true;
 }
 
-void check_dict_init(void)
-{
-    for (int j = 0; j < N; j++)
-    {
-        printf("%c", table[j]->word[0]);
-    }
-    printf("\n");
-    return;
-}
 
 void get_word(FILE *f)
 {
