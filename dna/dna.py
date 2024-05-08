@@ -7,7 +7,9 @@ def main():
     # TODO: Check for command-line usage
     n = len(sys.argv)
     print("Total arguments passed:", n)
-
+    if (n != 3):
+        print("Error, wrong command line argument number")
+        sys.exit(1)
 
     # TODO: Read database file into a variable
     rows = []
@@ -40,14 +42,6 @@ def main():
 
     return
 
-def check_argument():
-    while True:
-        try:
-            n = len(sys.argv) # if != 3
-            return 0
-        except:
-            print("Error, wrong command line argument number")
-            sys.exit(1)
 
 
 def longest_match(sequence, subsequence):
