@@ -2,18 +2,16 @@
 #include <cs50.h>
 #include <ctype.h>
 #include <stdbool.h>
-#include <stdlib.h>
 #include <stdio.h>
-#include <strings.h>
+#include <stdlib.h>
 #include <string.h>
-
+#include <strings.h>
 
 #include "dictionary.h"
 
 // TODO: Choose number of buckets in hash table
 // const unsigned int N = 26;
 const unsigned int N = 52;
-
 
 int size_dict;
 
@@ -98,12 +96,11 @@ bool load(const char *dictionary)
     return true;
 }
 
-
 void get_word(FILE *f)
 {
     // Read each word in the file
     char c;
-    int i =0;
+    int i = 0;
     node *new;
     size_dict = 0;
 
@@ -124,7 +121,7 @@ void get_word(FILE *f)
                     return;
                 }
                 // 2. Copy the first char into the new node
-                new -> word[0] = c;
+                new->word[0] = c;
                 new->next = NULL;
                 // 3. Increase the letter counter
                 i++;
@@ -132,7 +129,7 @@ void get_word(FILE *f)
             else if (i >= 1)
             {
                 // keep copying the following letter of the word
-                new -> word[i] = c;
+                new->word[i] = c;
                 i++;
             }
         }
@@ -157,7 +154,6 @@ void get_word(FILE *f)
         }
     }
 }
-
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
@@ -186,13 +182,13 @@ bool unload(void)
 
 void free_node(node *block)
 {
-        if (block == NULL)
-        {
-            return;
-        }
-        else
-        {
-            free_node(block->next);
-            free(block);
-        }
+    if (block == NULL)
+    {
+        return;
+    }
+    else
+    {
+        free_node(block->next);
+        free(block);
+    }
 }
