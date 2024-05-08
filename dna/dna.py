@@ -43,9 +43,9 @@ def main():
     i, match_found = 0, 0;
     while ((match_found == 0) & (i < len(rows)-1)):
         for j in range(len(STRs)):
-            key_str = j
+            key_str = STRs[j]
             nb_str = rows[i][STRs[j]]
-            print("STR : ", key_str, " nb : ", nb_str)
+            print("Name : ", rows[i]["name"], "(", key_str, ",", nb_str, ")")
             if (nb_str == str_match[j]):
                 match_found = 1
 
