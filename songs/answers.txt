@@ -1,0 +1,2 @@
+first I checked that it corresponds to 100 songs with the following query :
+SELECT COUNT(*) FROM songs;
