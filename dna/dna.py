@@ -49,6 +49,9 @@ def main():
             print("STR : ", key_str, " nb : ", nb_str)
             if (nb_str == str_match[j]):
                 match_found = 1
+
+            
+
         i+=1
 
     return
