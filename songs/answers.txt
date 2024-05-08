@@ -11,7 +11,9 @@ we assigned a weight percentage to the two audio “moods” that best represent
 and the final product is a swirling gradient of color.
 
 the strongest value on average is the danceability, then the energy adn finally the valence.
-Thus the first mood that best represent this person must be orange or
+Thus the first mood that best represent this person must be purple or
+The second mood could be many different things as we do not look at diverse information.
+It could be pink
 
 definitely not green, yellow
 
