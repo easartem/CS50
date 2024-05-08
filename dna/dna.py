@@ -14,8 +14,10 @@ def main():
     # TODO: Read database file into a variable
     rows = []
     header = None
-    # database_path = "databases/" + str(name_db)
-    with open("databases/small.csv", 'r') as file:
+    name_db = sys.argv[1]
+    print(name_db)
+    database_path = "databases/" + str(name_db)
+    with open(database_path, 'r') as file:
         reader = csv.DictReader(file)
         header = reader.fieldnames
         for row in reader:
@@ -32,6 +34,8 @@ def main():
     str_match = []
     for str in STRs:
         str_match.append(longest_match(seq, str))
+    print(STRs)
+    print(str_match)
 
     # TODO: Check database for matching profiles
     i, match_found = 0, 0
@@ -40,7 +44,7 @@ def main():
         for j in range(len(STRs)):
             person_str = STRs[j]
             person_cpt = rows[i][STRs[j]]
-            # print("Name : ", rows[i]["name"], "(", person_str, ",", person_cpt, ")")
+            print("Name : ", rows[i]["name"], "(", person_str, ",", person_cpt, ")")
             if (int(person_cpt) == int(str_match[j])):
                 match_name = rows[i]["name"]
                 match_found += 1
