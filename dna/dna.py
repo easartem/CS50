@@ -47,7 +47,7 @@ def check_argument():
             return 0
         except:
             print("Error, wrong command line argument number")
-            return 1
+            sys.exit(1)
 
 
 def longest_match(sequence, subsequence):
