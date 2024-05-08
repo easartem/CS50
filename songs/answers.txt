@@ -1,7 +1,7 @@
 QUESTION 1 : If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
 
 Long answer short, I would characterize their aura as primary purple with a second mood of orange. The listener likes to dance
-to energizing songs. 
+to energizing songs.
 To get to this result, I first checked that the file indeed got 100 songs with the following query :
       SELECT COUNT(*) FROM songs;
 Then I queried the average of the energy, valence and danceability. (Valence seems to represent the positiveness of a song.)
@@ -15,8 +15,10 @@ It could be orange since the second highest value is the energy.
 
 
 
-QUESTION 2 : Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+QUESTION 2 : Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener.
+What better ways of calculating this aura would you propose?
 
+We are basing our assumptions on very few data, only three average values. To determine the aura Spotify might want to look at more factors such as tempo, key, loudness or spee
 furthermore the use of spotify made by the user may make the choice vary. For example, one can use it exclusively for partying or driving.
 also the average is not very representative
 the preference of a person can change depending on their mood and what they are going through in life.
