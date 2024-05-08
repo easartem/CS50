@@ -42,10 +42,10 @@ def main():
 
 def check_argument():
     while True:
-        Try:
+        try:
             n = len(sys.argv) # if != 3
             return 0
-        except xx:
+        except:
             print("Error, wrong command line argument number")
             return 1
 
