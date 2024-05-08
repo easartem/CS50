@@ -1,2 +1,7 @@
 first I checked that it corresponds to 100 songs with the following query :
 SELECT COUNT(*) FROM songs;
+
+After checking, valence represents the positiveness of a song.
+
+SELECT AVG(energy), AVG(valence), AVG(danceability) FROM songs;
+       0.65906      0.484443      0.71646
