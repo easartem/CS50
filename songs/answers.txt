@@ -9,3 +9,6 @@ SELECT AVG(energy), AVG(valence), AVG(danceability) FROM songs;
  six mood descriptor categories (including “happy,” “calm,” and “hopeful,”)
 we assigned a weight percentage to the two audio “moods” that best represent your listening,
 and the final product is a swirling gradient of color.
+
+the strongest value on average is the danceability, then the energy adn finally the valence.
+Thus the first mood that best represent this person must be 
