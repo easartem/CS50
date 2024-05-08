@@ -12,13 +12,18 @@
 
 -- start from the crime scene report with the initial information (date and street)
 SELECT * FROM crime_scene_reports WHERE year = '2023' AND month = '7' AND day = '28' AND street = 'Humphrey Street';
--- new information unlocked ! hour of crime 10:15am at the bakery + existence if three interviews by witnesses
+-- New information unlocked ! hour of crime 10:15am at the bakery + existence if three interviews by witnesses
 
 -- let's go look at the transcript from the witnesses in the interviews table
 .schema interviews
 -- interviews(id, name, year, month, day, transcript)
 -- There is 7 interviews but we are only interested by 3
 SELECT COUNT(*) FROM interviews WHERE year = '2023' AND month = '7' AND day = '28';
-
+-- Let's read them to find the 3 we want (Ruth, Eugene and Raymond)
 SELECT name, transcript FROM interviews WHERE year = '2023' AND month = '7' AND day = '28';
+-- New information unlocked !
+-------- Ruth : check the security footage of the bakery parking lot. The thief left by car within 10 min after crime began (10:15am -> 10:25am)
+-------- Eugene : check the atm transactions ot the morning of crime. The thief withdrawed money at the ATM of Leggett Street in the morning.
+-------- Raymond : check the phone_calls, flights and bank_accounts. The thief called someone less than 1 min between 10:15am and 10:25am.
+-------- Raymond : check the flights and bank_accounts. He asked his collaborator to book him the earliest flight out of town tomorrow (29 july 2023)
 
