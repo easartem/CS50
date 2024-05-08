@@ -42,7 +42,13 @@ def main():
     # TODO: Check database for matching profiles
     i, match_found = 0, 0;
     while (match_found == 0):
-        rows[i].key
+        for j in range(len(STRs)):
+            print("j is : ", j)
+            key_str = j
+            nb_str = rows[i][STRs[j]]
+            print("STR : ", key_str, " nb : ", nb_str)
+            if (nb_str == str_match[j]):
+                match_found = 1
         i+=1
 
     return
