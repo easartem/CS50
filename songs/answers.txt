@@ -1,7 +1,6 @@
 QUESTION 1 : If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
 
-Long answer short, I would characterize their aura as primary purple with a second mood of orange. The listener likes to dance
-to energizing songs.
+Long answer short, I would characterize their aura as primary purple with a second mood of orange. The listener likes to dance to energizing songs.
 To get to this result, I first checked that the file indeed got 100 songs with the following query :
       SELECT COUNT(*) FROM songs;
 Then I queried the average of the energy, valence and danceability. (Valence seems to represent the positiveness of a song.)
@@ -19,7 +18,8 @@ QUESTION 2 : Hypothesize about why the way you’ve calculated this aura might n
 What better ways of calculating this aura would you propose?
 
 We are basing our assumptions on very few data, only three average values. To determine the aura Spotify might want to look at more factors such as tempo, key, loudness or speechiness.
-We could imagine that each variable is heavily associated to the color of an aura. For example, 
-furthermore the use of spotify made by the user may make the choice vary. For example, one can use it exclusively for partying or driving.
-also the average is not very representative
-the preference of a person can change depending on their mood and what they are going through in life.
+We could imagine that each variable is heavily associated to the color of an aura. For example, danceability with purple or valence with pink.
+A better way to calculate the result would be to use more data.
+Furthermore, the aggregating method of data used, average, might not be the best choice. We can imagine that the use of spotify by a person can change depending on their mood and what they are going through in life.
+For example, a person could listen to the same artist in loop for a month when depressed and it would affect the average.
+We should incorpore more data such as the median, the effective lime listened and time of the day to make a better decision.
