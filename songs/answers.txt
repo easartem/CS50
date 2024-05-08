@@ -18,7 +18,8 @@ It could be orange since the second highest value is the energy.
 QUESTION 2 : Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener.
 What better ways of calculating this aura would you propose?
 
-We are basing our assumptions on very few data, only three average values. To determine the aura Spotify might want to look at more factors such as tempo, key, loudness or spee
+We are basing our assumptions on very few data, only three average values. To determine the aura Spotify might want to look at more factors such as tempo, key, loudness or speechiness.
+We could imagine that each variable is heavily associated to the color of an aura. For example, 
 furthermore the use of spotify made by the user may make the choice vary. For example, one can use it exclusively for partying or driving.
 also the average is not very representative
 the preference of a person can change depending on their mood and what they are going through in life.
