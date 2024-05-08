@@ -7,17 +7,15 @@ Then I queried the average of the energy, valence and danceability. (Valence see
       SELECT AVG(energy), AVG(valence), AVG(danceability) FROM songs;
 The results are 0.65906 energy, 0.484443 valence and 0.71646 danceability.
 Thus the highest value is the danceability, then the energy and finally the valence.
-As per the documentation of spotify aura, there is six mood descriptor corresponding to 
- six mood descriptor categories (including “happy,” “calm,” and “hopeful,”)
-we assigned a weight percentage to the two audio “moods” that best represent your listening,
-and the final product is a swirling gradient of color.
-
-Thus the first mood that best represent this person must be purple or
+As per the documentation of spotify aura, there is six mood descriptor corresponding to six colors.
+The mood that seems to best represent the listener might be the purple aura. Purple seems to be highly associated to danceability.
 The second mood could be many different things as we do not look at diverse information.
 It could be pink
+
+
+
+QUESTION 2 : Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
 
 furthermore the use of spotify made by the user may make the choice vary. For example, one can use it exclusively for partying or driving.
 also the average is not very representative
 the preference of a person can change depending on their mood and what they are going through in life.
-
-QUESTION 2 : Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
