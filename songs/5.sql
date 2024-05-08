@@ -1,1 +1,1 @@
-SELECT (AVG(energy
+SELECT AVG(energy) FROM songs;
