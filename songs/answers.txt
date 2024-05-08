@@ -5,3 +5,7 @@ After checking, valence represents the positiveness of a song.
 
 SELECT AVG(energy), AVG(valence), AVG(danceability) FROM songs;
        0.65906      0.484443      0.71646
+
+ six mood descriptor categories (including “happy,” “calm,” and “hopeful,”)
+we assigned a weight percentage to the two audio “moods” that best represent your listening,
+and the final product is a swirling gradient of color.
