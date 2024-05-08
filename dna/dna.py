@@ -6,7 +6,7 @@ def main():
 
     # TODO: Check for command-line usage
     n = len(sys.argv)
-    print("Total arguments passed:", n)
+    # print("Total arguments passed:", n)
     if (n != 3):
         print("Error, wrong command line argument number")
         sys.exit(1)
@@ -46,14 +46,13 @@ def main():
                 match_found += 1
             else:
                 match_found = 0
-        i+=1
-    if(match_found == len(STRs)):
+        i += 1
+    if (match_found == len(STRs)):
         print(match_name)
     else:
         print("No match")
 
     return
-
 
 
 def longest_match(sequence, subsequence):
