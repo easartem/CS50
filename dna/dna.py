@@ -41,7 +41,7 @@ def main():
 
     # TODO: Check database for matching profiles
     i, match_found = 0, 0;
-    while (match_found == 0):
+    while ((match_found == 0) & (i < len(rows)-1)):
         for j in range(len(STRs)):
             print("j is : ", j)
             key_str = j
