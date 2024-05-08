@@ -1,3 +1,7 @@
+QUESTION 1 : If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+
+
+
 first I checked that it corresponds to 100 songs with the following query :
 SELECT COUNT(*) FROM songs;
 
@@ -17,4 +21,6 @@ It could be pink
 
 furthermore the use of spotify made by the user may make the choice vary. For example, one can use it exclusively for partying or driving.
 also the average is not very representative
-the preference of a person can change depending on their mood and what they are going through in life.   
+the preference of a person can change depending on their mood and what they are going through in life.
+
+QUESTION 2 : Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
