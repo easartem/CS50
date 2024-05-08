@@ -42,7 +42,7 @@ def main():
     # TODO: Check database for matching profiles
     i, match_found = 0, 0;
     while (match_found == 0):
-        rows[i]
+        rows[i].key
         i+=1
 
     return
