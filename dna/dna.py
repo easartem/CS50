@@ -23,6 +23,7 @@ def main():
     print(rows[0])
     print(rows[1])
     print(rows[2])
+    
     # TODO: Read DNA sequence file into a variable
     seq = []
     # sequence_path = "sequences/" + str(name_seq)
