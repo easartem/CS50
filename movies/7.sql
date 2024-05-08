@@ -1,2 +1,1 @@
-SELECT AVG(rating) FROM ratings WHERE movie_id IN
-SELECT title FROM movies WHERE year = '2010';
+SELECT title, rating FROM movies ORDER BY title ASC JOIN ratings ON movies.id = ratings.movie_id WHERE year = '2010' ORDER BY rating DESC;
