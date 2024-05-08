@@ -1,20 +1,17 @@
 QUESTION 1 : If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
 
-
-
-first I checked that it corresponds to 100 songs with the following query :
-SELECT COUNT(*) FROM songs;
-
-After checking, valence represents the positiveness of a song.
-
-SELECT AVG(energy), AVG(valence), AVG(danceability) FROM songs;
-       0.65906      0.484443      0.71646
-
+Long answer short, I would characterize their aura as primary purple with a second mood of pink.
+To get to this result, I first checked that the file indeed got 100 songs with the following query :
+      SELECT COUNT(*) FROM songs;
+Then I queried the average of the energy, valence and danceability. (Valence seems to represent the positiveness of a song.)
+      SELECT AVG(energy), AVG(valence), AVG(danceability) FROM songs;
+The results are 0.65906 energy, 0.484443 valence and 0.71646 danceability.
+Thus the highest value is the danceability, then the energy and finally the valence.
+As per the documentation of spotify aura, there is six mood descriptor corresponding to 
  six mood descriptor categories (including “happy,” “calm,” and “hopeful,”)
 we assigned a weight percentage to the two audio “moods” that best represent your listening,
 and the final product is a swirling gradient of color.
 
-the strongest value on average is the danceability, then the energy adn finally the valence.
 Thus the first mood that best represent this person must be purple or
 The second mood could be many different things as we do not look at diverse information.
 It could be pink
