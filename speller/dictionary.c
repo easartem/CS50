@@ -190,12 +190,9 @@ void free_node(node *block)
         {
             return;
         }
-        else if (block->next != NULL)
-        {
-            free_node(block->next);
-        }
         else
         {
+            free_node(block->next);
             free(block);
         }
 }
