@@ -20,24 +20,18 @@ def main():
         header = reader.fieldnames
         for row in reader:
             rows.append(row)
-    print(rows[0])
-    print(rows[1])
-    print(rows[2])
 
     # TODO: Read DNA sequence file into a variable
     seq = []
     # sequence_path = "sequences/" + str(name_seq)
     with open("sequences/1.txt", 'r') as file:
         seq = file.read()
-    print(seq)
 
     # TODO: Find longest match of each STR in DNA sequence
     STRs = header[1:]
     str_match = []
     for str in STRs:
         str_match.append(longest_match(seq, str))
-    print(STRs)
-    print(str_match)
 
     # TODO: Check database for matching profiles
     i, match_found = 0, 0
@@ -46,15 +40,13 @@ def main():
         for j in range(len(STRs)):
             person_str = STRs[j]
             person_cpt = rows[i][STRs[j]]
-            print("Name : ", rows[i]["name"], "(", person_str, ",", person_cpt, ")")
-            if (person_cpt == str_match[j]):
+            # print("Name : ", rows[i]["name"], "(", person_str, ",", person_cpt, ")")
+            if (int(person_cpt) == int(str_match[j])):
                 match_name = rows[i]["name"]
                 match_found += 1
             else:
                 match_found = 0
         i+=1
-    print(match_found)
-    print(len(STRs))
     if(match_found == len(STRs)):
         print(match_name)
     else:
