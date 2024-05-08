@@ -40,17 +40,20 @@ def main():
     print(str_match)
 
     # TODO: Check database for matching profiles
-    i, match_found = 0, 0;
-    while ((match_found == 0) & (i < len(rows)-1)):
+    i, match_found = 0, 0
+    match_name = ""
+    while ((match_found != len(STRs)) & (i < len(rows)-1)):
         for j in range(len(STRs)):
-            key_str = STRs[j]
-            nb_str = rows[i][STRs[j]]
-            print("Name : ", rows[i]["name"], "(", key_str, ",", nb_str, ")")
-            if (nb_str == str_match[j]):
-                match_found = 1
-
-
+            person_str = STRs[j]
+            person_cpt = rows[i][STRs[j]]
+            print("Name : ", rows[i]["name"], "(", person_str, ",", person_cpt, ")")
+            if (person_cpt == str_match[j]):
+                match_found += 1
+            else:
+                match_found = 0
         i+=1
+    if():
+        print(match_name)
 
     return
 
