@@ -23,7 +23,7 @@ def main():
     print(rows[0])
     print(rows[1])
     print(rows[2])
-    
+
     # TODO: Read DNA sequence file into a variable
     seq = []
     # sequence_path = "sequences/" + str(name_seq)
@@ -40,6 +40,10 @@ def main():
     print(str_match)
 
     # TODO: Check database for matching profiles
+    i, match_found = 0, 0;
+    while (match_found == 0):
+        rows[i]
+        i+=1
 
     return
 
