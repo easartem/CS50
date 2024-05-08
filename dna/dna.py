@@ -48,12 +48,17 @@ def main():
             person_cpt = rows[i][STRs[j]]
             print("Name : ", rows[i]["name"], "(", person_str, ",", person_cpt, ")")
             if (person_cpt == str_match[j]):
+                match_name = rows[i]["name"]
                 match_found += 1
             else:
                 match_found = 0
         i+=1
-    if():
+    print(match_found)
+    print(len(STRs))
+    if(match_found == len(STRs)):
         print(match_name)
+    else:
+        print("No match")
 
     return
 
