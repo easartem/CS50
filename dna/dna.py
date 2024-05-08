@@ -14,9 +14,7 @@ def main():
     # TODO: Read database file into a variable
     rows = []
     header = None
-    name_db = sys.argv[1]
-    print(name_db)
-    database_path = "databases/" + str(name_db)
+    database_path = sys.argv[1]
     with open(database_path, 'r') as file:
         reader = csv.DictReader(file)
         header = reader.fieldnames
@@ -25,8 +23,8 @@ def main():
 
     # TODO: Read DNA sequence file into a variable
     seq = []
-    # sequence_path = "sequences/" + str(name_seq)
-    with open("sequences/1.txt", 'r') as file:
+    sequence_path = sys.argv[2]
+    with open(sequence_path, 'r') as file:
         seq = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
@@ -34,8 +32,6 @@ def main():
     str_match = []
     for str in STRs:
         str_match.append(longest_match(seq, str))
-    print(STRs)
-    print(str_match)
 
     # TODO: Check database for matching profiles
     i, match_found = 0, 0
@@ -44,7 +40,7 @@ def main():
         for j in range(len(STRs)):
             person_str = STRs[j]
             person_cpt = rows[i][STRs[j]]
-            print("Name : ", rows[i]["name"], "(", person_str, ",", person_cpt, ")")
+            # print("Name : ", rows[i]["name"], "(", person_str, ",", person_cpt, ")")
             if (int(person_cpt) == int(str_match[j])):
                 match_name = rows[i]["name"]
                 match_found += 1
