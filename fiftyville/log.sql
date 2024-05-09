@@ -143,11 +143,17 @@ SELECT name FROM people WHERE license_plate IN
 -- 8 people : Vanessa, Barry, Iman, Sofia, Luca, Diana, Kelsey, Bruce
 
 -- Eugene lead
+SELECT name FROM people WHERE id IN
+    (SELECT person_id FROM bank_accounts WHERE account_number IN
+        (SELECT account_number FROM atm_transactions WHERE year = '2023' AND month = '7' AND day = '28' AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw'));
+-- 8 people : Kenny, Iman, Benista, Taylor, Brooke, Luca, Diana, Bruce
+
+-- Raymond lead 1
 SELECT name FROM people WHERE phone_number IN
     (SELECT caller FROM phone_calls WHERE year = '2023' AND month = '7' AND day = '28' AND duration <= '60');
 -- 10 people : Kenny, Sofia, Benista, Taylor, Diana, Kelsey, Kathryn, Bruce, Carina
 
--- Raymond lead
+-- Raymond lead 2
 SELECT name FROM people WHERE passport_number IN
     (SELECT passport_number FROM passengers WHERE flight_id = '36');
 -- 8 people : Kenny, Sofia, Taylor, Luca, Kelsey, Edward, Bruce, Doris
@@ -155,7 +161,7 @@ SELECT name FROM people WHERE passport_number IN
 
 ---------------------------------------------CROSSING THE DATA : FIND THE CULPRIT------------------------------------------------------------
 
-
+-- We can intersect all the recap 
 SELECT * FROM people WHERE phone_number IN
     (SELECT caller FROM phone_calls WHERE year = '2023' AND month = '7' AND day = '28' AND duration <= '60')
 INTERSECT
@@ -168,6 +174,8 @@ INTERSECT
 SELECT * FROM people WHERE id IN
     (SELECT person_id FROM bank_accounts WHERE account_number IN
         (SELECT account_number FROM atm_transactions WHERE year = '2023' AND month = '7' AND day = '28' AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw'));
+
+
 
 
 SELECT * FROM people WHERE id IN
