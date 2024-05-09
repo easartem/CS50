@@ -62,26 +62,39 @@ SELECT COUNT(*)
  WHERE year = '2023' AND month = '7' AND day = '28' AND hour = '10'
    AND (minute >= 15 AND minute <= 25);
 
+
 -- 8 people left during that timeframe, later we can cross the 8 license pates given by this query with the table people to get the 8 suspect's name.
 SELECT activity, license_plate
   FROM bakery_security_logs
  WHERE year = '2023' AND month = '7' AND day = '28' AND hour = '10'
    AND (minute >= 15 AND minute <= 25);
 
+
 -- New information unlocked !
     -- There is 8 suspects for this case (8 license plates).
-    -- Each suspect can be identified with it's car's license plate.
+    -- Each suspect can be identified with it's car's license plate in the table people.
 
 
 ---------------------------------------------EUGENE LEAD---------------------------------------------------------------------
 
--- we
-SELECT account_number, transaction_type, amount FROM atm_transactions WHERE year = '2023' AND month = '7' AND day = '28' AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw';
--- 8 withdraw and 1 deposit were made
--- there is no hour indication in those 2 tables but we can cross the table to get a list of 9 names of people having used the atm
+-- Eugene told us that he saw the suspect at the atm of Leggett Street withdrawing money on the morning of the crime.
+SELECT account_number, amount
+  FROM atm_transactions
+ WHERE year = '2023' AND month = '7' AND day = '28'
+   AND atm_location = 'Leggett Street'
+   AND transaction_type = 'withdraw';
+
+
+-- New information unlocked !
+    -- There is 8 suspects people corresponding to the specifications given by Eugene (8 account number).
+    -- Each suspect can be identified with it's account number in the table people.
 
 
 ---------------------------------------------RAYMOND LEAD--------------------------------------------------------------------
+
+        -- Raymond lead :
+            -- check the phone_calls. The thief called someone less than 1 min between 10:15am and 10:25am.
+            -- check the flights and bank_accounts. He asked his collaborator to book him the earliest flight out of town tomorrow (29 july 2023).
 
 SELECT * FROM phone_calls WHERE year = '2023' AND month = '7' AND day = '28' AND duration <= '60';
 
