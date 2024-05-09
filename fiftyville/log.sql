@@ -54,6 +54,7 @@ SELECT name, transcript
             -- check the flights and bank_accounts. He asked his collaborator to book him the earliest flight out of town tomorrow (29 july 2023).
 
 
+-----------------------------------------RUTH ------------------------------------------------
 
 -- we look for the car's license plate in the timeframe given by Ruth
 SELECT COUNT(*) FROM bakery_security_logs WHERE year = '2023' AND month = '7' AND day = '28' AND hour = '10' AND (minute >= 15 AND minute <= 25);
