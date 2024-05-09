@@ -55,6 +55,8 @@ SELECT name, transcript
 
 
 ---------------------------------------------RUTH LEAD-----------------------------------------------------------------------
+---------------------------------------------EUGENE LEAD---------------------------------------------------------------------
+---------------------------------------------RAYMOND LEAD--------------------------------------------------------------------
 
 -- we look for the car's license plate in the timeframe given by Ruth
 SELECT COUNT(*) FROM bakery_security_logs WHERE year = '2023' AND month = '7' AND day = '28' AND hour = '10' AND (minute >= 15 AND minute <= 25);
