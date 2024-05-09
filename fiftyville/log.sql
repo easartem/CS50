@@ -100,13 +100,15 @@ SELECT COUNT(*)
 --> 10 calls were made of a duration < 60 seconds during our timeframe.
 
 
--- Check the flights and bank_accounts. He asked his collaborator to book him the earliest flight out of town tomorrow (29 july 2023).
+-- Check the flights. He asked his collaborator to book him the earliest flight out of town tomorrow (29 july 2023).
 SELECT * FROM flights WHERE year = '2023' AND month = '7' AND day = '29';
---> 5 flights at this date with different destination airport id.
+--> 5 flights at this date with same origin_airport_id (8) but different destination_airport_id.
 
--- get id of the airport of Fiftyville
+-- Just to be sure, we should check that all flights departs from the airport of get id of the airport of Fiftyville.
 SELECT id FROM airports WHERE city = 'Fiftyville';
--- get the flight he took and the destination_airport_id
+--> It is indeed 8.
+
+-- Now, we get the flight he took and the destination_airport_id
 SELECT id, destination_airport_id FROM flights WHERE year = '2023' AND month = '7' AND day = '29' AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') ORDER BY hour ASC, minute ASC LIMIT 1;
 -- find which is the destination : New York City LaGuardia Airport LGA
 SELECT * FROM airports WHERE id = '4';
