@@ -136,17 +136,22 @@ SELECT city
     -- The destination of the flight he boarded is New York City, LaGuardia Airport (LGA)
 
 
----------------------------------------------CROSSING THE DATA : FIND THE CULPRIT------------------------------------------------------------
+---------------------------------------------RECAP OF THE SUSPECTS BY LEAD------------------------------------------------------------------
 
-SELECT passport_number FROM passengers WHERE flight_id = '36';
--- 8 passport for 8 people
-
-
+-- Ruth lead
 SELECT name FROM people WHERE license_plate IN
     (SELECT license_plate FROM bakery_security_logs WHERE year = '2023' AND month = '7' AND day = '28' AND hour = '10' AND (minute >= 15 AND minute <= 25));
--- 8 people : Vanessa, Barry, Iman 
+-- 8 people : Vanessa, Barry, Iman, Sofia, Luca, Diana, Kelsey, Bruce
 
-SELECT * FROM phone_calls WHERE year = '2023' AND month = '7' AND day = '28' AND duration <= '60';
+-- Eugene lead
+SELECT name FROM people WHERE phone_number IN
+    (SELECT caller FROM phone_calls WHERE year = '2023' AND month = '7' AND day = '28' AND duration <= '60');
+-- 8 people : Kenny, Sofia, Benista, Taylor, Diana, Kelsey, Kathryn, Bruce, Carina
+
+
+-- Raymond lead
+SELECT passport_number FROM passengers WHERE flight_id = '36';
+-- 8 passport for 8 people
 
 
 ---------------------------------------------CROSSING THE DATA : FIND THE CULPRIT------------------------------------------------------------
