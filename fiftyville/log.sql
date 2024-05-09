@@ -182,8 +182,14 @@ SELECT * FROM people WHERE id IN
 ---------------------------------------------CROSSING THE DATA : FIND THE ACCOMPLICE---------------------------------------------------------
 
 -- Now we just need to find who Bruce called during the 10 minutes timeframe of the crime.
-SELECT * FROM people WHERE phone_number IN
-    (SELECT receiver FROM phone_calls WHERE year = '2023' AND month = '7' AND day = '28' AND duration <= '60' AND caller = (SELECT phone_number FROM people WHERE id = '686048'));
+SELECT *
+  FROM people
+ WHERE phone_number IN
+       (SELECT receiver
+          FROM phone_calls
+         WHERE year = '2023' AND month = '7' AND day = '28'
+           AND duration <= '60'
+           AND caller = (SELECT phone_number FROM people WHERE id = '686048'));
 
 -- New information unlocked !
     -- The accomplice is Robin !
