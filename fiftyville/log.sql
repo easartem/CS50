@@ -161,7 +161,7 @@ SELECT name FROM people WHERE passport_number IN
 
 ---------------------------------------------CROSSING THE DATA : FIND THE CULPRIT------------------------------------------------------------
 
--- We can intersect all the recap 
+-- We can intersect all the recap queries to find the common point between them.
 SELECT * FROM people WHERE phone_number IN
     (SELECT caller FROM phone_calls WHERE year = '2023' AND month = '7' AND day = '28' AND duration <= '60')
 INTERSECT
@@ -175,13 +175,9 @@ SELECT * FROM people WHERE id IN
     (SELECT person_id FROM bank_accounts WHERE account_number IN
         (SELECT account_number FROM atm_transactions WHERE year = '2023' AND month = '7' AND day = '28' AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw'));
 
-
-
-
-SELECT * FROM people WHERE id IN
-    (SELECT person_id FROM bank_accounts WHERE account_number IN
-        (SELECT account_number FROM atm_transactions WHERE year = '2023' AND month = '7' AND day = '28' AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw'));
-
+-- New information unlocked !
+    -- The culprit is Bruce !
+    
 
 ---------------------------------------------CROSSING THE DATA : FIND THE ACCOMPLICE---------------------------------------------------------
 
