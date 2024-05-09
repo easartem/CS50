@@ -97,15 +97,12 @@ SELECT COUNT(*)
   FROM phone_calls
  WHERE year = '2023' AND month = '7' AND day = '28'
    AND duration <= '60';
--- There is 
--- New information unlocked !
-    -- There is 8 suspects people corresponding to the specifications given by Eugene (8 account number).
-    -- Each suspect can be identified with it's account number in the table people.
+--> 10 calls were made of a duration < 60 seconds during our timeframe.
+
 
 -- Check the flights and bank_accounts. He asked his collaborator to book him the earliest flight out of town tomorrow (29 july 2023).
-
-
 SELECT * FROM flights WHERE year = '2023' AND month = '7' AND day = '29';
+--> 5 flights at this date with different destination airport id.
 
 -- get id of the airport of Fiftyville
 SELECT id FROM airports WHERE city = 'Fiftyville';
