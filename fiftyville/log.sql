@@ -69,7 +69,7 @@ SELECT activity, license_plate
    AND (minute >= 15 AND minute <= 25);
 
 -- New information unlocked !
-    -- There is 8 suspects for this case.
+    -- There is 8 suspects for this case (8 license plates).
     -- Each suspect can be identified with it's car's license plate.
 
 
