@@ -92,11 +92,18 @@ SELECT account_number, amount
 
 ---------------------------------------------RAYMOND LEAD--------------------------------------------------------------------
 
-        -- Raymond lead :
-            -- check the phone_calls. The thief called someone less than 1 min between 10:15am and 10:25am.
-            -- check the flights and bank_accounts. He asked his collaborator to book him the earliest flight out of town tomorrow (29 july 2023).
+-- Check the phone_calls table. The thief called someone less than 1 min between 10:15am and 10:25am.
+SELECT *
+  FROM phone_calls
+ WHERE year = '2023' AND month = '7' AND day = '28'
+   AND duration <= '60';
 
-SELECT * FROM phone_calls WHERE year = '2023' AND month = '7' AND day = '28' AND duration <= '60';
+-- New information unlocked !
+    -- There is 8 suspects people corresponding to the specifications given by Eugene (8 account number).
+    -- Each suspect can be identified with it's account number in the table people.
+
+-- Check the flights and bank_accounts. He asked his collaborator to book him the earliest flight out of town tomorrow (29 july 2023).
+
 
 SELECT * FROM flights WHERE year = '2023' AND month = '7' AND day = '29';
 
