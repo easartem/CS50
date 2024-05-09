@@ -30,7 +30,7 @@ SELECT name, transcript FROM interviews WHERE year = '2023' AND month = '7' AND 
 -- .schema bakery_security_logs(#id, year, month, day, hour, minute, activity, license_plate)
 -- we look for the car's license plate in the timeframe given by Ruth
 SELECT COUNT(*) FROM bakery_security_logs WHERE year = '2023' AND month = '7' AND day = '28' AND hour = '10' AND (minute >= 15 AND minute <= 25);
--- 8 people left during that timeframe
+-- 8 people left during that timeframe, we can cross the table to get a list of 8 names of people having the license plate in the table people
 SELECT activity, license_plate FROM bakery_security_logs WHERE year = '2023' AND month = '7' AND day = '28' AND hour = '10' AND (minute >= 15 AND minute <= 25);
 
 
@@ -42,3 +42,6 @@ SELECT account_number, transaction_type, amount FROM atm_transactions WHERE year
 -- there is no hour indication in those 2 tables but we can cross the table to get a list of 9 names of people having used the atm
 
 
+-- .schema people(id, name, phone_number, passport_number, license_plate)
+-- .schema phone_calls (id, caller, receiver, year, month, day, duration)
+SELECT * FROM phone_calls WHERE year = '2023' AND month = '7' AND day = '28';
