@@ -44,4 +44,18 @@ SELECT account_number, transaction_type, amount FROM atm_transactions WHERE year
 
 -- .schema people(id, name, phone_number, passport_number, license_plate)
 -- .schema phone_calls (id, caller, receiver, year, month, day, duration)
-SELECT * FROM phone_calls WHERE year = '2023' AND month = '7' AND day = '28';
+SELECT * FROM phone_calls WHERE year = '2023' AND month = '7' AND day = '28' AND duration <= '60';
+
+-- .schema flights(id, origin_airport, destination_airport, year, month, day, hour, minute, origin_airport_id, destination_airport_id)
+SELECT * FROM flights WHERE year = '2023' AND month = '7' AND day = '29';
+
+-- .schema airports(id, abbreviation, full_name, city)
+-- get id of the airport of Fiftyville
+SELECT id FROM airports WHERE city = 'Fiftyville';
+-- get the flight he took and the destination_airport_id
+SELECT destination_airport_id FROM flights WHERE year = '2023' AND month = '7' AND day = '29' AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') ORDER BY hour ASC, minute ASC LIMIT 1;
+-- find which is the destination : New York City LaGuardia Airport LGA
+SELECT * FROM airports WHERE id = '4';
+
+
+-- .schema passengers(flight_id, passport_number, seat)
