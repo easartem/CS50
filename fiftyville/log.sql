@@ -99,7 +99,6 @@ SELECT COUNT(*)
    AND duration <= '60';
 --> 10 calls were made of a duration < 60 seconds during our timeframe.
 
-
 -- Check the flights. He asked his collaborator to book him the earliest flight out of town tomorrow (29 july 2023).
 SELECT *
   FROM flights
@@ -146,12 +145,12 @@ SELECT name FROM people WHERE license_plate IN
 -- Eugene lead
 SELECT name FROM people WHERE phone_number IN
     (SELECT caller FROM phone_calls WHERE year = '2023' AND month = '7' AND day = '28' AND duration <= '60');
--- 8 people : Kenny, Sofia, Benista, Taylor, Diana, Kelsey, Kathryn, Bruce, Carina
-
+-- 10 people : Kenny, Sofia, Benista, Taylor, Diana, Kelsey, Kathryn, Bruce, Carina
 
 -- Raymond lead
-SELECT passport_number FROM passengers WHERE flight_id = '36';
--- 8 passport for 8 people
+SELECT name FROM people WHERE passport_number IN
+    (SELECT passport_number FROM passengers WHERE flight_id = '36');
+-- 8 people : Kenny, Sofia, Taylor, Luca, Kelsey, Edward, Bruce, Doris
 
 
 ---------------------------------------------CROSSING THE DATA : FIND THE CULPRIT------------------------------------------------------------
