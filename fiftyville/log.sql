@@ -65,16 +65,13 @@ SELECT activity, license_plate FROM bakery_security_logs WHERE year = '2023' AND
 ---------------------------------------------EUGENE LEAD---------------------------------------------------------------------
 
 
+
 ---------------------------------------------RAYMOND LEAD--------------------------------------------------------------------
-
-
-
 
 -- we
 SELECT account_number, transaction_type, amount FROM atm_transactions WHERE year = '2023' AND month = '7' AND day = '28' AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw';
 -- 8 withdraw and 1 deposit were made
 -- there is no hour indication in those 2 tables but we can cross the table to get a list of 9 names of people having used the atm
-
 
 SELECT * FROM phone_calls WHERE year = '2023' AND month = '7' AND day = '28' AND duration <= '60';
 
