@@ -56,22 +56,32 @@ SELECT name, transcript
 
 ---------------------------------------------RUTH LEAD-----------------------------------------------------------------------
 
--- we look for the car's license plate in the timeframe given by Ruth
-SELECT COUNT(*) FROM bakery_security_logs WHERE year = '2023' AND month = '7' AND day = '28' AND hour = '10' AND (minute >= 15 AND minute <= 25);
--- 8 people left during that timeframe, we can cross the table to get a list of 8 names of people having the license plate in the table people
-SELECT activity, license_plate FROM bakery_security_logs WHERE year = '2023' AND month = '7' AND day = '28' AND hour = '10' AND (minute >= 15 AND minute <= 25);
+-- We look for the car's license plate in the timeframe given by Ruth from the table bakery_security_logs.
+SELECT COUNT(*)
+  FROM bakery_security_logs
+ WHERE year = '2023' AND month = '7' AND day = '28' AND hour = '10'
+   AND (minute >= 15 AND minute <= 25);
+
+-- 8 people left during that timeframe, later we can cross the 8 license pates given by this query with the table people to get the 8 suspect's name.
+SELECT activity, license_plate
+  FROM bakery_security_logs
+ WHERE year = '2023' AND month = '7' AND day = '28' AND hour = '10'
+   AND (minute >= 15 AND minute <= 25);
+
+-- New information unlocked !
+    -- There is 8 suspects for this case.
+    -- Each suspect can be identified with it's car's license plate.
 
 
 ---------------------------------------------EUGENE LEAD---------------------------------------------------------------------
-
-
-
----------------------------------------------RAYMOND LEAD--------------------------------------------------------------------
 
 -- we
 SELECT account_number, transaction_type, amount FROM atm_transactions WHERE year = '2023' AND month = '7' AND day = '28' AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw';
 -- 8 withdraw and 1 deposit were made
 -- there is no hour indication in those 2 tables but we can cross the table to get a list of 9 names of people having used the atm
+
+
+---------------------------------------------RAYMOND LEAD--------------------------------------------------------------------
 
 SELECT * FROM phone_calls WHERE year = '2023' AND month = '7' AND day = '28' AND duration <= '60';
 
@@ -89,6 +99,7 @@ SELECT passport_number FROM passengers WHERE flight_id = '36';
 -- 8 passport for 8 people
 
 
+---------------------------------------------CROSS THE DATA TO FIND THE CULPRIT------------------------------------------------------------
 
 
 -- .schema people(id, name, phone_number, passport_number, license_plate)
@@ -117,11 +128,10 @@ SELECT * FROM people WHERE id IN
     (SELECT person_id FROM bank_accounts WHERE account_number IN
         (SELECT account_number FROM atm_transactions WHERE year = '2023' AND month = '7' AND day = '28' AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw'));
 
--- .schema atm_transactions(id, account_number, year, month, day, atm_location, transaction_type, amount)
+
 SELECT * FROM people WHERE id IN
     (SELECT person_id FROM bank_accounts WHERE account_number IN
         (SELECT account_number FROM atm_transactions WHERE year = '2023' AND month = '7' AND day = '28' AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw'));
--- .schema bank_accounts(account_number, person_id, creation_year) person_id ref people(id)
 
 
 SELECT * FROM people WHERE phone_number IN
