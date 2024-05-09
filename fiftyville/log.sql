@@ -24,21 +24,36 @@ SELECT *
   FROM crime_scene_reports
  WHERE year = '2023' AND month = '7' AND day = '28'
    AND street = 'Humphrey Street';
--- New information unlocked ! hour of crime 10:15am at the bakery + existence if three interviews by witnesses
 
-
------------------------------------------LAUNCHING THE INVESTIGATION-------------------------------------------
-
--- let's go look at the transcript from the witnesses in the interviews table
--- There is 7 interviews but we are only interested by 3
-SELECT COUNT(*) FROM interviews WHERE year = '2023' AND month = '7' AND day = '28';
--- Let's read them to find the 3 we want (Ruth, Eugene and Raymond)
-SELECT name, transcript FROM interviews WHERE year = '2023' AND month = '7' AND day = '28';
 -- New information unlocked !
--------- Ruth : check the security footage of the bakery parking lot. The thief left by car within 10 min after crime began (10:15am -> 10:25am)
--------- Eugene : check the atm transactions ot the morning of crime. The thief withdrawed money at the ATM of Leggett Street in the morning.
--------- Raymond : check the phone_calls, flights and bank_accounts. The thief called someone less than 1 min between 10:15am and 10:25am.
--------- Raymond : check the flights and bank_accounts. He asked his collaborator to book him the earliest flight out of town tomorrow (29 july 2023)
+    -- The exact hour of the crime is 10:15am.
+    -- The exact location is the bakery of Humphrey Street.
+    -- There is three interviews made by three witnesses.
+
+
+-----------------------------------------READING THE WITNESSES INTERVIEW------------------------------------------------
+
+-- Let's go look at the transcript from the witnesses in the table interviews !
+-- But we don't have the name of the three witnesses and the table interviews records transcript with name and date/time.
+-- Since the query won't be precise, let's check the total number of transcripts existing for our date and time.
+SELECT COUNT(*)
+  FROM interviews
+ WHERE year = '2023' AND month = '7' AND day = '28';
+
+
+-- There is 7 interviews but we are only interested by 3, let's read them to find the 3 we want !
+SELECT name, transcript
+  FROM interviews
+ WHERE year = '2023' AND month = '7' AND day = '28';
+-- New information unlocked !
+    -- The three witnesses are Ruth, Eugene and Raymond. Each of them gave us a new lead on the mystery:
+        -- Ruth lead : check the security footage of the bakery parking lot. The thief left by car within 10 min after crime began (10:15am -> 10:25am).
+        -- Eugene lead : check the atm transactions on the morning of crime. The thief withdrawed money at the ATM of Leggett Street in the morning.
+        -- Raymond lead :
+            -- check the phone_calls. The thief called someone less than 1 min between 10:15am and 10:25am.
+            -- check the flights and bank_accounts. He asked his collaborator to book him the earliest flight out of town tomorrow (29 july 2023).
+
+
 
 -- we look for the car's license plate in the timeframe given by Ruth
 SELECT COUNT(*) FROM bakery_security_logs WHERE year = '2023' AND month = '7' AND day = '28' AND hour = '10' AND (minute >= 15 AND minute <= 25);
