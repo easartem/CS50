@@ -120,20 +120,27 @@ SELECT id, destination_airport_id
    AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville')
  ORDER BY hour ASC, minute ASC
  LIMIT 1;
- --> The id of the flight is 36 and the destination_airport_id is 4.
 
--- find which is the destination : New York City LaGuardia Airport LGA
-SELECT city
-  FROM airports
- WHERE id = '4';
-
--- .schema passengers(flight_id, passport_number, seat)
-SELECT passport_number FROM passengers WHERE flight_id = '36';
--- 8 passport for 8 people
+ -- New information unlocked !
+    -- The id of the flight is 36 and the destination_airport_id is 4.
 
 
 ---------------------------------------------CROSSING THE DATA : FIND THE CITY---------------------------------------------------------------
 
+-- No need to cross the data, we found out that destination_airport_id is 4 so we can just look it up the airport table.
+SELECT city
+  FROM airports
+ WHERE id = '4';
+
+-- New information unlocked !
+    -- The destination of the flight he boarded is New York City, LaGuardia Airport (LGA)
+
+
+---------------------------------------------CROSSING THE DATA : FIND THE CULPRIT------------------------------------------------------------
+
+-- .schema passengers(flight_id, passport_number, seat)
+SELECT passport_number FROM passengers WHERE flight_id = '36';
+-- 8 passport for 8 people
 
 -- .schema people(id, name, phone_number, passport_number, license_plate)
 SELECT license_plate FROM bakery_security_logs WHERE year = '2023' AND month = '7' AND day = '28' AND hour = '10' AND (minute >= 15 AND minute <= 25);
