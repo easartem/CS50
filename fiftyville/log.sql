@@ -85,3 +85,8 @@ SELECT * FROM people WHERE license_plate IN
 INTERSECT
 SELECT * FROM people WHERE passport_number IN
     (SELECT passport_number FROM passengers WHERE flight_id = '36');
+
+
+-- .schema atm_transactions(id, account_number, year, month, day, atm_location, transaction_type, amount)
+SELECT * FROM people WHERE account_number IN
+    (SELECT account_number FROM atm_transactions WHERE year = '2023' AND month = '7' AND day = '28' AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw');
