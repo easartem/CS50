@@ -72,3 +72,5 @@ SELECT * FROM people WHERE license_plate IN
 
 SELECT * FROM phone_calls WHERE year = '2023' AND month = '7' AND day = '28' AND duration <= '60';
 
+SELECT * FROM people WHERE phone_number IN
+    (SELECT caller FROM phone_calls WHERE year = '2023' AND month = '7' AND day = '28' AND duration <= '60');
