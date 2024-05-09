@@ -53,9 +53,10 @@ SELECT * FROM flights WHERE year = '2023' AND month = '7' AND day = '29';
 -- get id of the airport of Fiftyville
 SELECT id FROM airports WHERE city = 'Fiftyville';
 -- get the flight he took and the destination_airport_id
-SELECT destination_airport_id FROM flights WHERE year = '2023' AND month = '7' AND day = '29' AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') ORDER BY hour ASC, minute ASC LIMIT 1;
+SELECT id, destination_airport_id FROM flights WHERE year = '2023' AND month = '7' AND day = '29' AND origin_airport_id = (SELECT id FROM airports WHERE city = 'Fiftyville') ORDER BY hour ASC, minute ASC LIMIT 1;
 -- find which is the destination : New York City LaGuardia Airport LGA
 SELECT * FROM airports WHERE id = '4';
 
-
 -- .schema passengers(flight_id, passport_number, seat)
+SELECT passport_number FROM passengers WHERE flight_id = '36';
+-- 8 passport for 8 people 
