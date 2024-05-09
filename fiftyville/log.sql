@@ -93,11 +93,11 @@ SELECT account_number, amount
 ---------------------------------------------RAYMOND LEAD--------------------------------------------------------------------
 
 -- Check the phone_calls table. The thief called someone less than 1 min between 10:15am and 10:25am.
-SELECT *
+SELECT COUNT(*)
   FROM phone_calls
  WHERE year = '2023' AND month = '7' AND day = '28'
    AND duration <= '60';
-
+-- There is 
 -- New information unlocked !
     -- There is 8 suspects people corresponding to the specifications given by Eugene (8 account number).
     -- Each suspect can be identified with it's account number in the table people.
