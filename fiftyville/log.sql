@@ -36,8 +36,8 @@ SELECT activity, license_plate FROM bakery_security_logs WHERE year = '2023' AND
 
 -- .schema atm_transactions(id, account_number, year, month, day, atm_location, transaction_type, amount)
 -- we
-SELECT account_number, transaction_type, amount FROM atm_transactions WHERE year = '2023' AND month = '7' AND day = '28' AND atm_location = 'Leggett Street';
--- 1 withdraw and 8 deposit were made
+SELECT account_number, transaction_type, amount FROM atm_transactions WHERE year = '2023' AND month = '7' AND day = '28' AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw';
+-- 8 withdraw and 1 deposit were made
 -- .schema bank_accounts(account_number, person_id, creation_year) person_id ref people(id)
 -- there is no hour indication in those 2 tables but we can cross the table to get a list of 9 names of people having used the atm
 
@@ -59,4 +59,4 @@ SELECT * FROM airports WHERE id = '4';
 
 -- .schema passengers(flight_id, passport_number, seat)
 SELECT passport_number FROM passengers WHERE flight_id = '36';
--- 8 passport for 8 people 
+-- 8 passport for 8 people
