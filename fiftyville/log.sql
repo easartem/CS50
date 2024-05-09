@@ -20,7 +20,10 @@
 
 
 -- To get started on this case, We can search through the crime_scene_reports table with our initial information (date and street).
-SELECT * FROM crime_scene_reports WHERE year = '2023' AND month = '7' AND day = '28' AND street = 'Humphrey Street';
+SELECT *
+  FROM crime_scene_reports
+ WHERE year = '2023' AND month = '7' AND day = '28'
+   AND street = 'Humphrey Street';
 -- New information unlocked ! hour of crime 10:15am at the bakery + existence if three interviews by witnesses
 
 
