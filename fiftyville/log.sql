@@ -19,7 +19,7 @@
     -- phone_calls(id, caller, receiver, year, month, day, duration)
 
 
--- start from the crime scene report with the initial information (date and street)
+-- To get started on this case, We can search through the crime_scene_reports table with our initial information (date and street).
 SELECT * FROM crime_scene_reports WHERE year = '2023' AND month = '7' AND day = '28' AND street = 'Humphrey Street';
 -- New information unlocked ! hour of crime 10:15am at the bakery + existence if three interviews by witnesses
 
