@@ -13,7 +13,6 @@
                 let answer = document.querySelector('#result-button');
                 let id = "#" + button_clicked;
                 console.log(button_clicked);
-
                     if (button_clicked == result) {
                         document.querySelector(id).style.backgroundColor = 'green';
                         answer.innerHTML = "Correct";
@@ -26,19 +25,19 @@
                     }
                 }
             // Check answer input
-            function checkAnswerText(button_clicked) {
+            function checkAnswerText() {
                 let result = "Calathea";
+                let text = document.querySelector('#text-answer');
                 let answer = document.querySelector('#result-text');
                 let id = "#" + button_clicked;
                 console.log(button_clicked);
-
-                    if (button_clicked == result) {
-                        document.querySelector(id).style.backgroundColor = 'green';
+                    if (answer.value() == result) {
+                        answer.style.backgroundColor = 'green';
                         answer.innerHTML = "Correct";
                         return true;
                     }
                     else {
-                        document.querySelector(id).style.backgroundColor = 'red';
+                        answer.style.backgroundColor = 'red';
                         answer.innerHTML = "Incorrect";
                         return false;
                     }
@@ -68,8 +67,8 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>What is the safest family of plants for pets ?</h3>
-                <input id="text_answer">
-                <button id="button-confirm">Confirm</button>
+                <input id="text-answer">
+                <button id="button-confirm" onclick="checkAnswerText()">Confirm</button>
                 <p id="result-text"></p>
             </div>
         </div>
