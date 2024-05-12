@@ -11,8 +11,11 @@
             // Check answer button
             function checkAnswerButton(button_clicked) {
                 let result = "button-some";
+                let answer = document.querySelector('#result');
+
                     if (button_clicked == result) {
                         button.style.backgroundColor = 'green';
+                        
                         return true;
                     }
                     else {
@@ -47,6 +50,7 @@
                 <button id="button-all">All species of plants !!!</button>
                 <button id="button-some">Some species only</button>
                 <button id="button-none">None at all</button>
+                <p id="result"></p>
             </div>
 
             <div class="section">
