@@ -15,11 +15,12 @@
 
                     if (button_clicked == result) {
                         button.style.backgroundColor = 'green';
-                        
+                        answer.innerHTML = "Correct";
                         return true;
                     }
                     else {
                         button.style.backgroundColor = 'red';
+                        answer.innerHTML = "Incorrect";
                         return false;
                     }
                 }
