@@ -28,7 +28,8 @@
 
             // Listen
             document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector('button').addEventListener('click', function() {
+                document.querySelectorAll('button').addEventListener('click', function() {
+                    console.log(document.querySelector('#id').value);
                     checkAnswerButton(document.querySelector('#id').value);
                 });
             });
