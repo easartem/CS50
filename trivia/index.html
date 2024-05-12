@@ -7,20 +7,20 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-
             // Check answer button
             function checkAnswerButton(button_clicked) {
                 let result = "button-some";
                 let answer = document.querySelector('#result');
+                let id = "#" + button_clicked;
                 console.log(button_clicked);
 
                     if (button_clicked == result) {
-                        document.querySelector(button_clicked).style.backgroundColor = 'green';
+                        document.querySelector(id).style.backgroundColor = 'green';
                         answer.innerHTML = "Correct";
                         return true;
                     }
                     else {
-                        document.querySelector(button_clicked).style.backgroundColor = 'red';
+                        document.querySelector(id).style.backgroundColor = 'red';
                         answer.innerHTML = "Incorrect";
                         return false;
                     }
@@ -50,6 +50,7 @@
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <!-- TODO: Add free response question here -->
+                <h3>What is the safest family of plants for pets ?</h3>
             </div>
         </div>
     </body>
