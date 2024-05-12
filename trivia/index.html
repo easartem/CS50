@@ -26,10 +26,11 @@
                 }
             // Check answer input
             function checkAnswerText() {
-                let result = "Calathea";
+                let result = "calathea";
                 let text = document.querySelector('#text-answer');
                 let answer = document.querySelector('#result-text');
-                    if (answer.value == result) {
+                console.log(text);
+                    if (text.value == result) {
                         answer.style.backgroundColor = 'green';
                         answer.innerHTML = "Correct";
                         return true;
@@ -54,7 +55,7 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>Can interior plants be toxic for pets ?</h3>
-                <button id="button-all" onclick="checkAnswerButton('button-all')">All species of plants !!!</button>
+                <button id="button-all" onclick="checkAnswerButton('button-all')">All species of plants</button>
                 <button id="button-some" onclick="checkAnswerButton('button-some')">Some species only</button>
                 <button id="button-none" onclick="checkAnswerButton('button-none')">None at all</button>
                 <p id="result-button"></p>
