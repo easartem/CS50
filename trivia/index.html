@@ -29,9 +29,7 @@
                 let result = "Calathea";
                 let text = document.querySelector('#text-answer');
                 let answer = document.querySelector('#result-text');
-                let id = "#" + button_clicked;
-                console.log(button_clicked);
-                    if (answer.value() == result) {
+                    if (answer.value == result) {
                         answer.style.backgroundColor = 'green';
                         answer.innerHTML = "Correct";
                         return true;
