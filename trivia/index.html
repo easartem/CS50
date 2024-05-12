@@ -7,14 +7,6 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector('button').addEventListener('submit', function(document.querySelector('#id').value) {
-                    let result = "button-some";
-                    if ()
-                    else
-                });
-            });
-
             function checkAnswerButton(button_clicked) {
                 let result = "button-some";
                     if (button_clicked == result) {
@@ -24,6 +16,10 @@
                         return false;
                     }
             }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('button').addEventListener('submit', checkAnswerButton(document.querySelector('#id').value));
+            });
 
         </script>
     </head>
