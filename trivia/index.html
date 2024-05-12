@@ -10,17 +10,17 @@
 
             // Check answer button
             function checkAnswerButton(button_clicked) {
-                let result = "some";
+                let result = "button-some";
                 let answer = document.querySelector('#result');
                 console.log(button_clicked);
 
                     if (button_clicked == result) {
-                        button.style.backgroundColor = 'green';
+                        document.querySelector(button_clicked).style.backgroundColor = 'green';
                         answer.innerHTML = "Correct";
                         return true;
                     }
                     else {
-                        button.style.backgroundColor = 'red';
+                        document.querySelector(button_clicked).style.backgroundColor = 'red';
                         answer.innerHTML = "Incorrect";
                         return false;
                     }
@@ -40,9 +40,9 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>Can interior plants be toxic for pets ?</h3>
-                <button id="button-all" onclick="checkAnswerButton('all')">All species of plants !!!</button>
-                <button id="button-some" onclick="checkAnswerButton('some')">Some species only</button>
-                <button id="button-none" onclick="checkAnswerButton('none')">None at all</button>
+                <button id="button-all" onclick="checkAnswerButton('button-all')">All species of plants !!!</button>
+                <button id="button-some" onclick="checkAnswerButton('button-some')">Some species only</button>
+                <button id="button-none" onclick="checkAnswerButton('button-none')">None at all</button>
                 <p id="result"></p>
             </div>
 
