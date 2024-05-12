@@ -18,7 +18,10 @@
             }
 
             document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector('button').addEventListener('submit', checkAnswerButton(document.querySelector('#id').value));
+                document.querySelector('button').addEventListener('submit', function(e) {
+                    alert('Answer : ' + document.querySelector('#id').value);
+                    e.preventDefault();
+                });
             });
 
         </script>
