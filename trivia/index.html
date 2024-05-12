@@ -10,7 +10,7 @@
             // Check answer button
             function checkAnswerButton(button_clicked) {
                 let result = "button-some";
-                let answer = document.querySelector('#result');
+                let answer = document.querySelector('#result-button');
                 let id = "#" + button_clicked;
                 console.log(button_clicked);
 
@@ -25,7 +25,24 @@
                         return false;
                     }
                 }
-            // Change
+            // Check answer input
+            function checkAnswerText(button_clicked) {
+                let result = "Calathea";
+                let answer = document.querySelector('#result-text');
+                let id = "#" + button_clicked;
+                console.log(button_clicked);
+
+                    if (button_clicked == result) {
+                        document.querySelector(id).style.backgroundColor = 'green';
+                        answer.innerHTML = "Correct";
+                        return true;
+                    }
+                    else {
+                        document.querySelector(id).style.backgroundColor = 'red';
+                        answer.innerHTML = "Incorrect";
+                        return false;
+                    }
+                }
 
         </script>
     </head>
@@ -43,7 +60,7 @@
                 <button id="button-all" onclick="checkAnswerButton('button-all')">All species of plants !!!</button>
                 <button id="button-some" onclick="checkAnswerButton('button-some')">Some species only</button>
                 <button id="button-none" onclick="checkAnswerButton('button-none')">None at all</button>
-                <p id="result"></p>
+                <p id="result-button"></p>
             </div>
 
             <div class="section">
@@ -53,6 +70,7 @@
                 <h3>What is the safest family of plants for pets ?</h3>
                 <input id="text_answer">
                 <button id="button-confirm">Confirm</button>
+                <p id="result-text"></p>
             </div>
         </div>
     </body>
