@@ -1,3 +1,9 @@
+body {
+  color: #3384FF;
+}
+
+
 .parallax-1 {
-    background-image: url=("/assets/me.jpg");
+    background-image: url("/assets/me.jpg");
+    min-height: 100%;
   }
