@@ -3,6 +3,21 @@ body {
   height: 100%;
 }
 
+#title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  color: #27d38a;
+  text-align: center;
+  font-family: 'lato',sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  padding-left: 10px;
+}
+
 .parallax-1 {
     background-image: url("/assets/me.jpg");
     width: 100%;
@@ -13,3 +28,4 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
