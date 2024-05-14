@@ -2,8 +2,11 @@ body {
   color: #3384FF;
 }
 
-
 .parallax-1 {
     background-image: url("/assets/me.jpg");
     min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
