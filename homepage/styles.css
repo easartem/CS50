@@ -1,5 +1,5 @@
 body {
-  color: #ffffff;
+  color: #3384FF;
   height: 100%;
 }
 
@@ -23,6 +23,7 @@ body {
 }
 
 #section {
+  height: 100%;
   background-color: #3384FF;
 }
 
