@@ -22,7 +22,7 @@ body {
   position: relative;
 }
 
-#section {
+.section {
   height: 100%;
   background-color: #3384FF;
 }
