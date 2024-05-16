@@ -10,7 +10,7 @@ body {
 
 .navbar {
   height: 100%;
-  background-color: var(--navcolor);
+  background-color: #27d38a;
 }
 
 #title {
@@ -18,7 +18,7 @@ body {
   top: 50%;
   left: 0;
   right: 0;
-  color: #27d38a;
+  color: #262626;
   text-align: center;
   font-family: 'lato',sans-serif;
   font-weight: 300;
