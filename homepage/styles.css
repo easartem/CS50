@@ -1,5 +1,6 @@
 :root {
   --maincolor: #3384FF;
+  --navcolor: rgb(38, 38, 38);
 }
 
 body {
@@ -9,7 +10,7 @@ body {
 
 .navbar {
   height: 100%;
-  background-color: #3185a2;
+  background-color: var(--navcolor);
 }
 
 #title {
