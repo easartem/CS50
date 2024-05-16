@@ -6,6 +6,7 @@
 .navbar {
   height: 100%;
   background-color: var(--navcolor);
+  font-size: 1.875em;
 }
 
 body {
