@@ -1,3 +1,7 @@
+:root {
+  --maincolor: #3384FF;
+}
+
 body {
   color: #ffffff;
   height: 100%;
@@ -29,7 +33,7 @@ body {
 
 .section {
   height: 100%;
-  background-color: #3384FF;
+  background-color: var(--maincolor);
 }
 
 #footer {
