@@ -60,7 +60,7 @@ body {
 
 
 .parallax-1 {
-    background-image: url("/assets/me.jpg");
+    background-image: url("/assets/fluid.jpg");
     width: 100%;
     padding: 20%;
     min-height: 100%;
@@ -70,7 +70,7 @@ body {
     background-size: cover;
   }
   .parallax-2 {
-    background-image: url("/assets/formation_texture.png");
+    background-image: url("/assets/me.jpg");
     width: 100%;
     padding: 20%;
     min-height: 100%;
