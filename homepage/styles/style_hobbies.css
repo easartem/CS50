@@ -43,7 +43,7 @@
       opacity: 0.7;
   }
 
-  .fixed-image {
+  .fixed-image-hobby {
     position: fixed;
     top: 40%;
     left: 0;
@@ -52,7 +52,7 @@
     height: auto;
   }
 
-  .text-section {
+  .text-section-hobby {
     margin-left: 45%;
     padding: 20px;
   }
