@@ -121,10 +121,10 @@ body {
 
 .fixed-image {
   position: fixed;
-  top: 10%;
+  top: 40%;
   left: 0;
   transform: translateY(-50%);
-  width: 40%;
+  width: auto;
   height: auto;
 }
 
