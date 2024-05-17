@@ -105,5 +105,6 @@ body {
 }
 
 #card {
-  
+  height: 100%;
+  color: #000000;
 }
