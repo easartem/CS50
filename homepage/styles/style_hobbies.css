@@ -82,6 +82,12 @@ body {
   border-radius: 50%;
 }
 
+.responsive {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
 .parallax {
   width: 100%;
   padding: 20%;
@@ -98,6 +104,11 @@ body {
 
 #parallax-2 {
   background-image: url("/assets/me.jpg");
+}
+
+.section {
+  height: 100%;
+  background-color: var(--maincolor);
 }
 
 /*----------------Body page plants----------------------- */
