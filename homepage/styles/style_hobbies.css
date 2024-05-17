@@ -32,12 +32,11 @@
   }
 
   .fa {
-    padding: 1.25rem; /* 20px to rem */
-    font-size: 1.875rem; /* 30px to rem */
-    width: 3.125rem; /* 50px to rem */
+    padding: 0.5rem; /* 20px to rem */
+    font-size: 2rem; /* 30px to rem */
+    width: 4rem; /* 50px to rem */
     text-align: center;
     text-decoration: none;
-    margin: 0.3125rem 0.125rem; /* 5px 2px to rem */
 }
 
   .fa:hover {
