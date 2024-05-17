@@ -45,14 +45,13 @@
   }
 
   .fixed-image-hobby {
-    position: absolute;
+    position: relative;
     left: 0;
     width: auto;
     height: auto;
   }
 
   .text-section-hobby {
-    margin-left: 45%;
     padding: 20px;
     color: var(--textcolor);
   }
