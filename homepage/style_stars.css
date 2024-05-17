@@ -59,11 +59,15 @@ html {
   box-shadow: 968px 1728px #FFF , 541px 1101px #FFF , 582px 1425px #FFF , 55px 401px #FFF , 1513px 1757px #FFF , 633px 1576px #FFF , 1215px 773px #FFF , 1884px 829px #FFF , 590px 164px #FFF , 742px 1823px #FFF , 814px 342px #FFF , 1920px 449px #FFF , 828px 26px #FFF , 1221px 323px #FFF , 1316px 478px #FFF , 794px 480px #FFF , 1632px 50px #FFF , 1382px 1163px #FFF , 815px 874px #FFF , 606px 1145px #FFF , 1616px 212px #FFF , 1036px 880px #FFF , 509px 1198px #FFF , 477px 1633px #FFF , 654px 1165px #FFF , 1486px 1636px #FFF , 1439px 1898px #FFF , 701px 667px #FFF , 261px 1301px #FFF , 261px 1196px #FFF , 266px 899px #FFF , 379px 27px #FFF , 1164px 776px #FFF , 1450px 1207px #FFF , 575px 245px #FFF , 1039px 1538px #FFF , 1811px 823px #FFF , 259px 1345px #FFF , 893px 214px #FFF , 675px 555px #FFF , 459px 1416px #FFF , 744px 1985px #FFF , 47px 302px #FFF , 1451px 1400px #FFF , 1737px 713px #FFF , 251px 1151px #FFF , 12px 30px #FFF , 1611px 1548px #FFF , 1271px 210px #FFF , 662px 919px #FFF , 1691px 1321px #FFF , 1937px 1692px #FFF , 259px 1154px #FFF , 236px 338px #FFF , 1249px 423px #FFF , 1498px 1131px #FFF , 1620px 1849px #FFF , 1758px 538px #FFF , 267px 778px #FFF , 1946px 1750px #FFF , 1668px 1499px #FFF , 1501px 1115px #FFF , 207px 1892px #FFF , 1523px 70px #FFF , 536px 1987px #FFF , 1435px 1291px #FFF , 335px 1954px #FFF , 290px 376px #FFF , 1408px 973px #FFF , 1196px 1432px #FFF , 1036px 1680px #FFF , 78px 123px #FFF , 1930px 1493px #FFF , 1261px 821px #FFF , 1249px 1709px #FFF , 567px 817px #FFF , 1170px 1187px #FFF , 1112px 937px #FFF , 1790px 964px #FFF , 316px 1579px #FFF , 363px 796px #FFF , 961px 1473px #FFF , 1936px 606px #FFF , 203px 597px #FFF , 1881px 1093px #FFF , 1307px 666px #FFF , 616px 751px #FFF , 1386px 481px #FFF , 801px 1414px #FFF , 184px 1075px #FFF , 1454px 1745px #FFF , 817px 1033px #FFF , 347px 586px #FFF , 1454px 288px #FFF , 812px 1800px #FFF , 1432px 15px #FFF , 1819px 1061px #FFF , 462px 1854px #FFF , 653px 1112px #FFF , 1274px 1401px #FFF;
 }
 
-#title {
+#content {
   position: absolute;
   top: 50%;
   left: 0;
   right: 0;
+  text-align: center;
+}
+
+#title {
   color: #27d38a;
   text-align: center;
   font-family: "lato", sans-serif;
