@@ -82,23 +82,21 @@ body {
   border-radius: 50%;
 }
 
-.parallax-1 {
+.parallax {
+  width: 100%;
+  padding: 20%;
+  min-height: 40%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#parallax-1 {
   background-image: url("/assets/fluid2.jpg");
-  width: 100%;
-  padding: 20%;
-  min-height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-.parallax-2 {
+
+#parallax-2 {
   background-image: url("/assets/me.jpg");
-  width: 100%;
-  padding: 20%;
-  min-height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
+

@@ -59,8 +59,7 @@ body {
 }
 
 
-.parallax-1 {
-    background-image: url("/assets/fluid.jpg");
+.parallax {
     width: 100%;
     padding: 20%;
     min-height: 100%;
@@ -80,7 +79,9 @@ body {
     background-size: cover;
   }
 
-
+#parallax-1 {
+  background-image: url("/assets/fluid.jpg");
+}
 #id-pic {
   border-radius: 50%;
 }
