@@ -111,3 +111,9 @@ body {
   color: #000000;
 }
 
+#bghobby
+{
+  position: absolute;
+  height:100%;
+  width: 100%;
+}
