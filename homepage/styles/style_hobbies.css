@@ -21,6 +21,7 @@ body {
 }
 
 .footer {
+  color: var(--navcolor-text);
   background-color: var(--navcolor-bg);
   padding: 1rem 0;
   bottom: 0;
