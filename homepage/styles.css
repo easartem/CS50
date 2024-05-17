@@ -104,7 +104,7 @@ body {
   height: auto;
 }
 
-#card {
+.card {
   height: 100%;
   color: #000000;
 }
