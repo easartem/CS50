@@ -105,12 +105,9 @@ body {
 }
 
 .card {
-  height: 100%;
+  height: auto;
+  width: 100%;
+  max-width: 300px;
   color: #000000;
 }
 
-.card-img-top {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-}
