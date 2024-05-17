@@ -118,3 +118,17 @@ body {
   height:100%;
   width: 100%;
 }
+
+.fixed-image {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: auto;
+  height: 100%;
+}
+
+.text-section {
+  margin-left: 45%;
+  padding: 20px;
+}
