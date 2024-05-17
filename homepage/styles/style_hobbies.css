@@ -1,6 +1,7 @@
 :root {
     --maincolor: #3384FF;
     --navcolor: rgb(38, 38, 38);
+    --textcolor: rgb(38, 38, 38);
   }
 
   body {
@@ -55,4 +56,5 @@
   .text-section-hobby {
     margin-left: 45%;
     padding: 20px;
+    color: var(--textcolor);
   }
