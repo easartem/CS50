@@ -55,5 +55,6 @@
 
   .text-section-hobby {
     padding: 20px;
+    flex: 1 1 auto;
     color: var(--textcolor);
   }
