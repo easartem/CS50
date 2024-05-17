@@ -56,7 +56,7 @@ body {
   flex: 0 0 auto;
 }
 
-.fixed-image-hobby {
+.fixed-image {
   position: relative;
   left: 0;
   max-width:100%;
@@ -65,7 +65,7 @@ body {
   padding: 0;
 }
 
-.text-section-hobby {
+.text-section {
   padding: 20px;
   flex: 1 1 auto;
   color: var(--textcolor);
