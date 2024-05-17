@@ -46,9 +46,7 @@
 
   .fixed-image-hobby {
     position: fixed;
-    top: 40%;
     left: 0;
-    transform: translateY(-50%);
     width: auto;
     height: auto;
   }
