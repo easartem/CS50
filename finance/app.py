@@ -115,6 +115,9 @@ def register():
     if request.method == "POST":
         return redirect("/register")
 
+    if not request.form.get("username"):
+            return apology("must provide username", 403)
+
     # Remember which user has logged in
     session["user_id"] = rows[0]["id"]
 
