@@ -8,6 +8,9 @@
     <form action="/quote" method="get">
         <h3>Quoted</h3>
         <br>
-        <button class="btn btn-primary" type="submit">Get price</button>
+        <div class="mb-3">
+            {{ quote["price"] }}
+            {{ quote["symbol"] }}
+        </div>
     </form>
 {% endblock %}
