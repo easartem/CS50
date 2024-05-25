@@ -113,8 +113,13 @@ def quote():
 def register():
     """Register user"""
     if request.method == "POST":
-        return redirect("/register") 
-    return apology("TODO")
+        return redirect("/register")
+
+    # Remember which user has logged in
+    session["user_id"] = rows[0]["id"]
+
+    # Redirect user to home page
+    return redirect("/")
 
 
 @app.route("/sell", methods=["GET", "POST"])
