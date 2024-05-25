@@ -123,16 +123,11 @@ def register():
             return apology("must provide password", 403)
 
         # VERIFY THE VALIDITY OF THE USER INPUT -----------------
-        # Query database for username already existing
-        rows = db.execute(
-            "INSERT (?, ?) * FROM users WHERE username = ?", request.form.get("username")
-        )
-        # Ensure username is unique
-        if len(rows) != 0:
-            return apology("username already exists", 403)
-
+        # Query database for username already existing, Ensure username is unique
+        name = request.form.get("username")
+        psw = request.form.get("password")
         try :
-            pass
+            db.execute("INSERT INTO users (username, password) VALUES (?, ?)", name, psw)
         except ValueError:
             return apology("username already exists", 403)
 
