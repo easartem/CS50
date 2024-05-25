@@ -113,8 +113,29 @@ def quote():
 def register():
     """Register user"""
     if request.method == "POST":
+        # VERIFY THE EXISTENCE OF A USER INPUT -----------------
+        # Ensure username was submitted
         if not request.form.get("username"):
             return apology("must provide username", 403)
+
+        # Ensure password was submitted
+        elif not request.form.get("password"):
+            return apology("must provide password", 403)
+
+        # VERIFY THE VALIDITY OF THE USER INPUT -----------------
+        # Query database for username already existing
+        rows = db.execute(
+            "INSERT (?, ?) * FROM users WHERE username = ?", request.form.get("username")
+        )
+        # Ensure username is unique
+        if len(rows) != 0:
+            return apology("username already exists", 403)
+
+        try :
+            pass
+        except ValueError:
+            return apology("username already exists", 403)
+
         # Redirect user to home page
         return redirect("/")
 
