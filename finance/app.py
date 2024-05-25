@@ -125,7 +125,7 @@ def register():
         # VERIFY THE VALIDITY OF THE USER INPUT -----------------
         # Query database for username already existing, Ensure username is unique
         name = request.form.get("username")
-        psw = request.form.get("password")
+        psw = generate_password_hash(request.form.get("password"))
         try :
             db.execute("INSERT INTO users (username, password) VALUES (?, ?)", name, psw)
         except ValueError:
