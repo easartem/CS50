@@ -119,7 +119,7 @@ def register():
         return redirect("/")
 
     else:
-        return redirect("/register")
+        return render_template("register.html")
 
 
 
