@@ -1,135 +1,125 @@
 :root {
-  --maincolor: #3384FF;
-  --navcolor: rgb(38, 38, 38);
-}
-
-.navbar {
-  height: 100%;
-  background-color: var(--navcolor);
-  font-size: 1.875em;
-  text-align: center;
-  font-family: "lato", sans-serif;
-  font-weight: 300;
-  letter-spacing: 5px;
+  --maincolor: #4f46c0;
+  --textcolor: rgb(38, 38, 38);
+  --navcolor-bg: rgb(38, 38, 38);
+  --navcolor-text: #ffffff;
+  /* #6e42f0   3384FF*/
 }
 
 body {
-  color: #ffffff;
-  height: 100%;
+color:  var(--textcolor);
+padding-top: 5.5rem;
 }
 
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
+/*----------------Header & Footer----------------------- */
+.navbar {
+color: var(--navcolor-text);
+background-color: var(--navcolor-bg);
+font-size: 1.875em;
+text-align: center;
+font-family: "lato", sans-serif;
+font-weight: 300;
+letter-spacing: 5px;
 }
 
 .footer {
-  background-color: var(--navcolor);
-  font-size: 1em;
-  text-align: center;
-  font-family: "lato", sans-serif;
-  font-weight: 300;
-  letter-spacing: 2px;
-}
+color: var(--navcolor-text);
+background-color: var(--navcolor-bg);
+padding: 1rem 0;
+bottom: 0;
+width: 100%;
+height: 100%;
 
-#title {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  color: #262626;
-  text-align: center;
-  font-family: 'lato',sans-serif;
-  font-weight: 300;
-  font-size: 50px;
-  letter-spacing: 10px;
-  margin-top: -60px;
-  padding-left: 10px;
-}
-
-#main {
-  position: relative;
-}
-
-.section {
-  height: 100%;
-  background-color: var(--maincolor);
-}
-
-
-.parallax {
-    width: 100%;
-    padding: 20%;
-    min-height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .parallax-2 {
-    background-image: url("/assets/me.jpg");
-    width: 100%;
-    padding: 20%;
-    min-height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-#parallax-1 {
-  background-image: url("/assets/fluid.jpg");
-}
-#id-pic {
-  border-radius: 50%;
+font-size: 1em;
+text-align: center;
+font-family: "lato", sans-serif;
+font-weight: 300;
+letter-spacing: 2px;
 }
 
 .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
+padding: 0.5rem; /* 20px to rem */
+font-size: 2rem; /* 30px to rem */
+width: 4rem; /* 50px to rem */
+text-align: center;
+text-decoration: none;
 }
 
 .fa:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
-.responsive {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
+a {
+color: var(--maincolor);
+}
+/*----------------Body page hobbies & formation----------------------- */
+
+.image-text-container {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
 }
 
-.card {
-  height: auto;
-  width: 100%;
-  max-width: 300px;
-  color: #000000;
-}
-
-#bghobby
-{
-  position: relative;
-  float: left;
-  height:100%;
-  width: 100%;
+.image-column {
+flex: 0 0 auto;
 }
 
 .fixed-image {
-  position: fixed;
-  top: 40%;
-  left: 0;
-  transform: translateY(-50%);
-  width: auto;
-  height: auto;
+position: relative;
+left: 0;
+max-width:100%;
+height: auto;
+padding-left: 0;
+padding: 0;
 }
 
 .text-section {
-  margin-left: 45%;
-  padding: 20px;
+padding: 20px;
+flex: 1 1 auto;
+color: var(--textcolor);
+}
+
+/*----------------Body main page----------------------- */
+
+#id-pic {
+border-radius: 50%;
+}
+
+.responsive {
+width: 100%;
+max-width: 200px;
+height: auto;
+}
+
+.parallax {
+width: 100%;
+padding: 10%;
+min-height: 40%;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+#parallax-1 {
+background-image: url("/assets/fluid4.jpg");
+}
+
+#parallax-2 {
+background-image: url("/assets/me.jpg");
+}
+
+.section {
+height: 100%;
+background-color: var(--maincolor);
+color: var(--navcolor-text);
+}
+
+/*----------------Body page plants----------------------- */
+
+.card {
+height: auto;
+width: 100%;
+max-width: 300px;
+color: #000000;
 }
