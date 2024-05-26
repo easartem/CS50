@@ -48,6 +48,13 @@ def buy():
         # if nb of shares is not a positive integer return apology
         # if purchase price (lookup) > user cash (query db) return apology
         # else insert purchase into new table, and update user cash
+
+
+
+                if not request.form.get("symbol"):
+             return apology("must provide symbol name", 403)
+        quote = lookup(request.form.get("symbol"))
+        return render_template("quoted.html", quote=quote)
     else:
         return render_template("buy.html")
 
