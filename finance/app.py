@@ -72,13 +72,12 @@ def buy():
         # else insert purchase into new table, and update user cash
         new_user_cash = user_cash - purchase_price
         db.execute("UPDATE users SET cash = ? WHERE id = ?", (new_user_cash, user_id))
-
-        db.execute("", )
+        db.execute("INSERT INTO transactions (symbol, price_per_share, shares, user_id) VALUES(?, ?, ?, ?)", symbol, price, shares, user_id)
 
         return apology("TODO")
     else:
         return render_template("buy.html")
-
+"""
     CREATE TABLE transactions (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
                                symbol TEXT NOT NULL,
                                price_per_share NUMERIC NOT NULL,
@@ -86,6 +85,7 @@ def buy():
                                date DATE DEFAULT CURRENT_TIMESTAMP NOT NULL,
                                user_id INTEGER NOT NULL,
                                FOREIGN KEY(user_id) REFERENCES users(id));
+"""
 
 
 @app.route("/history")
