@@ -63,6 +63,9 @@ def buy():
             return apology("must provide a positive shares number", 403)
 
         # if purchase price (lookup) > user cash (query db) return apology
+        purchase_price = price*shares
+        user_id = s
+        user_cash = db.execute("SELECT ")
         # else insert purchase into new table, and update user cash
 
         return apology("TODO")
