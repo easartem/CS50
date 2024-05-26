@@ -84,7 +84,8 @@ def buy():
                                price_per_share NUMERIC NOT NULL,
                                shares INTEGER NOT NULL,
                                date DATE DEFAULT sysdate NOT NULL,
-                               user_id FOREIGN KEY )
+                               user_id FOREIGN KEY
+                               FOREIGN KEY(trackartist) REFERENCES artist(artistid))
 
 
 @app.route("/history")
