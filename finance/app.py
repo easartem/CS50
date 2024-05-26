@@ -49,7 +49,7 @@ def buy():
         elif not lookup(request.form.get("symbol")):
             return apology("must provide a valid symbol name", 403)
         symbol = request.form.get("symbol")
-        price = lookup(request.form.get("symbol"))["price"]
+        price = lookup(request.form.get("symbol"))["price"][0]
 
         # if nb of shares is not a positive integer return apology
         if not request.form.get("shares"):
@@ -66,7 +66,6 @@ def buy():
         purchase_price = price*shares
         user_id = session["user_id"]
         user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-        return apology(purchase_price, 403)
         if purchase_price > user_cash:
             return apology("you don't have enough cash", 403)
 
