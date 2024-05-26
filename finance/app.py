@@ -83,7 +83,7 @@ def buy():
                                symbol TEXT NOT NULL,
                                price_per_share NUMERIC NOT NULL,
                                shares INTEGER NOT NULL,
-                               date 
+                               date DATE DEFAULT sysdate NOT NULL,
                                user_id FOREIGN KEY )
 
 
