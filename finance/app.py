@@ -66,6 +66,7 @@ def buy():
         purchase_price = price*shares
         user_id = session["user_id"]
         user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        return apology(purchase_price, 403)
         if purchase_price > user_cash:
             return apology("you don't have enough cash", 403)
 
