@@ -12,8 +12,8 @@
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">
         </div>
         <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Shares" type="number">
+            <input autocomplete="off" class="form-control mx-auto w-auto" name="shares" placeholder="Shares" type="number" min=0>
         </div>
-        <button class="btn btn-primary" type="submit">Get price</button>
+        <button class="btn btn-primary" type="submit">Buy</button>
     </form>
 {% endblock %}
