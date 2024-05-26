@@ -42,8 +42,14 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    # return apology("TODO")
-    return render_template("buy.html")
+    if request.method =="POST":
+        return apology("TODO")
+        # if symbol is blank or does not exist (lookup) return apology
+        # if nb of shares is not a positive integer return apology
+        # if purchase price (lookup) > user cash (query db) return apology
+        # else insert purchase into new table, and update user cash
+    else:
+        return render_template("buy.html")
 
 
 @app.route("/history")
