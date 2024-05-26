@@ -79,6 +79,13 @@ def buy():
     else:
         return render_template("buy.html")
 
+    CREATE TABLE transactions (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                               symbol TEXT NOT NULL,
+                               price_per_share NUMERIC NOT NULL,
+                               shares INTEGER NOT NULL,
+                               date 
+                               user_id FOREIGN KEY )
+
 
 @app.route("/history")
 @login_required
