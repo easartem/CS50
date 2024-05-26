@@ -53,14 +53,19 @@ def buy():
 
         # if nb of shares is not a positive integer return apology
         if not request.form.get("shares"):
-            return apology("must provide shares number", 403)
+            return apology("must provide a valid shares number", 403)
         shares = request.form.get("shares")
-        if shares <= 0 or 
+        try:
+            shares = int(shares)
+        except ValueError:
+            return apology("must provide a integer for shares number", 403)
+        if shares <= 0:
+            return apology("must provide a positive shares number", 403)
 
-
-        return apology("TODO")
         # if purchase price (lookup) > user cash (query db) return apology
         # else insert purchase into new table, and update user cash
+
+        return apology("TODO")
     else:
         return render_template("buy.html")
 
