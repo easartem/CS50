@@ -75,7 +75,8 @@ def buy():
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_user_cash, user_id)
         db.execute("INSERT INTO transactions (symbol, price_per_share, shares, user_id) VALUES(?, ?, ?, ?)", symbol, price, shares, user_id)
 
-        return apology("/")
+        # Redirect user to home page
+        return redirect("/")
     else:
         return render_template("buy.html")
 """
