@@ -48,13 +48,17 @@ def buy():
             return apology("must provide symbol name", 403)
         elif not lookup(request.form.get("symbol")):
             return apology("must provide a valid symbol name", 403)
-        else:
-            price = lookup(request.form.get("symbol")).price
+        symbol = request.form.get("symbol")
+        price = lookup(request.form.get("symbol"))["price"]
+
+        # if nb of shares is not a positive integer return apology
+        if not request.form.get("shares"):
+            return apology("must provide shares number", 403)
+        shares = request.form.get("shares")
+        if shares <= 0 or 
 
 
         return apology("TODO")
-        # if symbol is blank or does not exist (lookup) return apology
-        # if nb of shares is not a positive integer return apology
         # if purchase price (lookup) > user cash (query db) return apology
         # else insert purchase into new table, and update user cash
     else:
