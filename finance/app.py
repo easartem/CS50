@@ -43,18 +43,20 @@ def index():
 def buy():
     """Buy shares of stock"""
     if request.method =="POST":
+        # if symbol is blank or does not exist (lookup) return apology
+        if not request.form.get("symbol"):
+            return apology("must provide symbol name", 403)
+        elif not lookup(request.form.get("symbol")):
+            return apology("must provide a valid symbol name", 403)
+        else:
+            price = lookup(request.form.get("symbol")).price
+
+
         return apology("TODO")
         # if symbol is blank or does not exist (lookup) return apology
         # if nb of shares is not a positive integer return apology
         # if purchase price (lookup) > user cash (query db) return apology
         # else insert purchase into new table, and update user cash
-
-
-
-                if not request.form.get("symbol"):
-             return apology("must provide symbol name", 403)
-        quote = lookup(request.form.get("symbol"))
-        return render_template("quoted.html", quote=quote)
     else:
         return render_template("buy.html")
 
