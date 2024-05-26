@@ -65,8 +65,13 @@ def buy():
         # if purchase price (lookup) > user cash (query db) return apology
         purchase_price = price*shares
         user_id = session["user_id"]
-        user_cash = db.execute("SELECT cash FROM users WHERE id=(?)", user_id)
+        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        if purchase_price > user_cash:
+            return apology("you don't have enough cash", 403
+
         # else insert purchase into new table, and update user cash
+        new_user_cash = user_cash - purchase_price
+        # query
 
         return apology("TODO")
     else:
