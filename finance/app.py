@@ -112,7 +112,11 @@ def quote():
         return render_template("quote.html")
     else:
         quote = lookup(request.form.get("symbol"))
-        if not quote:
+        if not request.form.get("symbol"):
+            return render_template("quote.html")
+        else:
+            try:
+                
             return apology("problem with the lookup", 403)
         else:
             return render_template("quoted.html", quote=quote)
