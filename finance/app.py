@@ -48,6 +48,8 @@ def index():
             # # compute total value
             total = float(price)*stock["sum"]
             stock["total"] = total
+            rfan
+            gain
 
     except:
         return(apology("index error"))
