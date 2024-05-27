@@ -38,6 +38,7 @@ def index():
     try:
          user_id = session["user_id"]
          portfolio = db.execute("SELECT symbol, SUM(shares) AS sum FROM (SELECT * FROM transactions WHERE user_id=?) GROUP BY symbol", user_id)
+         grand_total = 0
          for stock in portfolio:
             #  stock.symbol
             #  stock.shares
@@ -45,11 +46,11 @@ def index():
             # lookup actual price
             price = lookup(stock["symbol"])["price"]
             stock["price"] = price
-            # # compute total value
+            # compute total value
             total = float(price)*stock["sum"]
             stock["total"] = total
-            rfan
-            gain
+            grand_total = grand_total + total
+        # f
 
     except:
         return(apology("index error"))
