@@ -36,7 +36,7 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     try:
-        pass
+         
     except:
         return(apology("index error"))
 
