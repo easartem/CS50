@@ -45,8 +45,8 @@ def index():
             # lookup actual price
             price = lookup(stock["symbol"])["price"]
             stock["price"] = price
-            # compute total value
-            total = price*stock["shares"]
+            # # compute total value
+            total = float(price)*stock["sum"]
             stock["total"] = total
 
     except:
