@@ -236,7 +236,8 @@ def sell():
         pass
         # give list of stocks through argument
         if not request.form.get("symbol") or request.form.get("share_nb"):
-            return apology("TODO")
+            return apology("Must provide symbol and number", 403)
+        if 
     else:
         return render_template("sell.html")
     return redirect("/")
