@@ -39,7 +39,7 @@ def index():
          user_id = session["user_id"]
          portfolio = db.execute("SELECT symbol, SUM(shares) AS sum FROM (SELECT * FROM transactions WHERE user_id=?) GROUP BY symbol", user_id)
          grand_total = 0
-         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]
          for stock in portfolio:
             #  stock.symbol
             #  stock.shares
@@ -55,7 +55,7 @@ def index():
     except:
         return(apology("index error"))
 
-    return render_template("index.html", rows=portfolio, grand_total=grand_total)
+    return render_template("index.html", rows=portfolio, cash=usd(cash["cash"]), grand_total=usd(grand_total))
 
 
 @app.route("/buy", methods=["GET", "POST"])
