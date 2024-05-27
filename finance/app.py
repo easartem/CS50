@@ -220,10 +220,24 @@ def register():
 
 
 
+# Complete the implementation of sell in such a way that it enables a user to sell shares of a stock (that he or she owns).
 
+# Require that a user input a stock’s symbol, implemented as a select menu whose name is symbol. Render an apology if the user fails to select a stock or if (somehow, once submitted) the user does not own any shares of that stock.
+# Require that a user input a number of shares, implemented as a text field whose name is shares. Render an apology if the input is not a positive integer or if the user does not own that many shares of the stock.
+# Submit the user’s input via POST to /sell.
+# Upon completion, redirect the user to the home page.
+# You don’t need to worry about race conditions (or use transactions).
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
     """Sell shares of stock"""
+    if request.method == "POST":
+        pass
+        # give list of stocks through argument
+        if not request.form.get("symbol") or request.form.get("share_nb"):
+            return apology("TODO")
+    else:
+        return render_template("sell.html")
+    return redirect("/")
     return apology("TODO")
