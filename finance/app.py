@@ -41,7 +41,12 @@ def index():
          for stock in portfolio:
             #  stock.symbol
             #  stock.shares
-            stock.price = 0
+            stock["price"] = 0
+            # lookup actual price
+            # compute total value
+            total = stock.price*stock.shares
+            stock["total"] = total
+
     except:
         return(apology("index error"))
 
