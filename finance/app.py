@@ -257,7 +257,7 @@ def sell():
         new_cash = float(cash["cash"]) + gain
         new_nb = nb_owned - nb
         db.execute("UPDATE users SET cash=? WHERE id=?", new_cash, session["user_id"])
-        db.execute("INSERT INTO (symbol, price_per_share, shares, user_id) VALUES(?, ?, ?, ?)",(symbol, price, new_nb, session["user_id"]))
+        db.execute("INSERT INTO transactions(symbol, price_per_share, shares, user_id) VALUES(?, ?, ?, ?)",(symbol, price, new_nb, session["user_id"]))
         return redirect("/")
     else:
         try:
