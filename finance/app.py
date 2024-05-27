@@ -253,8 +253,8 @@ def sell():
 
         price = lookup(request.form.get("symbol"))["price"]
         gain = float(price)*nb
-        cash = db.execute("SELECT cash FROM users WHERE user_id=?", session["user_id"])[0]
-        new_cash = cash + gain
+        cash = db.execute("SELECT cash FROM users WHERE id=?", session["user_id"])[0]
+        new_cash = float(cash["cash"]) + gain
         new_nb = nb_owned - nb
         db.execute("UPDATE users SET cash=? WHERE id=?", new_cash, session["user_id"])
         db.execute("INSERT INTO (symbol, price_per_share, shares, user_id) VALUES(?, ?, ?, ?)",(symbol, price, new_nb, session["user_id"]))
