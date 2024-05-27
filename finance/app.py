@@ -237,7 +237,13 @@ def sell():
         # give list of stocks through argument
         if not request.form.get("symbol") or request.form.get("share_nb"):
             return apology("Must provide symbol and number", 403)
-        if 
+
+        if not lookup(request.form.get("symbol")):
+            return apology("must provide a valid symbol name", 403)
+
+        
+        symbol = request.form.get("symbol")
+        price = lookup(request.form.get("symbol"))["price"]
     else:
         return render_template("sell.html")
     return redirect("/")
