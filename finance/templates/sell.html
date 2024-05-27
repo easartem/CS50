@@ -11,7 +11,7 @@
         <select name="symbol" autofocus class="form-control mx-auto w-auto">
             <option disabled selected value="">Stock name</option>
             {% for stock in stock_owned %}
-                <option>{{ stock }}</option>
+                <option>{{ stock.symbol }}</option>
             {% endfor %}
         </select>
         <div class="mb-3">

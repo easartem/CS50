@@ -253,7 +253,10 @@ def sell():
 
         symbol = request.form.get("symbol")
         price = lookup(request.form.get("symbol"))["price"]
+        return redirect("/")
     else:
-        return render_template("sell.html")
-    return redirect("/")
-    return apology("TODO")
+        try:
+            stock_owned = db.execute("SELECT symbol, SUM(shares) AS sum FROM (SELECT * FROM transactions WHERE user_id=?) GROUP BY symbol", session["user_id"])
+        except ValueError:
+            return apology("failed to retrieve the information from db, try again later", 403)
+        return render_template("sell.html", stock_owned=stock_owned)
