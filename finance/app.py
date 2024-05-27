@@ -36,7 +36,7 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     try:
-         
+         portfolio = df.execute("SELECT symbol, SUM(shares) FROM (SELECT * FROM transactions WHERE user_id=?) GROUP BY symbol", session["user_id"])
     except:
         return(apology("index error"))
 
