@@ -50,7 +50,7 @@ def index():
             total = float(price)*stock["sum"]
             stock["total"] = total
             grand_total = grand_total + total
-        # f
+        # get the cash
 
     except:
         return(apology("index error"))
