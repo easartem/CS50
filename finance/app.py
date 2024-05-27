@@ -39,9 +39,9 @@ def index():
          user_id = session["user_id"]
          portfolio = db.execute("SELECT symbol, SUM(shares) AS sum FROM (SELECT * FROM transactions WHERE user_id=?) GROUP BY symbol", user_id)
          for stock in portfolio:
-             stock.symbol
-             stock.shares
-             stock
+            #  stock.symbol
+            #  stock.shares
+             stock.price = 0
     except:
         return(apology("index error"))
 
