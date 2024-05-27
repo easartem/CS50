@@ -241,7 +241,16 @@ def sell():
         if not lookup(request.form.get("symbol")):
             return apology("must provide a valid symbol name", 403)
 
-        
+        nb = request.form.get("share_nb")
+        try:
+            int(nb)
+        except ValueError:
+            return apology("must provide a valid sell number", 403)
+
+        if nb <= 0 or nb > maxborn:
+            return apology("you don't have enough shares", 403)
+
+
         symbol = request.form.get("symbol")
         price = lookup(request.form.get("symbol"))["price"]
     else:
