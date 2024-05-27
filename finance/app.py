@@ -41,7 +41,7 @@ def index():
          for stock in portfolio:
             #  stock.symbol
             #  stock.shares
-             stock.price = 0
+            stock.price = 0
     except:
         return(apology("index error"))
 
