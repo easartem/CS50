@@ -9,7 +9,7 @@
         <h3>Quoted</h3>
         <br>
         <div class="mb-3">
-            {{ quote["price"] }}
+            {{ quote["price"] | usd }}
             {{ quote["symbol"] }}
         </div>
     </form>
