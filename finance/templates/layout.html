@@ -87,9 +87,16 @@
                         button.addEventListener("click", function() {
                             const shareId = this.getAttribute("data-id");
                             const shareValueElement = document.getElementById(`share-value-${shareId}`);
+                            const shareMax = this.getAttribute("data-max");
+                            const shareMin = this.getAttribute("data-min");
                             let shareValue = parseInt(shareValueElement.textContent);
-                            shareValue++;
-                            shareValueElement.textContent = shareValue;
+                            if (shareValue < 0 | shareValue >= shareMax) {
+                                this.disabled=true;
+                            } else {
+                                shareValue++;
+                                shareValueElement.textContent = shareValue;
+                                this.disabled=false;
+                            }
                         });
                     });
 
@@ -97,9 +104,17 @@
                         button.addEventListener("click", function() {
                             const shareId = this.getAttribute("data-id");
                             const shareValueElement = document.getElementById(`share-value-${shareId}`);
+                            const shareMax = this.getAttribute("data-max");
+                            const shareMin = this.getAttribute("data-min");
                             let shareValue = parseInt(shareValueElement.textContent);
-                            shareValue--;
-                            shareValueElement.textContent = shareValue;
+                            if (shareValue < 0 | shareValue >= shareMax) {
+                                this.disabled=true;
+                            } else {
+                                shareValue--;
+                                shareValueElement.textContent = shareValue;
+                                this.disabled=false;
+                            }
+                        });
                         });
                     });
                 });
