@@ -117,7 +117,9 @@ def history():
     return apology("TODO")
 
 """
-    ALTER TABLE transactions ADD buy BOOLEAN, sell BOOLEAN;
+    ALTER TABLE transactions ADD type BOOLEAN;
+    UPDATE transactions SET type=TRUE WHERE shares>0;
+    UPDATE transactions SET type=FALSE WHERE shares<=0;
 """
 
 
