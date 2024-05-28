@@ -114,6 +114,8 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
+    try:
+        rows = db.execute("SELECT * FROM transactions WHERE user_id = ? ORDER BY da", session["user_id"])
     return render_template("history.html", rows=portfolio)
 
 # For each row, make clear whether a stock was bought or sold and include the stock’s symbol, the (purchase or sale) price,
