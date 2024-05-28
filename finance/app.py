@@ -36,12 +36,12 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     try:
-         user_id = session["user_id"]
-         portfolio = db.execute(
-             "SELECT symbol, SUM(shares) AS sum FROM (SELECT * FROM transactions WHERE user_id=?) GROUP BY symbol", user_id)
-         grand_total = 0
-         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]
-         for stock in portfolio:
+        user_id = session["user_id"]
+        portfolio = db.execute(
+            "SELECT symbol, SUM(shares) AS sum FROM (SELECT * FROM transactions WHERE user_id=?) GROUP BY symbol", user_id)
+        grand_total = 0
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]
+        for stock in portfolio:
             #  stock.symbol
             #  stock.shares
             stock["price"] = 0
@@ -54,7 +54,7 @@ def index():
             grand_total = grand_total + total
 
     except:
-        return(apology("index error"))
+        return (apology("index error"))
 
     return render_template("index.html", rows=portfolio, cash=usd(cash["cash"]), grand_total=usd(grand_total))
 
@@ -63,7 +63,7 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    if request.method =="POST":
+    if request.method == "POST":
         # if symbol is blank or does not exist (lookup) return apology
         if not request.form.get("symbol"):
             return apology("must provide symbol name", 400)
@@ -94,12 +94,15 @@ def buy():
         # else insert purchase into new table, and update user cash
         new_user_cash = user_cash - purchase_price
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_user_cash, user_id)
-        db.execute("INSERT INTO transactions (symbol, price_per_share, shares, user_id) VALUES(?, ?, ?, ?)", symbol, price, shares, user_id)
+        db.execute("INSERT INTO transactions (symbol, price_per_share, shares, user_id) VALUES(?, ?, ?, ?)",
+                   symbol, price, shares, user_id)
 
         # Redirect user to home page
         return redirect("/")
     else:
         return render_template("buy.html")
+
+
 """
     CREATE TABLE transactions (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
                                symbol TEXT NOT NULL,
@@ -116,10 +119,12 @@ def buy():
 def history():
     """Show history of transactions"""
     try:
-        rows = db.execute("SELECT * FROM transactions WHERE user_id = ? ORDER BY date ASC", session["user_id"])
+        rows = db.execute(
+            "SELECT * FROM transactions WHERE user_id = ? ORDER BY date ASC", session["user_id"])
     except ValueError:
         return apology("history query failed", 400)
     return render_template("history.html", rows=rows)
+
 
 # For each row, make clear whether a stock was bought or sold and include the stock’s symbol, the (purchase or sale) price,
 # the number of shares bought or sold, and the date and time at which the transaction occurred.
@@ -187,7 +192,7 @@ def quote():
     """Get stock quote."""
     if request.method == "POST":
         if not request.form.get("symbol"):
-             return apology("must provide symbol name", 400)
+            return apology("must provide symbol name", 400)
         elif not lookup(request.form.get("symbol")):
             return apology("must provide a valid symbol name", 400)
         quote = lookup(request.form.get("symbol"))
@@ -220,7 +225,7 @@ def register():
         # Query database for username already existing, Ensure username is unique
         name = request.form.get("username")
         psw = generate_password_hash(request.form.get("password"))
-        try :
+        try:
             new_user_id = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", name, psw)
         except ValueError:
             return apology("username already exists", 400)
@@ -233,7 +238,6 @@ def register():
 
     else:
         return render_template("register.html")
-
 
 
 @app.route("/sell", methods=["GET", "POST"])
@@ -256,7 +260,8 @@ def sell():
         except ValueError:
             return apology("must provide a valid sell number", 400)
 
-        nb_owned = db.execute("SELECT SUM(shares) AS sum FROM (SELECT * FROM transactions WHERE user_id=? AND symbol=?)", session["user_id"], symbol)[0]
+        nb_owned = db.execute(
+            "SELECT SUM(shares) AS sum FROM (SELECT * FROM transactions WHERE user_id=? AND symbol=?)", session["user_id"], symbol)[0]
         nb_owned = int(nb_owned["sum"])
         if nb_to_sell <= 0 or nb_to_sell > nb_owned:
             return apology("you don't have enough shares", 400)
@@ -267,7 +272,8 @@ def sell():
         new_nb = nb_owned - nb_to_sell
         print(type(price))
         try:
-            db.execute("INSERT INTO transactions (symbol, price_per_share, shares, user_id) VALUES(?, ?, ?, ?)", symbol, price, -nb_to_sell, session["user_id"])
+            db.execute("INSERT INTO transactions (symbol, price_per_share, shares, user_id) VALUES(?, ?, ?, ?)",
+                       symbol, price, -nb_to_sell, session["user_id"])
         except ValueError:
             msg = str(symbol) + str(price) + str(new_nb) + str(session["user_id"])
             return apology(msg, 400)
@@ -282,7 +288,8 @@ def sell():
         return redirect("/")
     else:
         try:
-            stock_owned = db.execute("SELECT symbol, SUM(shares) AS sum FROM (SELECT * FROM transactions WHERE user_id=?) GROUP BY symbol", session["user_id"])
+            stock_owned = db.execute(
+                "SELECT symbol, SUM(shares) AS sum FROM (SELECT * FROM transactions WHERE user_id=?) GROUP BY symbol", session["user_id"])
         except ValueError:
             return apology("failed to retrieve the information from db, try again later", 400)
         # give list of stocks through argument
