@@ -233,12 +233,13 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "POST":
-        # give list of stocks through argument
         if not request.form.get("symbol") or not request.form.get("share_nb"):
             return apology("Must provide symbol and number", 403)
 
         if not lookup(request.form.get("symbol")):
             return apology("must provide a valid symbol name", 403)
+
+        # if symbol not in listofsymbol:
 
         symbol = request.form.get("symbol")
         nb = int(request.form.get("share_nb"))
@@ -265,5 +266,5 @@ def sell():
             stock_owned = db.execute("SELECT symbol, SUM(shares) AS sum FROM (SELECT * FROM transactions WHERE user_id=?) GROUP BY symbol", session["user_id"])
         except ValueError:
             return apology("failed to retrieve the information from db, try again later", 403)
-
+        # give list of stocks through argument
         return render_template("sell.html", stock_owned=stock_owned)
