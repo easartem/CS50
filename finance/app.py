@@ -242,7 +242,7 @@ def sell():
         # if symbol not in listofsymbol:
 
         symbol = request.form.get("symbol")
-        nb = int(request.form.get("share_nb"))
+        nb_to_sell = int(request.form.get("share_nb"))
         try:
             int(nb)
         except ValueError:
@@ -250,16 +250,21 @@ def sell():
 
         nb_owned = db.execute("SELECT SUM(shares) AS sum FROM (SELECT * FROM transactions WHERE user_id=? AND symbol=?)", session["user_id"], symbol)[0]
         nb_owned = int(nb_owned["sum"])
-        if nb <= 0 or nb > nb_owned:
+        if nb_to_sell <= 0 or nb_to_sell > nb_owned:
             return apology("you don't have enough shares", 403)
 
+        # Selling the shares
         price = lookup(request.form.get("symbol"))["price"]
-        gain = float(price)*nb
+        gain = float(price)*nb_to_sell
+        new_nb = nb_owned - nb_to_sell
+
+        db.execute("INSERT INTO transactions (symbol, price_per_share, shares, user_id) VALUES(?, ?, ?, ?)",(symbol, price, new_nb, session["user_id"]))
+        # Updating the user cash 
         cash = db.execute("SELECT cash FROM users WHERE id=?", session["user_id"])[0]
         new_cash = float(cash["cash"]) + gain
-        new_nb = nb_owned - nb
+
         db.execute("UPDATE users SET cash=? WHERE id=?", new_cash, session["user_id"])
-        db.execute("INSERT INTO transactions (symbol, price_per_share, shares, user_id) VALUES(?, ?, ?, ?)",(symbol, price, new_nb, session["user_id"]))
+
         return redirect("/")
     else:
         try:
