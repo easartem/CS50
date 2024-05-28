@@ -27,9 +27,9 @@
                     <td>{{ row.total }}</td>
                     <td>{{ row.id }}</td>
                     <td>
-                        <button id="decrease" data-id="{{ row.id }}" class="btn btn-outline-info btn-sm btn-minus" type="button">-</button>
+                        <button data-id="{{ row.id }}" class="btn btn-outline-info btn-sm btn-minus decrease" type="button">-</button>
                         <span id="share-value-{{ row.id }}">{{ row.nb_to_trade }}</span>
-                        <button id="increase" data-id="{{ row.id }}" class="btn btn-outline-info btn-sm btn-plus" type="button">+</button>
+                        <button data-id="{{ row.id }}" class="btn btn-outline-info btn-sm btn-plus increase" type="button">+</button>
                     </td>
                 </tr>
                 {% endfor %}
