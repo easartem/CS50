@@ -246,6 +246,7 @@ def sell():
             int(nb)
         except ValueError:
             return apology("must provide a valid sell number", 403)
+
         nb_owned = db.execute("SELECT SUM(shares) AS sum FROM (SELECT * FROM transactions WHERE user_id=? AND symbol=?)", session["user_id"], symbol)[0]
         nb_owned = int(nb_owned["sum"])
         if nb <= 0 or nb > nb_owned:
