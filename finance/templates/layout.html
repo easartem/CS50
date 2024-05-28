@@ -87,8 +87,7 @@
                         button.addEventListener("click", function() {
                             const shareId = this.getAttribute("data-id");
                             const shareValueElement = document.getElementById(`share-value-${shareId}`);
-                            const shareMax = this.getAttribute("data-max");
-                            const shareMin = this.getAttribute("data-min");
+                            const shareMax = parseInt(this.getAttribute("data-max"));
                             let shareValue = parseInt(shareValueElement.textContent);
                             shareValue++;
                             if (shareValue < 0 || shareValue >= shareMax) {
@@ -106,8 +105,7 @@
                         button.addEventListener("click", function() {
                             const shareId = this.getAttribute("data-id");
                             const shareValueElement = document.getElementById(`share-value-${shareId}`);
-                            const shareMax = this.getAttribute("data-max");
-                            const shareMin = this.getAttribute("data-min");
+                            const shareMax = parseInt(this.getAttribute("data-max"));
                             let shareValue = parseInt(shareValueElement.textContent);
                             if (shareValue <= 0 || shareValue >= shareMax) {
                                 this.disabled=true;
