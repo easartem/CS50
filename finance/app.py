@@ -116,6 +116,10 @@ def history():
     """Show history of transactions"""
     return apology("TODO")
 
+"""
+    ALTER TABLE transactions ADD buy BOOLEAN, sell BOOLEAN;
+"""
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
