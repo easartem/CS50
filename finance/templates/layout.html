@@ -95,9 +95,9 @@
                             } else {
                                 shareValue++;
                                 shareValueElement.textContent = shareValue;
-                                this.disabled=false;
+                                let button = document.querySelector('.decrease[data-id=shareId]');
+                                button.disabled=false;
                             }
-                            document.querySelectorAll(".decrease")
                         });
                     });
 
@@ -113,7 +113,8 @@
                             } else {
                                 shareValue--;
                                 shareValueElement.textContent = shareValue;
-                                this.disabled=false;
+                                let button = document.querySelector('.increase[data-id=shareId]');
+                                button.disabled=false;
                             }
                         });
                     });
