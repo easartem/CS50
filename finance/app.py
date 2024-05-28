@@ -240,7 +240,7 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "POST":
-        if not request.form.get("symbol") or not request.form.get("share_nb"):
+        if not request.form.get("symbol") or not request.form.get("shares"):
             return apology("Must provide symbol and number", 400)
 
         if not lookup(request.form.get("symbol")):
@@ -249,7 +249,7 @@ def sell():
         # if symbol not in listofsymbol:
 
         symbol = request.form.get("symbol")
-        nb_to_sell = int(request.form.get("share_nb"))
+        nb_to_sell = int(request.form.get("shares"))
         try:
             int(nb_to_sell)
         except ValueError:
