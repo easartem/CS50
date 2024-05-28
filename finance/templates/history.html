@@ -10,33 +10,24 @@
         <table>
             <thead>
                 <tr>
+                    <th>Transaction type</th>
                     <th>Symbol</th>
                     <th>Number of shares</th>
                     <th>Price per share</th>
-                    <th>Total value</th>
+                    <th>Date</th>
                 </tr>
             </thead>
             <tbody>
                 {% for row in rows %}
                 <tr>
+                    <td>{{ row.type }}</td>
                     <td>{{ row.symbol }}</td>
                     <td>{{ row.sum }}</td>
                     <td>{{ row.price }}</td>
-                    <td>{{ row.total }}</td>
+                    <td>{{ row.date }}</td>
                 </tr>
                 {% endfor %}
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>{{ grand_total }}</td>
-                </tr>
             </tbody>
         </table>
-        <div>
-            Cash available : {{ cash }}
-            Total Wallet : {{ grand_total }}
-        </div>
-
     </form>
 {% endblock %}
