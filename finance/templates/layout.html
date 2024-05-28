@@ -90,10 +90,10 @@
                             const shareMax = parseInt(this.getAttribute("data-max"));
                             let shareValue = parseInt(shareValueElement.textContent);
                             shareValue++;
-                            if (shareValue < 0 || shareValue >= shareMax) {
+                            if (shareValue < 0 || shareValue > shareMax) {
                                 this.disabled=true;
                                 shareValueElement.textContent = shareValue;
-                            } else if (shareValue == 0) {
+                            } else if (shareValue == 0 || shareValue == shareMax) {
                                 this.disabled=true;
                             } else {
                                 shareValueElement.textContent = shareValue;
@@ -110,8 +110,6 @@
                             const shareMax = parseInt(this.getAttribute("data-max"));
                             let shareValue = parseInt(shareValueElement.textContent);
                             if (shareValue <= 0 || shareValue > shareMax) {
-                                this.disabled=true;
-                            } else if (shareValue == shareMax) {
                                 this.disabled=true;
                             } else {
                                 shareValue--;
