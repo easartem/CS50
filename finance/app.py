@@ -35,28 +35,31 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    try:
-        user_id = session["user_id"]
-        portfolio = db.execute(
-            "SELECT symbol, SUM(shares) AS sum FROM (SELECT * FROM transactions WHERE user_id=?) GROUP BY symbol", user_id)
-        grand_total = 0
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]
-        for stock in portfolio:
-            #  stock.symbol
-            #  stock.shares
-            stock["price"] = 0
-            # lookup actual price
-            price = lookup(stock["symbol"])["price"]
-            stock["price"] = price
-            # compute total value
-            total = float(price)*stock["sum"]
-            stock["total"] = total
-            grand_total = grand_total + total
+    if request.method == "POST":
+        return (apology("not yet written"))
+    else:
+        try:
+            user_id = session["user_id"]
+            portfolio = db.execute(
+                "SELECT symbol, SUM(shares) AS sum FROM (SELECT * FROM transactions WHERE user_id=?) GROUP BY symbol", user_id)
+            grand_total = 0
+            cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]
+            for stock in portfolio:
+                #  stock.symbol
+                #  stock.shares
+                stock["price"] = 0
+                # lookup actual price
+                price = lookup(stock["symbol"])["price"]
+                stock["price"] = price
+                # compute total value
+                total = float(price)*stock["sum"]
+                stock["total"] = total
+                grand_total = grand_total + total
 
-    except:
-        return (apology("index error"))
+        except:
+            return (apology("index error"))
 
-    return render_template("index.html", rows=portfolio, cash=usd(cash["cash"]), grand_total=usd(grand_total))
+        return render_template("index.html", rows=portfolio, cash=usd(cash["cash"]), grand_total=usd(grand_total))
 
 
 @app.route("/buy", methods=["GET", "POST"])
