@@ -90,7 +90,7 @@
                             const shareMax = this.getAttribute("data-max");
                             const shareMin = this.getAttribute("data-min");
                             let shareValue = parseInt(shareValueElement.textContent);
-                            if (shareValue < 0 | shareValue >= shareMax) {
+                            if (shareValue < 0 || shareValue >= shareMax) {
                                 this.disabled=true;
                             } else {
                                 shareValue++;
@@ -108,7 +108,7 @@
                             const shareMax = this.getAttribute("data-max");
                             const shareMin = this.getAttribute("data-min");
                             let shareValue = parseInt(shareValueElement.textContent);
-                            if (shareValue < 0 | shareValue >= shareMax) {
+                            if (shareValue < 0 || shareValue >= shareMax) {
                                 this.disabled=true;
                             } else {
                                 shareValue--;
