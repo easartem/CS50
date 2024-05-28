@@ -114,15 +114,11 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    return apology("TODO")
-
-# Complete the implementation of history in such a way that it displays an HTML table summarizing all of a user’s transactions ever,
-# listing row by row each and every buy and every sell.
+    return render_template("history.html", rows=portfolio)
 
 # For each row, make clear whether a stock was bought or sold and include the stock’s symbol, the (purchase or sale) price,
 # the number of shares bought or sold, and the date and time at which the transaction occurred.
 # You might need to alter the table you created for buy or supplement it with an additional table. Try to minimize redundancies.
-
 """
     ALTER TABLE transactions ADD type BOOLEAN;
     UPDATE transactions SET type=TRUE WHERE shares>0;
