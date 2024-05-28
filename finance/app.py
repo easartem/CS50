@@ -249,10 +249,9 @@ def sell():
         price = lookup(request.form.get("symbol"))["price"]
         gain = float(price)*nb_to_sell
         new_nb = nb_owned - nb_to_sell
-        random_price = 100
         print(type(price))
         try:
-            db.execute("INSERT INTO transactions (symbol, price_per_share, shares, user_id) VALUES(?)",('lvmuy', 100, -1, 2))
+            db.execute("INSERT INTO transactions (symbol, price_per_share, shares, user_id) VALUES(?, ?, ?, ?)", symbol, price, -nb_to_sell, session["user_id"])
         except ValueError: #RuntimeError
             msg = str(symbol) + str(price) + str(new_nb) + str(session["user_id"])
             return apology(msg, 403)
