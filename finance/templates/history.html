@@ -7,6 +7,7 @@
 {% block main %}
     <form action="/history" method="get">
         <h3>HISTORY PAGE</h3>
+        <br>
         <table>
             <thead>
                 <tr>
@@ -22,8 +23,8 @@
                 <tr>
                     <td>{{ row.type }}</td>
                     <td>{{ row.symbol }}</td>
-                    <td>{{ row.sum }}</td>
-                    <td>{{ row.price }}</td>
+                    <td>{{ row.shares }}</td>
+                    <td>{{ row.price_per_share }}</td>
                     <td>{{ row.date }}</td>
                 </tr>
                 {% endfor %}

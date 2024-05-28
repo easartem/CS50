@@ -115,8 +115,10 @@ def buy():
 def history():
     """Show history of transactions"""
     try:
-        rows = db.execute("SELECT * FROM transactions WHERE user_id = ? ORDER BY da", session["user_id"])
-    return render_template("history.html", rows=portfolio)
+        rows = db.execute("SELECT * FROM transactions WHERE user_id = ? ORDER BY date ASC", session["user_id"])
+    except ValueError:
+        return apology("history query failed", 403)
+    return render_template("history.html", rows=rows)
 
 # For each row, make clear whether a stock was bought or sold and include the stock’s symbol, the (purchase or sale) price,
 # the number of shares bought or sold, and the date and time at which the transaction occurred.
