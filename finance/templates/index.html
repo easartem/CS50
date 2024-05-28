@@ -14,12 +14,12 @@
                     <th>Number of shares</th>
                     <th>Price per share</th>
                     <th>Total value</th>
+                    <th>transaction id</th>
                     <th>Buy or sell</th>
                 </tr>
             </thead>
             <tbody>
                 {% for row in rows %}
-                {{ share.value = 0}}
                 <tr>
                     <td>{{ row.symbol }}</td>
                     <td>{{ row.sum }}</td>
@@ -28,7 +28,7 @@
                     <td>{{ row.id }}</td>
                     <td>
                         <button id="decrease" data-id="{{ row.id }}" class="btn btn-outline-info btn-sm btn-minus" type="button">-</button>
-                        <span id="share-value-{{ row.id }}">0</span>
+                        <span id="share-value-{{ row.id }}">{{ row.nb_to_trade }}</span>
                         <button id="increase" data-id="{{ row.id }}" class="btn btn-outline-info btn-sm btn-plus" type="button">+</button>
                     </td>
                 </tr>
