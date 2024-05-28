@@ -187,6 +187,8 @@ def quote():
     if request.method == "POST":
         if not request.form.get("symbol"):
              return apology("must provide symbol name", 400)
+        elif not lookup(request.form.get("symbol")):
+            return apology("must provide a valid symbol name", 400)
         quote = lookup(request.form.get("symbol"))
         return render_template("quoted.html", quote=quote)
     else:
