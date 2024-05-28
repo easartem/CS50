@@ -91,7 +91,7 @@
                             const shareMin = this.getAttribute("data-min");
                             let shareValue = parseInt(shareValueElement.textContent);
                             shareValue++;
-                            if (shareValue < 0 || shareValue >= shareMax-1) {
+                            if (shareValue < 0 || shareValue >= shareMax) {
                                 this.disabled=true;
                                 shareValueElement.textContent = shareValue;
                             } else {
@@ -113,12 +113,11 @@
                             const shareMax = this.getAttribute("data-max");
                             const shareMin = this.getAttribute("data-min");
                             let shareValue = parseInt(shareValueElement.textContent);
-                            if (shareValue < 0 || shareValue >= shareMax-1) {
+                            shareValue--;
+                            if (shareValue < 0 || shareValue >= shareMax) {
                                 this.disabled=true;
-                                shareValue--;
                                 shareValueElement.textContent = shareValue;
                             } else {
-                                shareValue--;
                                 shareValueElement.textContent = shareValue;
                                 let button = document.querySelector(`.increase[data-id="${shareId}"]`);
                                 button.disabled=false;
