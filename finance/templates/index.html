@@ -27,6 +27,8 @@
                     <td>
                         <form action=/index method="post">
                             <input name="id" type="hidden" value="{{ row.user_id }}">
+                            <input name="symbol" type="hidden" value="{{ row.symbol }}">
+                            <input name="shares" type="hidden" value="{{ row.user_id }}">
                             <button class="btn btn-outline-info btn-sm btn-minus" type="button" onclick="decrease()">-</button>
                             <i class="new_nb">0</i>
                             <button class="btn btn-outline-info btn-sm btn-plus" type="submit">+</button>
