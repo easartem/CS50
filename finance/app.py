@@ -294,8 +294,3 @@ def sell():
             return apology("failed to retrieve the information from db, try again later", 400)
         # give list of stocks through argument
         return render_template("sell.html", stock_owned=stock_owned)
-
-@app.route("/transaction", methods=[="POST"])
-@login_required
-def transaction():
-    return
