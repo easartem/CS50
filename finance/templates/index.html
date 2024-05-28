@@ -19,6 +19,7 @@
             </thead>
             <tbody>
                 {% for row in rows %}
+                {{ share.value = 0}}
                 <tr>
                     <td>{{ row.symbol }}</td>
                     <td>{{ row.sum }}</td>
