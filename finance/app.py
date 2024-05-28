@@ -252,7 +252,7 @@ def sell():
         print(type(price))
         try:
             db.execute("INSERT INTO transactions (symbol, price_per_share, shares, user_id) VALUES(?, ?, ?, ?)", symbol, price, -nb_to_sell, session["user_id"])
-        except ValueError: #RuntimeError
+        except ValueError:
             msg = str(symbol) + str(price) + str(new_nb) + str(session["user_id"])
             return apology(msg, 403)
 
@@ -261,7 +261,7 @@ def sell():
             cash = db.execute("SELECT cash FROM users WHERE id=?", session["user_id"])[0]
             new_cash = float(cash["cash"]) + gain
             db.execute("UPDATE users SET cash=? WHERE id=?", new_cash, session["user_id"])
-        except RuntimeError:
+        except ValueError:
             return apology("problem with cash update", 403)
         return redirect("/")
     else:
