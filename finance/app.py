@@ -252,7 +252,7 @@ def sell():
         random_price = 100
         print(type(price))
         try:
-            db.execute("INSERT INTO transactions (symbol, price_per_share, shares, user_id) VALUES(?, ?, ?, ?)",('lvmuy', 100, -1, 2))
+            db.execute("INSERT INTO transactions (symbol, price_per_share, shares, user_id) VALUES(?)",('lvmuy', 100, -1, 2))
         except ValueError: #RuntimeError
             msg = str(symbol) + str(price) + str(new_nb) + str(session["user_id"])
             return apology(msg, 403)
