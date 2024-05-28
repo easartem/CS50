@@ -14,6 +14,7 @@
                     <th>Number of shares</th>
                     <th>Price per share</th>
                     <th>Total value</th>
+                    <th>Buy or sell</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +24,11 @@
                     <td>{{ row.sum }}</td>
                     <td>{{ row.price }}</td>
                     <td>{{ row.total }}</td>
+                    <td>
+                        <button class="btn btn-primary" type="submit">-</button>
+                        <input autocomplete="off" class="form-control mx-auto w-auto" placeholder="0" type="number">
+                        <button class="btn btn-primary" type="submit">+</button>
+                    </td>
                 </tr>
                 {% endfor %}
                 <tr>
