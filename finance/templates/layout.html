@@ -85,19 +85,24 @@
                 });
 
                 document.addEventListener("DOMContentLoaded", function() {
-                    let shareValue = 0;
-                    const shareDisplay = document.getElementById("share-value");
-                    const increaseButton = document.getElementById("increase");
-                    const decreaseButton = document.getElementById("decrease");
-
-                    increaseButton.addEventListener("click", function() {
-                        shareValue++;
-                        shareDisplay.textContent = shareValue;
+                    document.querySelectorAll(".increase").forEach(button => {
+                        button.addEventListener("click", function() {
+                            const shareId = this.getAttribute("data-id");
+                            const shareValueElement = document.getElementById(`share-value-${shareId}`);
+                            let shareValue = parseInt(shareValueElement.textContent);
+                            shareValue++;
+                            shareValueElement.textContent = shareValue;
+                        });
                     });
 
-                    decreaseButton.addEventListener("click", function() {
-                        shareValue--;
-                        shareDisplay.textContent = shareValue;
+                    document.querySelectorAll(".decrease").forEach(button => {
+                        button.addEventListener("click", function() {
+                            const shareId = this.getAttribute("data-id");
+                            const shareValueElement = document.getElementById(`share-value-${shareId}`);
+                            let shareValue = parseInt(shareValueElement.textContent);
+                            shareValue--;
+                            shareValueElement.textContent = shareValue;
+                        });
                     });
                 });
 

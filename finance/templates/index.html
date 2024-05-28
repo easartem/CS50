@@ -25,13 +25,9 @@
                     <td>{{ row.price }}</td>
                     <td>{{ row.total }}</td>
                     <td>
-                        <input name="id" type="hidden" value="{{ row.user_id }}">
-                        <input name="symbol" type="hidden" value="{{ row.symbol }}">
-                        <input name="shares" type="hidden" value="{{ row.user_id }}">
-                        
-                        <button id="decrease" class="btn btn-outline-info btn-sm btn-minus" type="button" onclick="decrease()">-</button>
-                        <span id="share-value">0</span>
-                        <button id="increase" class="btn btn-outline-info btn-sm btn-plus" type="button" onclick="increase()">+</button>
+                        <button id="decrease" data-id="{{ row.id }}" class="btn btn-outline-info btn-sm btn-minus" type="button">-</button>
+                        <span id="share-value-{{ row.id }}">0</span>
+                        <button id="increase" data-id="{{ row.id }}" class="btn btn-outline-info btn-sm btn-plus" type="button">+</button>
                     </td>
                 </tr>
                 {% endfor %}
