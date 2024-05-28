@@ -34,4 +34,5 @@ border-collapse: collapse;
 
 .btn-minus, .btn-plus {
     border-radius: 50%;
+    padding:0.2rem;
 }
