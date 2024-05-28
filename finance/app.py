@@ -250,8 +250,8 @@ def sell():
         gain = float(price)*nb_to_sell
         new_nb = nb_owned - nb_to_sell
         try:
-            db.execute("INSERT INTO transactions (symbol, price_per_share, shares, user_id) VALUES(?, ?, ?, ?)",(symbol, price, new_nb, session["user_id"]))
-        except RuntimeError:
+            db.execute("INSERT INTO transactions (symbol, price_per_share, shares, user_id) VALUES(?, ?, ?, ?)",(symbol, price, -nb_to_sell, session["user_id"]))
+        except ValueError: #RuntimeError
             msg = str(symbol) + str(price) + str(new_nb) + str(session["user_id"])
             return apology(msg, 403)
 
