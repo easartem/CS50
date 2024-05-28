@@ -31,3 +31,7 @@ table {
 width: 100%;
 border-collapse: collapse;
 }
+
+#btn-minus, #btn-plus {
+    border-radius: 50%;
+}
