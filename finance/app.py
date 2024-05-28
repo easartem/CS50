@@ -236,7 +236,7 @@ def sell():
         symbol = request.form.get("symbol")
         nb_to_sell = int(request.form.get("share_nb"))
         try:
-            int(nb)
+            int(nb_to_sell)
         except ValueError:
             return apology("must provide a valid sell number", 403)
 
@@ -256,10 +256,12 @@ def sell():
             return apology(msg, 403)
 
         # Updating the user cash  ----------------------------------------------------------
-        cash = db.execute("SELECT cash FROM users WHERE id=?", session["user_id"])[0]
-        new_cash = float(cash["cash"]) + gain
-        db.execute("UPDATE users SET cash=? WHERE id=?", new_cash, session["user_id"])
-
+        try:
+            cash = db.execute("SELECT cash FROM users WHERE id=?", session["user_id"])[0]
+            new_cash = float(cash["cash"]) + gain
+            db.execute("UPDATE users SET cash=? WHERE id=?", new_cash, session["user_id"])
+        except RuntimeError:
+            return apology("problem with cash update", 403)
         return redirect("/")
     else:
         try:
