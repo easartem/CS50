@@ -98,11 +98,11 @@
                                 shareValue++;
                                 shareValueElement.textContent = shareValue;
                                 let button = document.querySelector(`.decrease[data-id="${shareId}"]`);
+                                button.disabled=false;
                                 console.log(shareId);
                                 console.log(button);
                                 console.log(shareValue);
                                 console.log(shareMax);
-                                button.disabled=false;
                             }
                         });
                     });
