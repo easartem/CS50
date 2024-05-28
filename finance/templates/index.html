@@ -25,7 +25,7 @@
                     <td>{{ row.price }}</td>
                     <td>{{ row.total }}</td>
                     <td>
-                        <form action=/transction method="post">
+                        <form action=/transaction method="post">
                             <input name="id" type="hidden" value="{{ row.user_id }}">
                             <button class="btn btn-outline-info btn-sm btn-minus" type="button" onclick="decrease()">-</button>
                             <i class="new_nb">0</i>
