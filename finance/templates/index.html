@@ -28,9 +28,9 @@
                         <input name="id" type="hidden" value="{{ row.user_id }}">
                         <input name="symbol" type="hidden" value="{{ row.symbol }}">
                         <input name="shares" type="hidden" value="{{ row.user_id }}">
-                        <button class="btn btn-outline-info btn-sm btn-minus" type="button" onclick="decrease()">-</button>
+                        <button id="increase" class="btn btn-outline-info btn-sm btn-minus" type="button" onclick="decrease()">-</button>
                         <span id="share-value">0</span>
-                        <button class="btn btn-outline-info btn-sm btn-plus" type="button" onclick="increase()">+</button>
+                        <button id="decrease" class="btn btn-outline-info btn-sm btn-plus" type="button" onclick="increase()">+</button>
                     </td>
                 </tr>
                 {% endfor %}

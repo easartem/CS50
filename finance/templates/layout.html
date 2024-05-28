@@ -84,13 +84,23 @@
                     document.querySelector('form[action="https://validator.w3.org/check"] > input[name="fragment"]').value = html;
                 });
 
-                function decrease() {
-                    document.getElementsByClassName("new_nb").style.color = "red";
-                    }
+                document.addEventListener("DOMContentLoaded", function() {
+                    let shareValue = 0;
+                    const shareDisplay = document.getElementById("share-value");
+                    const increaseButton = document.getElementById("increase");
+                    const decreaseButton = document.getElementById("decrease");
 
-                function increase() {
-                    document.getElementsByClassName("new_nb").style.color = "red";
-                    }
+                    increaseButton.addEventListener("click", function() {
+                        shareValue++;
+                        shareDisplay.textContent = shareValue;
+                    });
+
+                    decreaseButton.addEventListener("click", function() {
+                        shareValue--;
+                        shareDisplay.textContent = shareValue;
+                    });
+                });
+
             </script>
         </footer>
 
