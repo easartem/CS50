@@ -107,17 +107,13 @@
                             const shareValueElement = document.getElementById(`share-value-${shareId}`);
                             const shareMax = parseInt(this.getAttribute("data-max"));
                             let shareValue = parseInt(shareValueElement.textContent);
-                            if (shareValue <= 0 || shareValue >= shareMax) {
+                            if (shareValue < 0 || shareValue >= shareMax) {
                                 this.disabled=true;
                             } else {
                                 shareValue--;
                                 shareValueElement.textContent = shareValue;
                                 let button = document.querySelector(`.increase[data-id="${shareId}"]`);
                                 button.disabled=false;
-                                console.log(shareId);
-                                console.log(button);
-                                console.log(shareValue);
-                                console.log(shareMax);
                             }
                         });
                     });
