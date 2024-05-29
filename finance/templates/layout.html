@@ -130,7 +130,10 @@
                             'method' : 'POST',
                             'body' : myformdata
                         };
-                        fetch("/manage", fetch_options);
+                        fetch("/manage", fetch_options)
+                        .then(response => response.json())
+                        .then(data => console.log(data))
+                        .catch(error => console.error('Error:', error));
                         // try {
                         //     response = fetch("/manage", fetch_options);
                         //     console.log("Success:", response);
