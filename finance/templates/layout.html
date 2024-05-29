@@ -121,30 +121,28 @@
                         });
                     });
 
-                    // document.getElementById("btn_manage").addEventListener("click", manage_stock);
-                    // function manage_stock() {
-                    //     event.preventDefault();
-                    //     const form = document.querySelector(`form[id="form_manage"]`)
-                    //     console.log("blavblalazflf");
-                    //     console.log(form);
-                    //     const myformdata = new FormData(form)
-                    //     fetch_options = {
-                    //         'method' : 'POST',
-                    //         'body' : myformdata
-                    //     };
-                    //     fetch("/manage", fetch_options)
-                    //     .then(response => response.json())
-                    //     .then(data => console.log(data))
-                    //     .catch(error => console.error('Error:', error));
-                    //     // try {
-                    //     //     response = fetch("/manage", fetch_options);
-                    //     //     console.log("Success:", response);
-                    //     // } catch (error) {
-                    //     //     console.error("Error:", error);
-                    //     // }
+                    document.getElementById("btn_manage").addEventListener("click", manage_stock);
+                    function manage_stock() {
+                        event.preventDefault();
+                        const form = document.querySelector(`form[id="form_manage"]`)
+                        const myformdata = new FormData(form)
+                        fetch_options = {
+                            'method' : 'POST',
+                            'body' : myformdata
+                        };
+                        fetch("/manage", fetch_options)
+                        .then(response => response.json())
+                        .then(data => console.log(data))
+                        .catch(error => console.error('Error:', error));
+                        // try {
+                        //     response = fetch("/manage", fetch_options);
+                        //     console.log("Success:", response);
+                        // } catch (error) {
+                        //     console.error("Error:", error);
+                        // }
 
-                    // document.getElementById("btn_manage").innerHTML = "YOU CLICKED ME!";
-                    // }
+                    document.getElementById("btn_manage").innerHTML = "YOU CLICKED ME!";
+                    }
                 });
 
             </script>
