@@ -1,7 +1,7 @@
 import os
 
 from cs50 import SQL
-from flask import Flask, flash, redirect, render_template, request, session
+from flask import Flask, flash, redirect, render_template, request, session, jsonify
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 
@@ -33,10 +33,9 @@ def after_request(response):
 @app.route("/manage", methods=["POST"])
 @login_required
 def manage():
-    """Show portfolio of stocks"""
     if request.method == "POST":
-        return (apology("not yet written"), 400)
-    return (apology("not yet written"), 400)
+        return jsonify(success=True), 200
+    return jsonify(success=False, error="An error message"), 400
 
 
 @app.route("/")
