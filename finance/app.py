@@ -36,6 +36,7 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     if request.method == "POST":
+        for
         request.form.get("")
         return (apology("not yet written"))
     else:
