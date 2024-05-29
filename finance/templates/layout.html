@@ -122,7 +122,6 @@
                     });
 
                     document.getElementById("btn_manage").addEventListener("click", manage_stock);
-
                     function manage_stock() {
                         event.preventDefault();
                         const form = document.querySelector(`form[id="form_manage"]`)
@@ -131,12 +130,13 @@
                             'method' : 'POST',
                             'body' : myformdata
                         };
-                        try {
-                            response = fetch("/manage", fetch_options);
-                            console.log("Success:", response);
-                        } catch (error) {
-                            console.error("Error:", error);
-                        }
+                        fetch("/manage", fetch_options);
+                        // try {
+                        //     response = fetch("/manage", fetch_options);
+                        //     console.log("Success:", response);
+                        // } catch (error) {
+                        //     console.error("Error:", error);
+                        // }
 
                     document.getElementById("btn_manage").innerHTML = "YOU CLICKED ME!";
                     }
