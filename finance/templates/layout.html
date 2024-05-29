@@ -120,6 +120,13 @@
                             }
                         });
                     });
+
+                    document.getElementById("btn_manage").addEventListener("click", manage_stock);
+
+                    function manage_stock() {
+                        event.preventDefault();
+                    document.getElementById("btn_manage").innerHTML = "YOU CLICKED ME!";
+                    }
                 });
 
             </script>
