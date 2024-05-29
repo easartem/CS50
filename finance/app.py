@@ -39,11 +39,12 @@ def manage():
         else:
             print("form exist")
         print(request.form.get("share-value-3"))
+        test = request.form.get("share-value-3")
         # # for transaction in transactions:
         # #     if new_value != 0:
         # #         db.execute("INSERT INTO transactions)
         # #         db.execute("UPDATE users")
-        return jsonify(success=True), 200
+        return jsonify(success=True, error=test), 200
     return jsonify(success=False, error="An error message"), 400
 
 
