@@ -93,11 +93,11 @@
 
                             if (shareValue < 0 || shareValue >= shareMax) {
                                 this.disabled=true;
-                                shareValueElement.textContent = shareValue;
+                                shareValueElement.value = shareValue;
                             } else if (shareValue == 0 || shareMax == 0) {
                                 this.disabled=true;
                             } else {
-                                shareValueElement.textContent = shareValue;
+                                shareValueElement.value = shareValue;
                                 let button = document.querySelector(`.decrease[data-id="${shareId}"]`);
                                 button.disabled=false;
                             }
@@ -109,12 +109,12 @@
                             const shareId = this.getAttribute("data-id");
                             const shareValueElement = document.getElementById(`share-value-${shareId}`);
                             const shareMax = parseInt(this.getAttribute("data-max"));
-                            let shareValue = parseInt(shareValueElement.textContent);
+                            let shareValue = parseInt(shareValueElement.value);
                             if (shareValue <= 0 || shareValue > shareMax) {
                                 this.disabled=true;
                             } else {
                                 shareValue--;
-                                shareValueElement.textContent = shareValue;
+                                shareValueElement.value = shareValue;
                                 let button = document.querySelector(`.increase[data-id="${shareId}"]`);
                                 button.disabled=false;
                             }
