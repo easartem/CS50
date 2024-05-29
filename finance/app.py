@@ -34,6 +34,10 @@ def after_request(response):
 @login_required
 def manage():
     if request.method == "POST":
+        if not request.form:
+            print("no form")
+        else:
+            print("form exist")
         print(request.form.get("share-value-3"))
         # # for transaction in transactions:
         # #     if new_value != 0:
