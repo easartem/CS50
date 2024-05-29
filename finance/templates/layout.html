@@ -88,7 +88,7 @@
                             const shareId = this.getAttribute("data-id");
                             const shareValueElement = document.getElementById(`share-value-${shareId}`);
                             const shareMax = parseInt(this.getAttribute("data-max"));
-                            let shareValue = parseInt(shareValueElement.textContent);
+                            let shareValue = parseInt(shareValueElement.value);
                             if (shareMax > 0) { shareValue++; }
 
                             if (shareValue < 0 || shareValue >= shareMax) {
