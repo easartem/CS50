@@ -34,7 +34,7 @@ def after_request(response):
 @login_required
 def manage():
     if request.method == "POST":
-        print(request.body)
+        print(request.get.body)
         # for transaction in transactions:
         #     if new_value != 0:
         #         db.execute("INSERT INTO transactions)
