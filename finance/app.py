@@ -35,8 +35,8 @@ def after_request(response):
 def manage():
     """Show portfolio of stocks"""
     if request.method == "POST":
-        return (apology("not yet written"), 400)
-    return (apology("post not entered"), 400)
+        return True
+    return False
 
 
 @app.route("/")
