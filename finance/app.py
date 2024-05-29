@@ -35,8 +35,8 @@ def after_request(response):
 def manage():
     """Show portfolio of stocks"""
     if request.method == "POST":
-        return res.json({ success: true });
-    return res.json({ success: false, error: 'An error message' });
+        return (apology("not yet written"), 400)
+    return (apology("not yet written"), 400)
 
 
 @app.route("/")
