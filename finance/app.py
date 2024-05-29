@@ -34,10 +34,11 @@ def after_request(response):
 @login_required
 def manage():
     if request.method == "POST":
-        for transaction in transactions:
-            if new_value != 0:
-                db.execute("INSERT INTO transactions)
-                db.execute("UPDATE users")
+        console.log(request)
+        # for transaction in transactions:
+        #     if new_value != 0:
+        #         db.execute("INSERT INTO transactions)
+        #         db.execute("UPDATE users")
         return jsonify(success=True), 200
     return jsonify(success=False, error="An error message"), 400
 
