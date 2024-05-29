@@ -93,7 +93,7 @@
                             if (shareValue < 0 || shareValue > shareMax) {
                                 this.disabled=true;
                                 shareValueElement.textContent = shareValue;
-                            } else if (shareValue == 0 || shareValue == shareMax) { 
+                            } else if (shareValue == 0 || shareMax == 0) {
                                 this.disabled=true;
                             } else {
                                 shareValueElement.textContent = shareValue;
