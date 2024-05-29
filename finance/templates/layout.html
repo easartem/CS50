@@ -131,7 +131,14 @@
                             'method' : 'POST',
                             'body' : myformdata
                         }
-                        try                        fetch("/", fetch_options)
+                        try {
+                            const response = await fetch("/", fetch_options);
+                            const result = await response;
+                            console.log("Success:", result);
+                        } catch (error) {
+                            console.error("Error:", error);
+                        }
+
                     document.getElementById("btn_manage").innerHTML = "YOU CLICKED ME!";
                     }
                 });
