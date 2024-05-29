@@ -7,6 +7,7 @@
 {% block main %}
     <form action="/index" method="get">
         <h3>INDEX PAGE</h3>
+        <br>
         <table>
             <thead>
                 <tr>
@@ -27,9 +28,11 @@
                     <td>{{ row.total }}</td>
                     <td>{{ row.id }}</td>
                     <td>
-                        <button data-id="{{ row.id }}" data-max="{{ row.sum }}" data-min="0" class="btn btn-outline-info btn-sm btn-minus decrease" type="button">-</button>
-                        <span id="share-value-{{ row.id }}">{{ row.nb_to_trade }}</span>
-                        <button data-id="{{ row.id }}" data-max="{{ row.sum }}" data-min="0" class="btn btn-outline-info btn-sm btn-plus increase" type="button">+</button>
+                        <form id="form_manage" action="/index" method="post">
+                            <button data-id="{{ row.id }}" data-max="{{ row.sum }}" data-min="0" class="btn btn-outline-info btn-sm btn-minus decrease" type="button">-</button>
+                            <span id="share-value-{{ row.id }}">{{ row.nb_to_trade }}</span>
+                            <button data-id="{{ row.id }}" data-max="{{ row.sum }}" data-min="0" class="btn btn-outline-info btn-sm btn-plus increase" type="button">+</button>
+                        </form>
                     </td>
                 </tr>
                 {% endfor %}
@@ -41,10 +44,11 @@
                 </tr>
             </tbody>
         </table>
+        <br>
         <div>
-            Cash available : {{ cash }}
-            Total Wallet : {{ grand_total }}
+            Cash available : {{ cash }} & Total Wallet : {{ grand_total }}
         </div>
-        <button class="btn btn-primary" type="submit">Confirm action</button>
+        <br>
+        <button class="btn btn-primary" type="submit" form="form_manage">Confirm action</button>
     </form>
 {% endblock %}

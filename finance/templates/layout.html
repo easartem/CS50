@@ -89,8 +89,9 @@
                             const shareValueElement = document.getElementById(`share-value-${shareId}`);
                             const shareMax = parseInt(this.getAttribute("data-max"));
                             let shareValue = parseInt(shareValueElement.textContent);
-                            shareValue++;
-                            if (shareValue < 0 || shareValue > shareMax) {
+                            if (shareMax > 0) { shareValue++; }
+
+                            if (shareValue < 0 || shareValue >= shareMax) {
                                 this.disabled=true;
                                 shareValueElement.textContent = shareValue;
                             } else if (shareValue == 0 || shareMax == 0) {
