@@ -38,6 +38,7 @@ def manage():
             print("no form")
         else:
             print("form exist")
+            print(request.form)
         print(request.form.get("share-value-3"))
         test = request.form.get("share-value-3")
         # # for transaction in transactions:
