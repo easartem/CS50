@@ -125,7 +125,13 @@
 
                     function manage_stock() {
                         event.preventDefault();
-                        const info_form 
+                        const form = document.querySelector(`form[id="form_manage"]`)
+                        const myformdata = new FormData(form)
+                        fetch_options = {
+                            'method' : 'POST',
+                            'body' : myformdata
+                        }
+                        try                        fetch("/", fetch_options)
                     document.getElementById("btn_manage").innerHTML = "YOU CLICKED ME!";
                     }
                 });
