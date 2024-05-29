@@ -30,6 +30,14 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
+@app.route("/manage", methods=["POST"])
+@login_required
+def manage():
+    """Show portfolio of stocks"""
+    if request.method == "POST":
+        return (apology("not yet written"), 400)
+    return (apology("post not entered"), 400)
+
 
 @app.route("/")
 @login_required

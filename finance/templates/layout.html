@@ -130,11 +130,10 @@
                         fetch_options = {
                             'method' : 'POST',
                             'body' : myformdata
-                        }
+                        };
                         try {
-                            const response = await fetch("/", fetch_options);
-                            const result = await response;
-                            console.log("Success:", result);
+                            response = fetch("/", fetch_options);
+                            console.log("Success:", response);
                         } catch (error) {
                             console.error("Error:", error);
                         }
