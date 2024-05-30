@@ -5,50 +5,48 @@
 {% endblock %}
 
 {% block main %}
-    <form action="/index" method="get">
-        <h3>INDEX PAGE</h3>
-        <br>
-        <table>
-            <thead>
+    <h3>INDEX PAGE</h3>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Number of shares</th>
+                <th>Price per share</th>
+                <th>Total value</th>
+                <th>transaction id</th>
+                <th>Buy or sell</th>
+            </tr>
+        </thead>
+        <tbody>
+            <form id="form_manage" action="/manage" method="post">
+                {% for row in rows %}
                 <tr>
-                    <th>Symbol</th>
-                    <th>Number of shares</th>
-                    <th>Price per share</th>
-                    <th>Total value</th>
-                    <th>transaction id</th>
-                    <th>Buy or sell</th>
+                    <td>{{ row.symbol }}</td>
+                    <td>{{ row.sum }}</td>
+                    <td>{{ row.price }}</td>
+                    <td>{{ row.total }}</td>
+                    <td>{{ row.id }}</td>
+                    <td>
+                        <button data-id="{{ row.id }}" data-max="{{ row.sum }}" data-min="0" class="btn btn-outline-info btn-sm btn-minus decrease" type="button">-</button>
+                        <input id="share-value-{{ row.id }}" name="share-value-{{ row.id }}" type="number" readonly value={{ row.nb_to_trade }}>
+                        <button data-id="{{ row.id }}" data-max="{{ row.sum }}" data-min="0" class="btn btn-outline-info btn-sm btn-plus increase" type="button">+</button>
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-                <form id="form_manage" action="/manage" method="post">
-                    {% for row in rows %}
-                    <tr>
-                        <td>{{ row.symbol }}</td>
-                        <td>{{ row.sum }}</td>
-                        <td>{{ row.price }}</td>
-                        <td>{{ row.total }}</td>
-                        <td>{{ row.id }}</td>
-                        <td>
-                            <button data-id="{{ row.id }}" data-max="{{ row.sum }}" data-min="0" class="btn btn-outline-info btn-sm btn-minus decrease" type="button">-</button>
-                            <input id="share-value-{{ row.id }}" name="share-value-{{ row.id }}" type="number" readonly value={{ row.nb_to_trade }}>
-                            <button data-id="{{ row.id }}" data-max="{{ row.sum }}" data-min="0" class="btn btn-outline-info btn-sm btn-plus increase" type="button">+</button>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>{{ grand_total }}</td>
-                    </tr>
-                </form>
-            </tbody>
-        </table>
-        <br>
-        <div>
-            Cash available : {{ cash }} & Total Wallet : {{ grand_total }}
-        </div>
-        <br>
-        <button id="btn_manage" class="btn btn-primary" form="form_manage" type="submit">Confirm action</button>
-    </form>
+                {% endfor %}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>{{ grand_total }}</td>
+                </tr>
+            </form>
+        </tbody>
+    </table>
+    <br>
+    <div>
+        Cash available : {{ cash }} & Total Wallet : {{ grand_total }}
+    </div>
+    <br>
+    <button id="btn_manage" class="btn btn-primary" form="form_manage" type="submit">Confirm action</button>
 {% endblock %}
