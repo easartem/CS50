@@ -125,10 +125,8 @@
                     function manage_stock(event) {
                         event.preventDefault();
                         const form = document.querySelector(`form[id="form_manage"]`)
-                        // const form = document.getElementById("form_manage")
                         console.log(form);
-                        console.log(document.getElementById("form_manage"));
-                        const myformdata = new FormData(document.getElementById("form_manage"))
+                        const myformdata = new FormData(form)
                         console.log(myformdata);
                         fetch_options = {
                             'method' : 'POST',
