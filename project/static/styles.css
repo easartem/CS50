@@ -1,17 +1,32 @@
 #logo {
   border-radius: 50%;
   }
-
 /* Ajoutez ces styles à votre fichier CSS */
 .navbar {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .navbar-brand {
   position: relative;
-  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
 #nav-items-left, #nav-items-right {
@@ -20,9 +35,14 @@
 }
 
 #nav-items-left {
-  order: 1;
+  margin-right: auto;
 }
 
 #nav-items-right {
-  order: 3;
+  margin-left: auto;
+}
+
+.nav-item {
+  margin-left: 10px;
+  margin-right: 10px;
 }
