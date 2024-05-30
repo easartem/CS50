@@ -2,12 +2,24 @@
   border-radius: 50%;
   }
 
-/* Ajoutez ces styles à votre fichier CSS */
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+/* Ajoutez ces styles à votre fichier CSS
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+}*/
 
 .navbar-brand {
   position: relative;
