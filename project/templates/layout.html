@@ -19,16 +19,16 @@
 
     <body>
         <!-- Navigation menu on top of page-->
-        <nav class="navbar navbar-expand-sm justify-content-center sticky-top">
-            <div class="container-fluid">
-                <a class="nav-item  me-auto mt-2" href="/">
+        <nav class="navbar fixed-top bg-body-tertiary navbar-expand-lg">
+            <div class="container">
+                <a class="nav-item " href="/">
                     <img id="logo" src="/static/assets/logo.jpg" alt="TATTOO STUDIO" width="75" height="75">
                 </a>
                 <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse container-fluid" id="navbar">
-                    <ul class="navbar-nav me-auto mt-2" id="nav-items">
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav" id="nav-items">
                         <li class="nav-item"><a class="nav-link" href="/quote">STUDIO</a></li>
                         <li class="nav-item"><a class="nav-link" href="/buy">GALERIE</a></li>
                         <li class="nav-item"><a class="nav-link" href="/sell">ARTISTS</a></li>
@@ -47,7 +47,7 @@
             </header>
         {% endif %}
 
-        <main class="container-fluid">
+        <main class="container">
             {% block main %}{% endblock %}
         </main>
 
