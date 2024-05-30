@@ -40,7 +40,7 @@ def manage():
             print("form exist")
             print(request.form)
             print(request.form.get("share-value-3"))
-            
+            values = request.form.getlist('input_text[]')
             return jsonify(success=True, error=test), 200
 
         test = request.form.get("share-value-3")
