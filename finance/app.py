@@ -40,11 +40,9 @@ def manage():
             print("form exist")
             print(request.form)
             nb_to_manage = request.form.getlist("share-value")
-            stock_id = request.form.getlist("transaction_id")
-transaction_id
-            print(transactions)
-            for transaction in transactions:
-                print(transaction)
+            stock_symbol = request.form.getlist("symbol")
+            for x,y in zip(nb_to_manage, stock_symbol):
+                print(x,y)
             return jsonify(success=True, error="none"), 200
 
         # for transaction in transactions:
