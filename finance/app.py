@@ -46,7 +46,7 @@ def manage():
             return jsonify(success=True, error="none"), 200
 
         # for transaction in transactions:
-        #     if new_value != 0:
+        #     if new_value != 0:    
         #         db.execute("INSERT INTO transactions)
         #         db.execute("UPDATE users")
 
