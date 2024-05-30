@@ -8,7 +8,11 @@
 
 #logo {
   border-radius: 50%;
-  }
+}
+
+#id-pic {
+  border-radius: 50%;
+}
 
 .navbar {
     width: 100%;
@@ -29,3 +33,9 @@
   #parallax-1 {
   background-image: url("/static/assets/tattooing_colored.jpg");
   }
+
+.responsive {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
