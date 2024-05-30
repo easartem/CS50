@@ -29,7 +29,7 @@
                     <td>{{ row.id }}</td>
                     <td>
                         <button data-id="{{ row.id }}" data-max="{{ row.sum }}" data-min="0" class="btn btn-outline-info btn-sm btn-minus decrease" type="button">-</button>
-                        <input id="share-value-{{ row.id }}" name="share-value-{{ row.id }}" type="number" readonly value={{ row.nb_to_trade }}>
+                        <input id="share-value-{{ row.id }}" name="share-value-{{ row.id }}" type="number" readonly value={{ row.nb_to_trade }} class="shares_transac_nb">
                         <button data-id="{{ row.id }}" data-max="{{ row.sum }}" data-min="0" class="btn btn-outline-info btn-sm btn-plus increase" type="button">+</button>
                     </td>
                 </tr>

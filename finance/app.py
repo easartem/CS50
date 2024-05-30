@@ -41,7 +41,7 @@ def manage():
             print(request.form)
             print(request.form.get("share-value-3"))
             test = request.form.get("share-value-3")
-            transactions = request.form.getlist('input_text[]')
+            transactions = request.form.getlist("shares_transac_nb")
             print(transactions)
             for transaction in transactions:
                 print(transaction)
