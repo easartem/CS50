@@ -12,6 +12,6 @@
 
 .navbar {
     width: 100%;
-    color: var(--navcolor-text);
+    color: var(--maincolor);
     background-color: var(--navcolor-bg);
 }
