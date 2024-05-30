@@ -40,10 +40,13 @@ def manage():
             print("form exist")
             print(request.form)
             print(request.form.get("share-value-3"))
-            values = request.form.getlist('input_text[]')
+            test = request.form.get("share-value-3")
+            transactions = request.form.getlist('input_text[]')
+            print(transactions)
+            for transaction in transactions:
+                print(transaction)
             return jsonify(success=True, error=test), 200
 
-        test = request.form.get("share-value-3")
         # for transaction in transactions:
         #     if new_value != 0:
         #         db.execute("INSERT INTO transactions)
