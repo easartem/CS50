@@ -39,13 +39,13 @@ def manage():
         else:
             print("form exist")
             print(request.form)
-            print(request.form.get("share-value-3"))
-            test = request.form.get("share-value-3")
-            transactions = request.form.getlist("shares_transac_nb")
+            nb_to_manage = request.form.getlist("share-value")
+            stock_id = request.form.getlist("transaction_id")
+transaction_id
             print(transactions)
             for transaction in transactions:
                 print(transaction)
-            return jsonify(success=True, error=test), 200
+            return jsonify(success=True, error="none"), 200
 
         # for transaction in transactions:
         #     if new_value != 0:
