@@ -47,7 +47,7 @@ def manage():
                     # get price
                     # db.execute("INSERT INTO transactions)
                     # db.execute("UPDATE users")
-            return redirect("/")
+            return jsonify(success=True, error="An error message"), 200
 
 
 @app.route("/")
