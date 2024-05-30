@@ -1,7 +1,17 @@
+:root {
+    --maincolor: #4f46c0;
+    --textcolor: rgb(38, 38, 38);
+    --navcolor-bg: rgb(38, 38, 38);
+    --navcolor-text: #ffffff;
+    /* #6e42f0   3384FF*/
+  }
+
 #logo {
   border-radius: 50%;
   }
 
-  .navbar {
+.navbar {
     width: 100%;
+    color: var(--navcolor-text);
+    background-color: var(--navcolor-bg);
 }
