@@ -42,8 +42,8 @@ def manage():
             nb_to_manage = request.form.getlist("share-value")
             stock_symbol = request.form.getlist("symbol")
             for new_nb, symbol in zip(nb_to_manage, stock_symbol):
-                print(x,y)
-                if new_nb != 0:
+                print(new_nb,symbol)
+                #if new_nb != 0:
                     # get price
                     # db.execute("INSERT INTO transactions)
                     # db.execute("UPDATE users")
