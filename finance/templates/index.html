@@ -20,7 +20,7 @@
                 </tr>
             </thead>
             <tbody>
-                <form id="form_manage" action="/manage" method="post"></form>
+                <form id="form_manage" action="/manage" method="post">
                     {% for row in rows %}
                     <tr>
                         <td>{{ row.symbol }}</td>
@@ -35,13 +35,13 @@
                         </td>
                     </tr>
                     {% endfor %}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>{{ grand_total }}</td>
+                    </tr>
                 </form>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>{{ grand_total }}</td>
-                </tr>
             </tbody>
         </table>
         <br>
