@@ -2,21 +2,27 @@
   border-radius: 50%;
   }
 
+/* Ajoutez ces styles à votre fichier CSS */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#nav-items {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-brand {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  position: relative;
+  order: 2;
+}
+
+#nav-items-left, #nav-items-right {
+  display: flex;
+  align-items: center;
+}
+
+#nav-items-left {
+  order: 1;
+}
+
+#nav-items-right {
+  order: 3;
 }
