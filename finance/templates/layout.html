@@ -89,17 +89,19 @@
                             const shareValueElement = document.getElementById(`share-value-${shareId}`);
                             const shareMax = parseInt(this.getAttribute("data-max"));
                             let shareValue = parseInt(shareValueElement.value);
-                            if (shareMax > 0) { shareValue++; }
+                            if (shareMax > 0) {
+                                shareValue++;
+                            }
 
                             if (shareValue < 0 || shareValue >= shareMax) {
-                                this.disabled=true;
+                                this.disabled = true;
                                 shareValueElement.value = shareValue;
                             } else if (shareValue == 0 || shareMax == 0) {
-                                this.disabled=true;
+                                this.disabled = true;
                             } else {
                                 shareValueElement.value = shareValue;
                                 let button = document.querySelector(`.decrease[data-id="${shareId}"]`);
-                                button.disabled=false;
+                                button.disabled = false;
                             }
                         });
                     });
@@ -111,17 +113,18 @@
                             const shareMax = parseInt(this.getAttribute("data-max"));
                             let shareValue = parseInt(shareValueElement.value);
                             if (shareValue <= 0 || shareValue > shareMax) {
-                                this.disabled=true;
+                                this.disabled = true;
                             } else {
                                 shareValue--;
                                 shareValueElement.value = shareValue;
                                 let button = document.querySelector(`.increase[data-id="${shareId}"]`);
-                                button.disabled=false;
+                                button.disabled = false;
                             }
                         });
                     });
 
                     document.getElementById("btn_manage").addEventListener("click", manage_stock);
+
                     function manage_stock(event) {
                         event.preventDefault();
                         const form = document.querySelector(`form[id="form_manage"]`)
@@ -129,24 +132,24 @@
                         const myformdata = new FormData(form)
                         console.log(myformdata);
                         fetch_options = {
-                            'method' : 'POST',
-                            'body' : myformdata
+                            'method': 'POST',
+                            'body': myformdata
                         };
                         fetch("/manage", fetch_options)
-                        .then(response => response.json())
-                        .then(data => console.log(data))
-                        .catch(error => console.error('Error:', error));
+                            .then(response => response.json())
+                            .then(data => console.log(data))
+                            .catch(error => console.error('Error:', error));
                         // try {
                         //     response = fetch("/manage", fetch_options);
                         //     console.log("Success:", response);
                         // } catch (error) {
                         //     console.error("Error:", error);
                         // }
+                        location.reload(true);
 
-                    document.getElementById("btn_manage").innerHTML = "YOU CLICKED ME!";
+                        document.getElementById("btn_manage").innerHTML = "YOU CLICKED ME!";
                     };
                 });
-
             </script>
         </footer>
 

@@ -21,19 +21,19 @@
         <tbody>
             <form id="form_manage" action="/manage" method="post">
                 {% for row in rows %}
-                <tr>
-                    <td>{{ row.symbol }}</td>
-                    <td>{{ row.sum }}</td>
-                    <td>{{ row.price }}</td>
-                    <td>{{ row.total }}</td>
-                    <td>{{ row.id }}</td>
-                    <td>
-                        <button data-id="{{ row.id }}" data-max="{{ row.sum }}" data-min="0" class="btn btn-outline-info btn-sm btn-minus decrease" type="button">-</button>
-                        <input id="share-value-{{ row.id }}" name="share-value" type="number" readonly value={{ row.nb_to_trade }} class="shares_transac_nb">
-                        <button data-id="{{ row.id }}" data-max="{{ row.sum }}" data-min="0" class="btn btn-outline-info btn-sm btn-plus increase" type="button">+</button>
-                        <input value = {{ row.symbol }} type="hidden" name="symbol">
-                    </td>
-                </tr>
+                    <tr>
+                        <td>{{ row.symbol }}</td>
+                        <td>{{ row.sum }}</td>
+                        <td>{{ row.price }}</td>
+                        <td>{{ row.total }}</td>
+                        <td>{{ row.id }}</td>
+                        <td>
+                            <button data-id="{{ row.id }}" data-max="{{ row.sum }}" data-min="0" class="btn btn-outline-info btn-sm btn-minus decrease" type="button">-</button>
+                            <input id="share-value-{{ row.id }}" name="share-value" type="number" readonly value={{ row.nb_to_trade }} class="shares_transac_nb">
+                            <button data-id="{{ row.id }}" data-max="{{ row.sum }}" data-min="0" class="btn btn-outline-info btn-sm btn-plus increase" type="button">+</button>
+                            <input value={{ row.symbol }} type="hidden" name="symbol">
+                        </td>
+                    </tr>
                 {% endfor %}
                 <tr>
                     <td></td>

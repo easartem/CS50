@@ -30,6 +30,7 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
+
 @app.route("/manage", methods=["POST"])
 @login_required
 def manage():
@@ -42,11 +43,11 @@ def manage():
             nb_to_manage = request.form.getlist("share-value")
             stock_symbol = request.form.getlist("symbol")
             for new_nb, symbol in zip(nb_to_manage, stock_symbol):
-                print(new_nb,symbol)
-                #if new_nb != 0:
-                    # get price
-                    # db.execute("INSERT INTO transactions)
-                    # db.execute("UPDATE users")
+                print(new_nb, symbol)
+                # if new_nb != 0:
+                # get price
+                # db.execute("INSERT INTO transactions)
+                # db.execute("UPDATE users")
             return jsonify(success=True, error="An error message"), 200
 
 
