@@ -11,7 +11,7 @@
 
 .container-fluid {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     padding: 0 15px;
@@ -19,32 +19,37 @@
 
 .navbar-collapse {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.nav-item.me-auto {
+    margin-right: auto;
+}
+
+.nav-item.ms-auto {
+    margin-left: auto;
 }
 
 .navbar-brand {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
-}
-
-#nav-items-left, #nav-items-right {
-    display: flex;
-    align-items: center;
-}
-
-#nav-items-left {
-    margin-right: auto;
-}
-
-#nav-items-right {
-    margin-left: auto;
-}
-
-.nav-item {
-    margin-left: 10px;
-    margin-right: 10px;
 }
