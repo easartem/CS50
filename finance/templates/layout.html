@@ -124,16 +124,19 @@
                     document.getElementById("btn_manage").addEventListener("click", manage_stock);
                     function manage_stock() {
                         event.preventDefault();
-                        const form = document.querySelector(`form[id="form_manage"]`)
+                        // const form = document.querySelector(`form[id="form_manage"]`)
+                        const form = document.getElementById("form_manage")
+                        console.log(form);
                         const myformdata = new FormData(form)
+                        console.log(myformdata);
                         fetch_options = {
                             'method' : 'POST',
                             'body' : myformdata
                         };
                         fetch("/manage", fetch_options)
-                        // .then(response => response.json())
-                        // .then(data => console.log(data))
-                        // .catch(error => console.error('Error:', error));
+                        .then(response => response.json())
+                        .then(data => console.log(data))
+                        .catch(error => console.error('Error:', error));
                         // try {
                         //     response = fetch("/manage", fetch_options);
                         //     console.log("Success:", response);
