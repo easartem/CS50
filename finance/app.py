@@ -44,13 +44,10 @@ def manage():
             for new_nb, symbol in zip(nb_to_manage, stock_symbol):
                 print(x,y)
                 if new_nb != 0:
-                    
-            return jsonify(success=True, error="none"), 200
-
-        # for transaction in transactions:
-        #     if new_value != 0:
-        #         db.execute("INSERT INTO transactions)
-        #         db.execute("UPDATE users")
+                    # get price
+                    # db.execute("INSERT INTO transactions)
+                    # db.execute("UPDATE users")
+            return redirect("/")
 
 
 @app.route("/")
