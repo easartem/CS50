@@ -19,6 +19,10 @@
     color: var(--navcolor-text);
     background-color: var(--navcolor-bg);
 }
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: green;
+}
 
 .parallax {
   width: 100%;
