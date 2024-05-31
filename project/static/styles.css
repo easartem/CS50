@@ -52,15 +52,11 @@ h2 {
 }
 
 .button-book {
-  background-color: #EA4C89;
-  color: #FFFFFF;
+  background-color: var(--btncolor);
+  color: var(--textcolor);
   border-radius: 8px;
-  border-style: none;
   box-sizing: border-box;
-  color: #FFFFFF;
   cursor: pointer;
-  margin: 0;
-  outline: none;
   padding: 10px 16px;
   position: relative;
   text-align: center;
