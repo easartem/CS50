@@ -7,7 +7,7 @@
   }
 
 body {
-  color:  var(--textcolor);
+  color:  var(--maincolor);
   padding-top: 5.5rem;
 }
 
