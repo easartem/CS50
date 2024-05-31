@@ -11,6 +11,10 @@ body {
   padding-top: 5.5rem;
 }
 
+.h2 {
+  text-align: center;
+}
+
 #logo {
   border-radius: 50%;
 }
