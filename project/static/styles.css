@@ -1,18 +1,19 @@
 :root {
-    --maincolor: #000000;
-    --textcolor: #F3FCF0;
+    --textcolor: #000000;
+    --titlecolor: #F3FCF0;
     --navcolor-bg: #000000;
     --navcolor-text: #F3FCF0;
     /* #6e42f0   3384FF rgb(38, 38, 38)*/
   }
 
 body {
-  color:  var(--maincolor);
+  color:  var(--textcolor);
   padding-top: 5.5rem;
 }
 
-.h2 {
+h2 {
   text-align: center;
+  color:  var(--titlecolor);
 }
 
 #logo {
