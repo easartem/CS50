@@ -6,6 +6,11 @@
     /* #6e42f0   3384FF rgb(38, 38, 38)*/
   }
 
+body {
+  color:  var(--textcolor);
+  padding-top: 5.5rem;
+}
+
 #logo {
   border-radius: 50%;
 }
