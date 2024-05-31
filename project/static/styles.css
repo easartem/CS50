@@ -12,6 +12,11 @@ body {
   padding-top: 5.5rem;
 }
 
+footer{
+  color:  var(--navcolor-text);
+  background-color:  var(--navcolor-bg);
+}
+
 h2 {
   text-align: center;
   color:  var(--titlecolor);
@@ -78,6 +83,7 @@ Responsive Image gallery Style rules
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 .container {
   padding: 40px 5%;
