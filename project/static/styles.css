@@ -1,12 +1,10 @@
 :root {
-    --maincolor: #4f46c0;
-    --textcolor: rgb(38, 38, 38);
-    --navcolor-bg: rgb(38, 38, 38);
-    --navcolor-text: #ffffff;
-    /* #6e42f0   3384FF*/
+    --maincolor: #000000;
+    --textcolor: #F3FCF0;
+    --navcolor-bg: #000000;
+    --navcolor-text: #F3FCF0;
+    /* #6e42f0   3384FF rgb(38, 38, 38)*/
   }
-  #F3FCF0
-  #000000
 
 #logo {
   border-radius: 50%;
@@ -18,7 +16,7 @@
 
 .navbar {
     width: 100%;
-    color: var(--maincolor);
+    color: var(--navcolor-text);
     background-color: var(--navcolor-bg);
 }
 
