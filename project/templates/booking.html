@@ -3,6 +3,8 @@
 {% block title %}
     Index
 {% endblock %}
+
+{% block main %}
     <form action="/booking" method="post">
         <h3>Formulaire de contact</h3>
         <div class="mb-3">
@@ -18,7 +20,4 @@
         <input class="form-control mx-auto w-auto" name="medium" placeholder="Comment avez-vous entendu parler de nous ?list" type="tel">
         <button class="btn btn-primary" type="submit">Envoyer</button>
     </form>
-
-{% block main %}
-
 {% endblock %}
