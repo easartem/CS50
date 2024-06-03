@@ -27,3 +27,27 @@ def after_request(response):
 @app.route("/")
 def index():
     return render_template("index.html")
+
+@app.route("/studio", methods=["GET"])
+def studio():
+    return render_template("studio.html")
+
+@app.route("/galerie", methods=["GET"])
+def galerie():
+    return render_template("galerie.html")
+
+@app.route("/artistes", methods=["GET"])
+def artistes():
+    return render_template("artistes.html")
+
+@app.route("/faq", methods=["GET"])
+def faq():
+    return render_template("faq.html")
+
+@app.route("/infos", methods=["GET"])
+def infos():
+    return render_template("infos.html")
+
+@app.route("/booking", methods=["GET"])
+def booking():
+    return render_template("booking.html")
