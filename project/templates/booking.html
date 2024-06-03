@@ -5,37 +5,42 @@
 {% endblock %}
 
 {% block main %}
-    <form action="/booking" method="post">
-        <div class="container text-center align-items-center">
-            <h3>Formulaire de contact</h3>
-        </div>
-        <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-25" name="fullname" placeholder="Nom & Prénom*" type="text">
-        </div>
-        <div class="mb-3">
-            <input class="form-control mx-auto w-25" name="phone" placeholder="Numéro de téléphone*" type="tel">
-        </div>
-        <div class="mb-3">
-            <input class="form-control mx-auto w-25" name="email" placeholder="Email*" type="mail">
-        </div>
-        <div class="mb-3">
-            <input class="form-control mx-auto w-25" name="description" placeholder="Brève description du tatouage" type="text">
-        </div>
-        <div class="mb-3">
-            <input class="form-control mx-auto w-25" name="location" placeholder="Localisation sur le corps" type="text">
-        </div>
-        <div class="mb-3">
-            <input class="form-control mx-auto w-25" name="size" placeholder="Taille du tatouage" type="text">
-        </div>
-        <div class="mb-3">
-            <input class="form-control mx-auto w-25" name="availability" placeholder="Vos disponibilités" type="text">
-        </div>
-        <div class="mb-3">
-            <input class="form-control mx-auto w-25" name="artist" placeholder="Choisissez un artiste" type="text">
-        </div>
-        <div class="mb-3">
-            <input class="form-control mx-auto w-25" name="medium" placeholder="Comment avez-vous entendu parler de nous ?list" type="text">
-        </div>
-        <button class="btn btn-primary" type="submit">Envoyer</button>
-    </form>
+    <section class="section p-3">
+        <form action="/booking" method="post">
+            <div class="container text-center align-items-center">
+                <h3>Formulaire de contact</h3>
+            </div>
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-25" name="fullname" placeholder="Nom & Prénom*" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" name="phone" placeholder="Numéro de téléphone*" type="tel">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" name="email" placeholder="Email*" type="mail">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" name="description" placeholder="Brève description du tatouage" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" name="location" placeholder="Localisation sur le corps" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" name="size" placeholder="Taille du tatouage" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" name="availability" placeholder="Vos disponibilités" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" name="artist" placeholder="Choisissez un artiste" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" name="medium" placeholder="Comment avez-vous entendu parler de nous ?list" type="text">
+            </div>
+            <div class="container text-center align-items-center">
+                <button class="btn btn-primary" type="submit">Envoyer</button>
+            </div>
+        </form>
+    </section>
+
 {% endblock %}
