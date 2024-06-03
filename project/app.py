@@ -48,6 +48,6 @@ def faq():
 def infos():
     return render_template("infos.html")
 
-@app.route("/booking", methods=["GET"])
+@app.route("/booking", methods=["GET", "POST"])
 def booking():
     return render_template("booking.html")
