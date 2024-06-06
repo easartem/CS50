@@ -29,7 +29,7 @@ body {
 .nav-group-option {
     left: 49px;
     text-align: left;
-    color: var(--darkcolor-onsurface);
+    color: var(--darkcolor-onprimary);
     font-family: var(--font-family);
     font-size: var(--font-size-s);
     font-style: normal;
@@ -37,7 +37,7 @@ body {
   }
 
 .side-menu {
-    color: var(--darkcolor-onbg);
+    color: var(--darkcolor-onprimary);
     background-color: var(--darkcolor-bg-menu);
     display: flex;
     flex-wrap: nowrap;
