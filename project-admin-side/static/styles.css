@@ -29,7 +29,7 @@ body {
 .nav-group-option {
     left: 49px;
     text-align: left;
-    color: var(--darkcolor-onprimary);
+    color: #A1A7C4;
     font-family: var(--font-family);
     font-size: var(--font-size-s);
     font-style: normal;
