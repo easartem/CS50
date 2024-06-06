@@ -18,6 +18,13 @@
 
     --font-family: "Nunito Sans", Helvetica;
   }
+
+body {
+  color: var(--darkcolor-onbg);
+  background-color: var(--darkcolor-bg);
+  min-height: 100vh;
+}
+
 .desktop-1 .category {
     background-color: transparent;
     height: auto;
@@ -43,13 +50,6 @@
   font-size: var(--font-size-s);
   font-style: normal;
   font-weight: 600;
-}
-
-body {
-  color: var(--darkcolor-onbg);
-  background-color: var(--darkcolor-bg);
-  min-height: 100vh;
-  height: -webkit-fill-available;
 }
 
 .side-menu {
@@ -116,5 +116,3 @@ body {
   overflow-y: auto;
 }
 
-.fw-semibold { font-weight: 600; }
-.lh-tight { line-height: 1.25; }
