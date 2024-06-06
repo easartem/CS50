@@ -23,7 +23,6 @@
 body {
   color: var(--darkcolor-onbg);
   background-color: var(--darkcolor-bg);
-  min-height: 100vh;
 }
 
 .nav-group {
@@ -47,8 +46,6 @@ body {
     display: flex;
     flex-wrap: nowrap;
     height: 100vh;
-    height: -webkit-fill-available;
-    max-height: 100vh;
     overflow-x: auto;
     overflow-y: hidden;
 }
