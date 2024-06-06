@@ -11,8 +11,14 @@
     --darkcolor-onbg: #FFFFFF;
     --darkcolor-onsurface: #FFFFFF;
     --darkcolor-onerror: #000000;
+
+    --font-size-l: 20px;
+    --font-size-m: 16px;
+    --font-size-s: 14px;
+
+    --font-family: "Nunito Sans", Helvetica;
   }
-  .desktop-1 .category {
+.desktop-1 .category {
     background-color: transparent;
     height: auto;
     left: 49px;
@@ -22,8 +28,21 @@
     text-align: left;
     width: 191px;
   }
-html {
-    height: -webkit-fill-available;
+
+.nunitosans-semi-bold-black-16px {
+  color: var(--black);
+  font-family: var(--font-family);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.nunitosans-semi-bold-blue-bell-14px {
+  color: var(--blue-bell);
+  font-family: var(--font-family);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
 }
 
 body {
