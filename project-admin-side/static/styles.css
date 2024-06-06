@@ -13,7 +13,20 @@
     --darkcolor-onerror: #000000;
   }
 
-  body {
-    color: var(--darkcolor-onbg);
-    background-color: var(--darkcolor-bg);
-  }
+body {
+color: var(--darkcolor-onbg);
+background-color: var(--darkcolor-bg);
+}
+
+.container-center-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    pointer-events: none;
+    width: 100%;
+}
+
+.container-center-horizontal > * {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
