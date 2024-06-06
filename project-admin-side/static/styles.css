@@ -15,5 +15,5 @@
 
   body {
     color: var(--darkcolor-onbg);
-    bg-color: var(--darkcolor-bg);
+    background-color: var(--darkcolor-bg);
   }
