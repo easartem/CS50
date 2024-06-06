@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
 }
 
-.desktop-1 .category {
+.desktop-1 .nav-group-option {
     background-color: transparent;
     height: auto;
     left: 49px;
