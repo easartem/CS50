@@ -12,3 +12,8 @@
     --darkcolor-onsurface: #FFFFFF;
     --darkcolor-onerror: #000000;
   }
+
+  body {
+    color: var(--textcolor);
+    bg-color: var(--textcolor);
+  }
