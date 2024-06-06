@@ -25,32 +25,15 @@ body {
   min-height: 100vh;
 }
 
-.desktop-1 .nav-group-option {
-    background-color: transparent;
-    height: auto;
+.nav-group-option {
     left: 49px;
-    letter-spacing: 0.00px;
-    line-height: 16px;
-    position: absolute;
     text-align: left;
-    width: 191px;
+    color: var(--darkcolor-onsurface);
+    font-family: var(--font-family);
+    font-size: var(--font-size-s);
+    font-style: normal;
+    font-weight: 600;
   }
-
-.nunitosans-semi-bold-black-16px {
-  color: var(--black);
-  font-family: var(--font-family);
-  font-size: var(--font-size-m);
-  font-style: normal;
-  font-weight: 600;
-}
-
-.nunitosans-semi-bold-blue-bell-14px {
-  color: var(--blue-bell);
-  font-family: var(--font-family);
-  font-size: var(--font-size-s);
-  font-style: normal;
-  font-weight: 600;
-}
 
 .side-menu {
     color: var(--darkcolor-onsurface);
