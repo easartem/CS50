@@ -12,7 +12,16 @@
     --darkcolor-onsurface: #FFFFFF;
     --darkcolor-onerror: #000000;
   }
-
+  .desktop-1 .category {
+    background-color: transparent;
+    height: auto;
+    left: 49px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: left;
+    width: 191px;
+  }
 html {
     height: -webkit-fill-available;
 }
