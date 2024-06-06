@@ -14,14 +14,11 @@
 
         <link href="/static/styles.css" rel="stylesheet">
 
-        <title>Tattoo shop: {% block title %}{% endblock %}</title>
+        <title>AdminStudio: {% block title %}{% endblock %}</title>
 
     </head>
 
     <body>
-        <!-- Navigation menu on top of page-->
-
-
         {% if get_flashed_messages() %}
             <header>
                 <div class="alert alert-primary mb-0 text-center" role="alert">
@@ -29,6 +26,18 @@
                 </div>
             </header>
         {% endif %}
+
+        <!-- Navigation menu on side of page-->
+        <div class="container-center-horizontal">
+			<div class="desktop-1 screen " data-id="7:1305">
+				<div class="side-menu-Ys8k0x" data-id="14:595">
+					<div class="menu-container-cxPNsw" data-id="7:1310"></div>
+                </div>
+            </div>
+        </div>
+
+
+
 
         <main class="container-fluid px-0">
             {% block main %}{% endblock %}
