@@ -21,7 +21,7 @@ body {
   color: var(--darkcolor-onbg);
   background-color: var(--darkcolor-bg);
   min-height: 100vh;
-  min-height: -webkit-fill-available;
+  height: -webkit-fill-available;
 }
 
 .side-menu {
