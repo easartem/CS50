@@ -2,6 +2,7 @@
     --darkcolor-primary: #BB86FC;
     --darkcolor-primary-variant: #3700B3;
     --darkcolor-secondary: #03DAC6;
+    --darkcolor-bg-menu: #D9D9D9;
     --darkcolor-bg: #000000;
     --darkcolor-surface: #232323;
     --darkcolor-error: #CF6679;
@@ -36,8 +37,8 @@ body {
   }
 
 .side-menu {
-    color: var(--darkcolor-onsurface);
-    background-color: var(--darkcolor-surface);
+    color: var(--darkcolor-onbg);
+    background-color: var(--darkcolor-bg-menu);
     display: flex;
     flex-wrap: nowrap;
     height: 100vh;
