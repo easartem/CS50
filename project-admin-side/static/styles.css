@@ -78,7 +78,7 @@ body {
   border-bottom: 2px solid var(--darkcolor-secondary);
 }
 
-i  {
+.fa  {
   color: var(--darkcolor-secondary);
 }
 
