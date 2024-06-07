@@ -30,7 +30,7 @@ body {
 
 /* Style page content container fluid px0 */
 main {
-  margin-left: 280px; /* Same as the width of the sidebar */
+  /* margin-left: 280px; Same as the width of the sidebar */
   position: absolute;
 }
 
@@ -60,7 +60,7 @@ main {
   display: flex;
   flex-wrap: nowrap;
   height: 100vh; /* Full-height */
-  width: 280px; /* Set the width of the sidebar */
+  /* width: 280px; /* Set the width of the sidebar */
   overflow-x: auto;
   overflow-y: hidden;
 }
