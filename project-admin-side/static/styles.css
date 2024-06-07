@@ -25,11 +25,22 @@ body {
   background-color: var(--darkcolor-bg);
 }
 
-.logo {
-  text-align: center;
-  font-family: var(--font-family);
-  font-weight: 600;
-  color: var(--darkcolor-surface);
+/* -------------------------SIDENAV CONFIRMED-------------------------------------------*/
+
+/* The sidebar menu */
+.side-menu {
+  color: var(--darkcolor-onprimary);
+  background-color: var(--darkcolor-bg-menu);
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  top: 0; /* Stay at the top */
+  left: 0; /* Stay on the left */
+  z-index: 1; /* Stay on top */
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100vh; /* Full-height */
+  width: 280px; /* Set the width of the sidebar */
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .nav-group {
@@ -42,24 +53,28 @@ body {
     font-weight: 600;
   }
 
+/* The navigation menu links */
 .nav-group-option a {
     font-size: var(--font-size-m);
     color: var(--darkcolor-onprimary);
 }
 
-.side-menu {
-    color: var(--darkcolor-onprimary);
-    background-color: var(--darkcolor-bg-menu);
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    top: 0; /* Stay at the top */
-    left: 0; /* Stay on the left */
-    display: flex;
-    flex-wrap: nowrap;
-    height: 100vh; /* Full-height */
-    width: 280px; /* Set the width of the sidebar */
-    overflow-x: auto;
-    overflow-y: hidden;
+/* The navigation menu logo */
+.logo {
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 600;
+  color: var(--darkcolor-surface);
 }
+
+/* When you mouse over the navigation links, change their color */
+.nav-group-option a:hover {
+  color: #f1f1f1;
+}
+
+
+/* ---------------------------Sidenav toggle button-------------------------------------*/
+
 
 .dropdown-toggle { outline: 0; }
 
