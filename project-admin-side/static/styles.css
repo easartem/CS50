@@ -28,7 +28,7 @@ body {
 /* ---------------------------MAIN CONTENT-------------------------------------*/
 
 
-/* Style page content */
+/* Style page content container fluid px0 */
 main {
   margin-left: 280px; /* Same as the width of the sidebar */
   position: absolute;
