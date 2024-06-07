@@ -34,6 +34,11 @@ main {
   position: absolute;
 }
 
+.surface {
+  color: var(--darkcolor-onsurface);
+  background-color: var(--darkcolor-surface);
+}
+
 .row-1 {
   height:20%;
 }
