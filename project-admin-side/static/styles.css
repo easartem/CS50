@@ -40,6 +40,7 @@ body {
 .surface {
   color: var(--darkcolor-onsurface);
   background-color: var(--darkcolor-surface);
+  border-radius: 30px;
 }
 
 .row-1 {
