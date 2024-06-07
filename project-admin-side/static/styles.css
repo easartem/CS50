@@ -25,6 +25,9 @@ body {
   background-color: var(--darkcolor-bg);
 }
 
+table {
+  color: var(--darkcolor-primary);
+}
 /* ---------------------------MAIN CONTENT-------------------------------------*/
 
 
