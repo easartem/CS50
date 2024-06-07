@@ -34,6 +34,17 @@ main {
   position: absolute;
 }
 
+.row-1 {
+  height:20%;
+}
+
+.row-2 {
+  height:50%;
+}
+
+.row-3 {
+  height:30%;
+}
 
 
 /* -------------------------SIDENAV CONFIRMED-------------------------------------------*/
