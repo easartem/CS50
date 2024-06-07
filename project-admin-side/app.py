@@ -15,9 +15,6 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 # db = SQL("sqlite:///../project/tattooshop.db")
 
-import { Tab, initMDB } from "mdb-ui-kit";
-initMDB({ Tab });
-
 @app.after_request
 def after_request(response):
     """Ensure responses aren't cached"""
