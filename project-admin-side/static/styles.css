@@ -57,7 +57,7 @@ body {
 
 /* -------------------------TAB NAV -------------------------------------------*/
 
-.nav-item {
+.client-nav {
   color: var(--darkcolor-onbg);
   background-color: var(--darkcolor-bg);
 }
