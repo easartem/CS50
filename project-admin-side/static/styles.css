@@ -33,7 +33,9 @@ body {
   margin-left: 15%; /*Same as the width of the sidebar */
   position: absolute;
 }
-
+.row {
+  margin: auto;
+}
 .surface {
   color: var(--darkcolor-onsurface);
   background-color: var(--darkcolor-surface);
