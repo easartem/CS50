@@ -62,6 +62,10 @@ body {
   background-color: var(--darkcolor-bg);
 }
 
+.nav-group-option a {
+  font-size: var(--font-size-m);
+  color: var(--darkcolor-onprimary);
+}
 
 /* -------------------------SIDENAV CONFIRMED-------------------------------------------*/
 
