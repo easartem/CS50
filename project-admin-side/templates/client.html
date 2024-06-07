@@ -8,11 +8,11 @@
     <!-- Tabs navs -->
     <ul class="client-nav nav nav-tabs mb-3" id="client-nav-tab" role="tablist">
         <li class="nav-item" role="presentation">
-        <a class="nav-link active" href="#">
+        <a class="nav-link active" id="bookings-tab" data-bs-toggle="tab" data-bs-target="#bookings" type="button" role="tab" aria-controls="bookings" aria-selected="true">
             <i class="fa fa-solid fa-book me-2"></i>Bookings</a>
         </li>
         <li class="nav-item" role="presentation">
-        <a  class="nav-link" href="#">
+        <a  class="nav-link" id="clients-tab" data-bs-toggle="tab" data-bs-target="#clients" type="button" role="tab" aria-controls="clients" aria-selected="false">
             <i class="fa fa-regular fa-user me-2"></i>Clients</a>
         </li>
         <li class="nav-item" role="presentation">
@@ -25,7 +25,7 @@
     <!-- Tabs content -->
     <br>
     <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="bookings-tab">
             <form class="form-inline my-3 w-75" action="/search" method="post">
                 <input autocomplete="off" autofocus class="form-control w-75 mb-2" name="fullname" placeholder="Nom du client" type="text">
                 <button class="btn btn-primary mb-2 mx-2" type="submit">Rechercher</button>
@@ -99,6 +99,10 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+
+        <div class="tab-pane fade" id="clients" role="tabpanel" aria-labelledby="clients-tab">
+            ...
         </div>
 
     </div>
