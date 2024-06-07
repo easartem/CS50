@@ -57,7 +57,10 @@ body {
 
 /* -------------------------TAB NAV -------------------------------------------*/
 
-
+.nav-tabs {
+  color: var(--darkcolor-onprimary);
+  background-color: var(--darkcolor-bg-menu);
+}
 
 
 /* -------------------------SIDENAV CONFIRMED-------------------------------------------*/
