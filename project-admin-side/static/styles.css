@@ -32,6 +32,11 @@ body {
   border-top-color: var(--darkcolor-secondary);
   border-bottom-color: var(--darkcolor-secondary);
 }
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
 /* ---------------------------MAIN CONTENT-------------------------------------*/
 
 
