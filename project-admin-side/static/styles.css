@@ -25,6 +25,14 @@ body {
   background-color: var(--darkcolor-bg);
 }
 
+/* ---------------------------MAIN CONTENT-------------------------------------*/
+
+
+/* Style page content */
+.main {
+  margin-left: 280px; /* Same as the width of the sidebar */
+}
+
 /* -------------------------SIDENAV CONFIRMED-------------------------------------------*/
 
 /* The sidebar menu */
@@ -72,17 +80,12 @@ body {
   color: var(--darkcolor-primary);
 }
 
-/* Style page content */
-.main {
-  margin-left: 280px; /* Same as the width of the sidebar */
-  padding: 0px 10px;
-}
-
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .side-menu  {padding-top: 15px;}
   .side-menu  a {font-size: 18px;}
 }
+
 
 /* ---------------------------Sidenav toggle button-------------------------------------*/
 
