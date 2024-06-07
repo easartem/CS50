@@ -57,9 +57,9 @@ body {
 
 /* -------------------------TAB NAV -------------------------------------------*/
 
-.nav-tabs {
-  color: var(--darkcolor-onprimary);
-  background-color: var(--darkcolor-bg-menu);
+.nav-item {
+  color: var(--darkcolor-onbg);
+  background-color: var(--darkcolor-bg);
 }
 
 
