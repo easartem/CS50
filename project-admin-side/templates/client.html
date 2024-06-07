@@ -24,11 +24,9 @@
 
     <!-- Tabs content -->
     <br>
-    <form action="/search" method="post">
-        <div class="container text-center align-items-center">
-            <input autocomplete="off" autofocus class="form-control w-75" name="fullname" placeholder="Nom du client" type="text">
-            <button class="btn btn-primary" type="submit">Rechercher</button>
-        </div>
+    <form class="form-inline" action="/search" method="post">
+        <input autocomplete="off" autofocus class="form-control w-75 mb-2" name="fullname" placeholder="Nom du client" type="text">
+        <button class="btn btn-primary mb-2" type="submit">Rechercher</button>
     </form>
     <table class="booking-table table table-dark table-striped table-hover rounded-3 p-3">
         <thead class="thead-dark">
