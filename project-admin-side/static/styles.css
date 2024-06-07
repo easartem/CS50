@@ -25,8 +25,10 @@ body {
   background-color: var(--darkcolor-bg);
 }
 
-table {
+.booking-table {
   color: var(--darkcolor-primary);
+  border-color: var(--darkcolor-primary);
+  width: 90%;
 }
 /* ---------------------------MAIN CONTENT-------------------------------------*/
 
