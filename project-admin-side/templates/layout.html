@@ -22,9 +22,8 @@
             </header>
         {% endif %}
 
-        <div class="container-fluid px-0">
-          <div class="row">
-            <div class="side-menu col-2 d-flex flex-column flex-shrink-0 p-4">
+        <div class="container-fluid px-0 ">
+            <div class="side-menu d-flex flex-column flex-shrink-0 p-4">
                 <!--LOGO-->
                 <a href="/" class="logo d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
                   <span class="fs-4">TATTOO STUDIO</span>
@@ -72,12 +71,9 @@
                 </div>
             </div>
 
-            <div class="col-10">
-              test
-              <main class="container h-100 w-100 px-0">
-                {% block main %}{% endblock %}
-              </main>
-            </div>
+            <main class="container h-100 w-100 px-0">
+              {% block main %}{% endblock %}
+            </main>
           </div>
         </div>
     </body>
