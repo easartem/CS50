@@ -16,7 +16,7 @@
             <i class="fa fa-regular fa-user me-2"></i>Clients</a>
         </li>
         <li class="nav-item" role="presentation">
-        <a class="nav-link"  href="#">
+        <a class="nav-link" id="new-tab" data-bs-toggle="tab" data-bs-target="#new" type="button" role="tab" aria-controls="new" aria-selected="false">
             <i class="fa fa-regular fa-plus me-2"></i>Nouvelle réservation</a>
         </li>
     </ul>
@@ -25,7 +25,7 @@
     <!-- Tabs content -->
     <br>
     <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="bookings-tab">
+        <div class="tab-pane fade show active" id="bookings" role="tabpanel" aria-labelledby="bookings-tab">
             <form class="form-inline my-3 w-75" action="/search" method="post">
                 <input autocomplete="off" autofocus class="form-control w-75 mb-2" name="fullname" placeholder="Nom du client" type="text">
                 <button class="btn btn-primary mb-2 mx-2" type="submit">Rechercher</button>
@@ -103,6 +103,10 @@
 
         <div class="tab-pane fade" id="clients" role="tabpanel" aria-labelledby="clients-tab">
             ...
+        </div>
+
+        <div class="tab-pane fade" id="new" role="tabpanel" aria-labelledby="new-tab">
+            ......
         </div>
 
     </div>
