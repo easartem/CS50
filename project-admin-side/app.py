@@ -27,3 +27,35 @@ def after_request(response):
 @app.route("/")
 def index():
     return render_template("index.html")
+
+@app.route("/clients", methods=["GET"])
+def studio():
+    return render_template("client.html")
+
+@app.route("/rdv", methods=["GET"])
+def galerie():
+    return render_template("rdv.html")
+
+@app.route("/team", methods=["GET"])
+def studio():
+    return render_template("team.html")
+
+@app.route("/kpi", methods=["GET"])
+def galerie():
+    return render_template("kpi.html")
+
+@app.route("/finance", methods=["GET"])
+def studio():
+    return render_template("finances.html")
+
+@app.route("/artists", methods=["GET"])
+def galerie():
+    return render_template("artists.html")
+
+@app.route("/gallery", methods=["GET"])
+def studio():
+    return render_template("gallery.html")
+
+@app.route("/parameters", methods=["GET"])
+def galerie():
+    return render_template("parameters.html")
