@@ -25,6 +25,13 @@ body {
   background-color: var(--darkcolor-bg);
 }
 
+.logo {
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 600;
+  color: var(--darkcolor-surface);
+}
+
 .nav-group {
     left: 49px;
     text-align: left;
