@@ -27,7 +27,7 @@
         {% endif %}
 
         <div class="container-fluid px-0">
-          <div class="side-menu d-flex flex-column flex-shrink-0 p-4">
+          <div class="side-menu col-3 d-flex flex-column flex-shrink-0 p-4">
               <!--LOGO-->
               <a href="/" class="logo d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
                 <span class="fs-4">TATTOO STUDIO</span>
@@ -74,13 +74,14 @@
                 </ul>
               </div>
             </div>
+
+            <div class="col-9">
+              <main class="container-fluid w-100 h-100 px-0">
+                {% block main %}{% endblock %}
+              </main>
+            </div>
+
           </div>
-
-
-        <main class="container-fluid w-100 h-100 px-0">
-            {% block main %}{% endblock %}
-        </main>
-
     </body>
 
 </html>
