@@ -31,24 +31,7 @@ body {
 /* Style page content */
 .main {
   margin-left: 280px; /* Same as the width of the sidebar */
-}
-
-.desktop-1 .main-grid-Ys8k0x {
-  background-color: transparent;
-  height: 1023px;
-  left: 277px;
   position: absolute;
-  top: 1px;
-  width: 1165px;
-}
-
-.desktop-1 .main-container-I29cT6 {
-  background-color: #121212;
-  height: 1023px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 1165px;
 }
 
 /* -------------------------SIDENAV CONFIRMED-------------------------------------------*/
