@@ -29,6 +29,8 @@ body {
   color: var(--darkcolor-primary);
   border-color: var(--darkcolor-primary);
   width: 90%;
+  border-top-color: var(--darkcolor-secondary);
+  border-bottom-color: var(--darkcolor-secondary);
 }
 /* ---------------------------MAIN CONTENT-------------------------------------*/
 
