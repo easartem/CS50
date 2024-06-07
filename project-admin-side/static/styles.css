@@ -78,8 +78,8 @@ body {
   border-bottom: 2px solid var(--darkcolor-secondary);
 }
 
-.client-nav .fa  {
-  color: var(--darkcolor-onbg);
+.client-nav .nav-link.active .fa  {
+  color: var(--darkcolor-secondary);
 }
 
 /* -------------------------SIDENAV CONFIRMED-------------------------------------------*/
