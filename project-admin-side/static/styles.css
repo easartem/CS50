@@ -29,7 +29,7 @@ body {
 
 
 /* Style page content */
-.main {
+main {
   margin-left: 280px; /* Same as the width of the sidebar */
   position: absolute;
 }
