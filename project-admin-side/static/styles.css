@@ -50,10 +50,13 @@ body {
 .side-menu {
     color: var(--darkcolor-onprimary);
     background-color: var(--darkcolor-bg-menu);
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    top: 0; /* Stay at the top */
+    left: 0; /* Stay on the left */
     display: flex;
     flex-wrap: nowrap;
-    height: 100vh;
-    width: 280px;
+    height: 100vh; /* Full-height */
+    width: 280px; /* Set the width of the sidebar */
     overflow-x: auto;
     overflow-y: hidden;
 }
