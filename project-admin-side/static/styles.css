@@ -69,9 +69,20 @@ body {
 
 /* When you mouse over the navigation links, change their color */
 .nav-group-option a:hover {
-  color: #f1f1f1;
+  color: var(--darkcolor-primary);
 }
 
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .side-menu  {padding-top: 15px;}
+  .side-menu  a {font-size: 18px;}
+}
 
 /* ---------------------------Sidenav toggle button-------------------------------------*/
 
