@@ -62,6 +62,12 @@ body {
   background-color: var(--darkcolor-bg);
 }
 
+.client-nav .nav-tabs {
+  bs-nav-tabs-link-active-color: var(--darkcolor-secondary);
+  bs-nav-tabs-link-active-bg: var(--darkcolor-bg);
+  bs-nav-tabs-link-active-border-color: var(--darkcolor-secondary);
+}
+
 .nav-group-option a {
   font-size: var(--font-size-m);
   color: var(--darkcolor-onprimary);
