@@ -78,8 +78,8 @@ body {
   border-bottom: 2px solid var(--darkcolor-secondary);
 }
 
-.fa  {
-  color: var(--darkcolor-secondary);
+.side-menu .fa  {
+  color: var(--darkcolor-onprimary);
 }
 
 /* -------------------------SIDENAV CONFIRMED-------------------------------------------*/
