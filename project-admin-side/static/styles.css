@@ -29,7 +29,7 @@ body {
 
 
 /* Style page content container fluid px0 */
-main {
+.main {
   margin-left: 15%; /*Same as the width of the sidebar */
   position: absolute;
 }
