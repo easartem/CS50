@@ -14,6 +14,7 @@
     </head>
 
     <body>
+
         {% if get_flashed_messages() %}
             <header>
                 <div class="alert alert-primary mb-0 text-center" role="alert">
@@ -22,59 +23,57 @@
             </header>
         {% endif %}
 
-        <div class="container px-0 h-100 w-100">
-            <div class="side-menu d-flex flex-column flex-shrink-0 p-4">
-                <!--LOGO-->
-                <a href="/" class="logo d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-                  <span class="fs-4">TATTOO STUDIO</span>
-                </a>
-                <!--NAVIGATION OPTIONS-->
-                <hr>
-                <!--MENU DASHBOARD-->
-                <div class="nav-group py-3">Gestion du site
-                  <ul class="nav-group-option nav nav-pills flex-column mb-auto">
-                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Dashboard</a></li>
-                    <li><a href="#" class="nav-link">Mes clients</a></li>
-                    <li><a href="#" class="nav-link">Mes RDV</a></li>
-                  </ul>
-                </div>
-                <!--MENU STUDIO-->
-                <div class="nav-group py-3">Gestion du studio
-                  <ul class="nav-group-option nav nav-pills flex-column mb-auto">
-                    <li><a href="#" class="nav-link">Equipe</a></li>
-                    <li><a href="#" class="nav-link">KPI</a></li>
-                    <li><a href="#" class="nav-link">Finances</a></li>
-                  </ul>
-                </div>
-                  <!--MENU SITE-->
-                <div class="nav-group py-3">Gestion personnelle
-                  <ul class="nav-group-option nav nav-pills flex-column mb-auto">
-                    <li><a href="#" class="nav-link">Artistes</a></li>
-                    <li><a href="#" class="nav-link">Galerie</a></li>
-                    <li><a href="#" class="nav-link">Paramètres</a></li>
-                  </ul>
-                </div>
-
-                <hr>
-                <!--NAVIGATION FOOTER-->
-                <div class="dropdown">
-                  <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                    <strong>owner</strong>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                    <li><a class="dropdown-item" href="#">Paramètres</a></li>
-                    <li><a class="dropdown-item" href="#">Profil</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Se déconnecter</a></li>
-                  </ul>
-                </div>
+        <div class="side-menu d-flex flex-column flex-shrink-0 p-4">
+            <!--LOGO-->
+            <a href="/" class="logo d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+              <span class="fs-4">TATTOO STUDIO</span>
+            </a>
+            <!--NAVIGATION OPTIONS-->
+            <hr>
+            <!--MENU DASHBOARD-->
+            <div class="nav-group py-3">Gestion du site
+              <ul class="nav-group-option nav nav-pills flex-column mb-auto">
+                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Dashboard</a></li>
+                <li><a href="#" class="nav-link">Mes clients</a></li>
+                <li><a href="#" class="nav-link">Mes RDV</a></li>
+              </ul>
+            </div>
+            <!--MENU STUDIO-->
+            <div class="nav-group py-3">Gestion du studio
+              <ul class="nav-group-option nav nav-pills flex-column mb-auto">
+                <li><a href="#" class="nav-link">Equipe</a></li>
+                <li><a href="#" class="nav-link">KPI</a></li>
+                <li><a href="#" class="nav-link">Finances</a></li>
+              </ul>
+            </div>
+              <!--MENU SITE-->
+            <div class="nav-group py-3">Gestion personnelle
+              <ul class="nav-group-option nav nav-pills flex-column mb-auto">
+                <li><a href="#" class="nav-link">Artistes</a></li>
+                <li><a href="#" class="nav-link">Galerie</a></li>
+                <li><a href="#" class="nav-link">Paramètres</a></li>
+              </ul>
             </div>
 
-            <main class="container h-100 w-100 px-0">
-              {% block main %}{% endblock %}
-            </main>
-          </div>
+            <hr>
+            <!--NAVIGATION FOOTER-->
+            <div class="dropdown">
+              <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>owner</strong>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                <li><a class="dropdown-item" href="#">Paramètres</a></li>
+                <li><a class="dropdown-item" href="#">Profil</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Se déconnecter</a></li>
+              </ul>
+            </div>
         </div>
+
+        <main class="container h-100 w-100 px-0">
+          {% block main %}{% endblock %}
+        </main>
+
     </body>
 </html>
