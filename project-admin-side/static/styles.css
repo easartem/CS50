@@ -78,6 +78,10 @@ body {
   border-bottom: 2px solid var(--darkcolor-secondary);
 }
 
+i  {
+  color: var(--darkcolor-secondary);
+}
+
 /* -------------------------SIDENAV CONFIRMED-------------------------------------------*/
 
 /* The sidebar menu */
