@@ -78,8 +78,8 @@ body {
   border-bottom: 2px solid var(--darkcolor-secondary);
 }
 
-.side-menu .fa  {
-  color: var(--darkcolor-onprimary);
+.client-nav .fa  {
+  color: var(--darkcolor-onbg);
 }
 
 /* -------------------------SIDENAV CONFIRMED-------------------------------------------*/
@@ -128,6 +128,10 @@ body {
 /* When you mouse over the navigation links, change their color */
 .nav-group-option a:hover {
   color: var(--darkcolor-primary);
+}
+
+.side-menu .fa  {
+  color: var(--darkcolor-onprimary);
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
