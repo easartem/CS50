@@ -65,6 +65,8 @@ body {
 }
 
 .client-nav .nav-link:hover {
+  color: var(--darkcolor-onsurface);
+  background-color: var(--darkcolor-surface);
   border: 0;
   border-bottom: 1px solid grey;
 }
@@ -74,7 +76,7 @@ body {
   background-color: var(--darkcolor-bg);
   border: 0;
   border-radius: 0;
-  border-bottom: 2px  var(--darkcolor-secondary);
+  border-bottom: 2px var(--darkcolor-secondary);
 }
 
 /* -------------------------SIDENAV CONFIRMED-------------------------------------------*/
