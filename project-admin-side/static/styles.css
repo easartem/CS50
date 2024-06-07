@@ -37,6 +37,7 @@ main {
 .surface {
   color: var(--darkcolor-onsurface);
   background-color: var(--darkcolor-surface);
+  padding
 }
 
 .row-1 {
