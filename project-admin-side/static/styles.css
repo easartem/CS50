@@ -48,6 +48,7 @@ body {
 .btn-primary {
   color: var(--darkcolor-onprimary) !important;
   background-color: var(--darkcolor-secondary) !important;
+  border-color: var(--darkcolor-secondary) !important;
 }
 /* ---------------------------MAIN CONTENT-------------------------------------*/
 
