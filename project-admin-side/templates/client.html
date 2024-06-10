@@ -173,9 +173,9 @@
 
                 <h5>Payment</h5>
                  <div class="form-group">
-                    <label for="id_start_datetime">12hr Date-Time:</label>
-                    <div class='input-group date' id='datetimepicker1'>
-                        <input type="date" class="form-control" required/>
+                    <label for="id_start_datetime">RDV</label>
+                    <div class='input-group date' id='rdv'>
+                        <input type="date" class="form-control"/>
                     </div>
                 </div>
                 <h5>BILAN</h5>
@@ -187,11 +187,6 @@
         </div>
 
     </div>
-    <script>
-        $('#datetimepicker1').datetimepicker({
-            format : 'mm/dd/yyyy'
-        });
-    </script>
     <!-- Tabs content -->
 
 {% endblock %}
