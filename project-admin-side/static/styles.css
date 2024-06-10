@@ -32,11 +32,25 @@ body {
   border-top-color: var(--darkcolor-secondary);
   border-bottom-color: var(--darkcolor-secondary);
 }
+
 .form-inline {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
 }
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  background-color: black !important;
+  color: white !important;
+}
+
+.btn-primary {
+  color: white !important;
+  background-color: green !important;
+  width: 100%;
 /* ---------------------------MAIN CONTENT-------------------------------------*/
 
 
