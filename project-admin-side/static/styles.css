@@ -39,10 +39,7 @@ body {
   align-items: center;
 }
 
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited,
-.btn-primary:focus {
+.btn-primary:hover {
   background-color: transparent !important;
   color: white !important;
   border-color: var(--darkcolor-secondary) !important;
@@ -51,6 +48,7 @@ body {
 .btn-primary {
   color: var(--darkcolor-onprimary) !important;
   background-color: var(--darkcolor-secondary) !important;
+
 /* ---------------------------MAIN CONTENT-------------------------------------*/
 
 
