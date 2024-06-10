@@ -43,14 +43,14 @@ body {
 .btn-primary:active,
 .btn-primary:visited,
 .btn-primary:focus {
-  background-color: black !important;
+  background-color: transparent !important;
   color: white !important;
+  border-color: var(--darkcolor-secondary) !important;
 }
 
 .btn-primary {
-  color: white !important;
-  background-color: green !important;
-  width: 100%;
+  color: var(--darkcolor-onprimary) !important;
+  background-color: var(--darkcolor-secondary) !important;
 /* ---------------------------MAIN CONTENT-------------------------------------*/
 
 
