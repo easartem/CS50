@@ -176,7 +176,7 @@
                     <div style="position : relative">
                         <input class="form-control" type="text" id="time"/>
                     </div>
-                 </div>  
+                 </div>
 
                 <h5>BILAN</h5>
                 Temps :
@@ -187,7 +187,11 @@
         </div>
 
     </div>
-
+    <script>
+        $('#time').datetimepicker({
+            format : 'aaaa-mm-jj'
+        });
+    </script>
     <!-- Tabs content -->
 
 {% endblock %}
