@@ -157,7 +157,7 @@ body {
 
 .nav-group-option .nav-link.active {
   color: var(--darkcolor-onsurface);
-  background-color: var(--darkcolor-onsurface);
+  background-color: var(--darkcolor-secondary);
 }
 
 
