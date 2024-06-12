@@ -191,6 +191,21 @@
     </footer>
     <!-- Footer -->
 
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        fetch('/api/coordinates')
+          .then(response => response.json())
+          .then(data => {
+            document.getElementById('address').textContent = data.address;
+            document.getElementById('phone').textContent = data.phone;
+            document.getElementById('email').textContent = data.email;
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+      });
+    </script>
+
     </body>
 
 </html>
