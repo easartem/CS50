@@ -25,7 +25,7 @@ def after_request(response):
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("/showcase/index.html")
 
 @app.route("/clients", methods=["GET"])
 def clients():
