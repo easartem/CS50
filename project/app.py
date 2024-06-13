@@ -30,6 +30,8 @@ def after_request(response):
 def index():
     return render_template('/showcase/index.html')
 
+
+# Servir les fichiers du site vitrine
 @app.route("/booking", methods=["GET", "POST"])
 def booking():
     return render_template("/showcase/booking.html")
@@ -53,3 +55,13 @@ def faq():
 @app.route("/infos", methods=["GET"])
 def infos():
     return render_template("/showcase/infos.html")
+
+
+# Servir les fichiers de l'interface d'administration
+@app.route("/admin")
+def admin_index():
+    return send_from_directory("showcase", "index.html")
+
+@app.route('/admin/<path:path>')
+def serve_admin_template(path):
+    return render_template(f'admin/{path}')
