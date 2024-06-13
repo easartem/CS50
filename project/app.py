@@ -24,9 +24,39 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
-@app.route("/")
+
+
+# Servir les fichiers de l'interface d'administration
+@app.route('/admin/static/<path:path>')
+def serve_admin_static(path):
+    return send_from_directory('admin/static', path)
+
+@app.route('/admin/<path:path>')
+def serve_admin_template(path):
+    return render_template(f'admin/{path}')
+
+# Servir les fichiers du site vitrine
+@app.route('/showcase/static/<path:path>')
+def serve_vitrine_static(path):
+    return send_from_directory('showcase/static', path)
+
+@app.route('/showcase/<path:path>')
+def serve_vitrine_template(path):
+    return render_template(f'showcase/{path}')
+
+# Route par défaut pour rediriger vers le site vitrine
+@app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template('showcase/index.html', title="Accueil")
+
+
+
+
+
+
+# @app.route("/")
+# def index():
+#     return render_template("index.html")
 
 @app.route("/studio", methods=["GET"])
 def studio():
