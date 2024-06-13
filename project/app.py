@@ -58,7 +58,7 @@ def infos():
 
 
 # Servir les fichiers de l'interface d'administration
-@app.route("/admin")
+@app.route("/admin/index")
 def admin_index():
     return render_template("/admin/index.html")
 
