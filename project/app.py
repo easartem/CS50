@@ -53,11 +53,6 @@ def index():
 
 
 
-
-# @app.route("/")
-# def index():
-#     return render_template("index.html")
-
 @app.route("/studio", methods=["GET"])
 def studio():
     return render_template("studio.html")
