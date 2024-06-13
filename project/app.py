@@ -49,9 +49,9 @@ def serve_vitrine_template(path):
 def index():
     return render_template('/showcase/index.html', title="Accueil")
 
-@app.route('/showcase/booking/')
-def serve_vitrine_booking_template(path):
-    return render_template(f'showcase/{path}')
+@app.route('/showcase/booking')
+def booking():
+    return render_template('/showcase/booking.html')
 
 
 
