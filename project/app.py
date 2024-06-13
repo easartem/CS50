@@ -47,7 +47,7 @@ def serve_vitrine_template(path):
 # Route par défaut pour rediriger vers le site vitrine
 @app.route('/')
 def index():
-    return render_template('/showcase/templates/index.html', title="Accueil")
+    return render_template('/showcase/index.html', title="Accueil")
 
 
 
