@@ -31,7 +31,7 @@ def after_request(response):
 def index():
     return render_template('/showcase/index.html')
 
-@app.route("/booking")
+@app.route("/booking", methods=["GET", "POST"])
 def booking():
     return render_template("/showcase/booking.html")
 
