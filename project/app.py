@@ -62,6 +62,34 @@ def infos():
 def admin_index():
     return send_from_directory("showcase", "index.html")
 
-@app.route('/admin/<path:path>')
-def serve_admin_template(path):
-    return render_template(f'admin/{path}')
+@app.route("/admin/clients", methods=["GET"])
+def clients():
+    return render_template("/admin/client.html")
+
+@app.route("/admin/rdv", methods=["GET"])
+def rdv():
+    return render_template("/admin/rdv.html")
+
+@app.route("/admin/team", methods=["GET"])
+def team():
+    return render_template("/admin/team.html")
+
+@app.route("/admin/kpi", methods=["GET"])
+def kpi():
+    return render_template("/admin/kpi.html")
+
+@app.route("/admin/finance", methods=["GET"])
+def finance():
+    return render_template("/admin/finances.html")
+
+@app.route("/admin/artists", methods=["GET"])
+def artists():
+    return render_template("/admin/artists.html")
+
+@app.route("/admin/gallery", methods=["GET"])
+def gallery():
+    return render_template("/admin/gallery.html")
+
+@app.route("/admin/parameters", methods=["GET"])
+def parameters():
+    return render_template("/admin/parameters.html")
