@@ -29,9 +29,9 @@ def after_request(response):
 # Route par défaut pour rediriger vers le site vitrine
 @app.route('/')
 def index():
-    return render_template('/showcase/index.html', title="Accueil")
+    return render_template('/showcase/index.html')
 
-@app.route("/showcase/booking")
+@app.route("/booking")
 def booking():
     return render_template("/showcase/booking.html")
 
