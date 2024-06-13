@@ -26,24 +26,6 @@ def after_request(response):
 
 
 
-# Servir les fichiers de l'interface d'administration
-@app.route('/admin/static/<path:path>')
-def serve_admin_static(path):
-    return send_from_directory('admin/static', path)
-
-@app.route('/admin/<path:path>')
-def serve_admin_template(path):
-    return render_template(f'admin/{path}')
-
-# Servir les fichiers du site vitrine
-@app.route('/showcase/static/<path:path>')
-def serve_vitrine_static(path):
-    return send_from_directory('showcase/static', path)
-
-@app.route('/showcase/<path:path>')
-def serve_vitrine_template(path):
-    return render_template(f'showcase/{path}')
-
 # Route par défaut pour rediriger vers le site vitrine
 @app.route('/')
 def index():
