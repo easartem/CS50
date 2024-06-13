@@ -25,7 +25,6 @@ def after_request(response):
     return response
 
 
-
 # Route par défaut pour rediriger vers le site vitrine
 @app.route('/')
 def index():
