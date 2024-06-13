@@ -74,7 +74,3 @@ def faq():
 @app.route("/infos", methods=["GET"])
 def infos():
     return render_template("infos.html")
-
-@app.route("/booking", methods=["GET", "POST"])
-def booking():
-    return render_template("booking.html")
