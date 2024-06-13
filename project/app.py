@@ -60,7 +60,7 @@ def infos():
 # Servir les fichiers de l'interface d'administration
 @app.route("/admin")
 def admin_index():
-    return send_from_directory("showcase", "index.html")
+    return render_template("/admin/index.html")
 
 @app.route("/admin/clients", methods=["GET"])
 def clients():
