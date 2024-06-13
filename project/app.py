@@ -35,24 +35,22 @@ def index():
 def booking():
     return render_template("/showcase/booking.html")
 
-
-
 @app.route("/studio", methods=["GET"])
 def studio():
-    return render_template("studio.html")
+    return render_template("/showcase/studio.html")
 
 @app.route("/galerie", methods=["GET"])
 def galerie():
-    return render_template("galerie.html")
+    return render_template("/showcase/galerie.html")
 
 @app.route("/artistes", methods=["GET"])
 def artistes():
-    return render_template("artistes.html")
+    return render_template("/showcase/artistes.html")
 
 @app.route("/faq", methods=["GET"])
 def faq():
-    return render_template("faq.html")
+    return render_template("/showcase/faq.html")
 
 @app.route("/infos", methods=["GET"])
 def infos():
-    return render_template("infos.html")
+    return render_template("/showcase/infos.html")
