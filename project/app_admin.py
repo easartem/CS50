@@ -1,6 +1,6 @@
 import os
 from cs50 import SQL
-from flask import Flask, flash, redirect, render_template, request, session, jsonify
+from flask import Flask, flash, redirect, render_template, request, session, jsonify, send_from_directory
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 
@@ -25,7 +25,7 @@ def after_request(response):
 
 @app.route("/")
 def index():
-    return render_template("/showcase/index.html")
+    return send_from_directory("showcase", "index.html")
 
 @app.route("/clients", methods=["GET"])
 def clients():
