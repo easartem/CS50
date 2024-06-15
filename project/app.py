@@ -26,8 +26,16 @@ STUDIO = {
 }
 def get_studio():
     try:
-        infos = db.execute("SELECT * FROM studio WHERE id = ?", 1)
+        infos = db.execute("SELECT * FROM studio WHERE id = ?", 1)[0]
+        print(studio)
         print(infos)
+        STUDIO["studio_name"] = infos["name"]
+        STUDIO["studio_address"] = infos["address"]
+        STUDIO["studio_telephone"] = infos["telephone"]
+        STUDIO["studio_email"] = infos["email"]
+        STUDIO["studio_instagram"] = infos["instagram"]
+        STUDIO["studio_openhours"] = infos["openhours"]
+        print(studio)
     except ValueError:
         pass
 
