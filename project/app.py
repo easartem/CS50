@@ -24,8 +24,6 @@ STUDIO = {
     "studio_instagram" : "default_instagram",
     "studio_openhours" : "default_openhours",
 }
-
-@app.before_first_request
 def get_studio():
     try:
         infos = db.execute("SELECT * FROM studio WHERE id = ?", 1)
@@ -33,6 +31,13 @@ def get_studio():
     except ValueError:
         pass
 
+@app.before_request
+def create_tables():
+    # The following line will remove this handler, making it
+    # only run on the first request
+    app.before_request_funcs[None].remove(create_tables)
+
+    db.get_studio()
 
 
 
