@@ -17,6 +17,15 @@ db = SQL("sqlite:///tattooshop.db")
 
 # Configure the showcase basic informations
 STUDIO = []
+@app.before_first_request
+def get_studio():
+    try:
+        infos = db.execute
+        STUDIO = infos 
+    except ValueError:
+        pass
+
+
 
 
 @app.after_request
@@ -31,10 +40,6 @@ def after_request(response):
 # Route par défaut pour rediriger vers le site vitrine
 @app.route('/')
 def index():
-    try:
-        
-    except ValueError:
-        return 400
     return render_template('/showcase/index.html')
 
 
