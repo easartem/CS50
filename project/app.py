@@ -37,7 +37,7 @@ def create_tables():
     # only run on the first request
     app.before_request_funcs[None].remove(create_tables)
 
-    db.get_studio()
+    get_studio()
 
 
 
