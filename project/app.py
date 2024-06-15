@@ -28,10 +28,8 @@ STUDIO = {
 @app.before_first_request
 def get_studio():
     try:
-        infos = db.execute
+        infos = db.execute("SELECT * FROM studio WHERE id = ?", 1)
         print(infos)
-
-
     except ValueError:
         pass
 
