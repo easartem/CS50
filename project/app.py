@@ -125,4 +125,4 @@ def parameters():
 
 @app.route("/change_settings", methods=["GET", "POST"])
 def change_settings():
-    request.form.get()
+    request.form.get("shop-name")
