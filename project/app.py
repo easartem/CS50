@@ -16,7 +16,15 @@ Session(app)
 db = SQL("sqlite:///tattooshop.db")
 
 # Configure the showcase basic informations
-STUDIO = []
+STUDIO = {
+    "studio_name" : "default_name",
+    "studio_address" : "default_address",
+    "studio_telephone" : "default_telephone",
+    "studio_email" : "default_email",
+    "studio_instagram" : "default_instagram",
+    "studio_openhours" : "default_openhours",
+}
+
 @app.before_first_request
 def get_studio():
     try:
