@@ -41,9 +41,7 @@ def create_tables():
     # The following line will remove this handler, making it
     # only run on the first request
     app.before_request_funcs[None].remove(create_tables)
-
     get_studio()
-
 
 
 @app.after_request
