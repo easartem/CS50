@@ -125,4 +125,11 @@ def parameters():
 
 @app.route("/change_settings", methods=["GET", "POST"])
 def change_settings():
-    request.form.get("shop-name")
+    new_name = request.form.get("shop-name")
+    new_name = request.form.get("shop-hours")
+    new_name = request.form.get("shop-location")
+    new_name = request.form.get("shop-tel")
+    new_name = request.form.get("shop-mail")
+    new_name = request.form.get("shop-insta")
+    # update
+
