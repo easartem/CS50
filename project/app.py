@@ -15,6 +15,9 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///tattooshop.db")
 
+# Configure the showcase basic informations
+STUDIO = []
+
 
 @app.after_request
 def after_request(response):
@@ -28,6 +31,10 @@ def after_request(response):
 # Route par défaut pour rediriger vers le site vitrine
 @app.route('/')
 def index():
+    try:
+        
+    except ValueError:
+        return 400
     return render_template('/showcase/index.html')
 
 
