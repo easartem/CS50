@@ -121,3 +121,8 @@ def gallery():
 @app.route("/admin/parameters", methods=["GET"])
 def parameters():
     return render_template("/admin/parameters.html")
+
+
+@app.route("/change_settings", methods=["GET", "POST"])
+def change_settings():
+    request.form.get()
