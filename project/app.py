@@ -29,9 +29,9 @@ STUDIO = {
 def get_studio():
     try:
         infos = db.execute
-        for info in infos:
-            STUDIO.append(info)
-        STUDIO = infos
+        print(infos)
+
+
     except ValueError:
         pass
 
