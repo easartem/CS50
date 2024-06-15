@@ -33,9 +33,8 @@ def get_studio():
         STUDIO["studio_email"] = infos["email"]
         STUDIO["studio_instagram"] = infos["instagram"]
         STUDIO["studio_openhours"] = infos["openhours"]
-        print(STUDIO)
     except ValueError:
-        pass
+        return 400
 
 @app.before_request
 def create_tables():
