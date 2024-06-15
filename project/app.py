@@ -56,7 +56,7 @@ def after_request(response):
 # Route par défaut pour rediriger vers le site vitrine
 @app.route('/')
 def index():
-    return render_template('/showcase/index.html')
+    return render_template('/showcase/index.html', studio=STUDIO)
 
 
 # Servir les fichiers du site vitrine
