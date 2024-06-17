@@ -24,7 +24,7 @@
               <div class="form-group">
                 <div id="liveAlertPlaceholder"></div>
                 <label for="shop-name">Nom du studio</label>
-                <input id="shop-name" type="text" class="form-control" disabled>
+                <input id="shop-name" type="text" class="form-control" placeholder="{{ infos.name }}" disabled>
               </div>
               <div class="form-group">
                 <label for="shop-hours">Heures d'ouverture</label>
@@ -95,7 +95,7 @@
   function alertEmpty() {
     console.log('Button clicked!');
   };
-  
+
 
   function confirmModification() {
     console.log('Button clicked!');
