@@ -123,7 +123,8 @@
       const inputs = document.querySelectorAll('#form-parameters input[required]');
       let allValid = true;
       inputs.forEach(function(input) {
-        console.log('input is : ', input);
+        console.log('input verif entered!');
+        console.log(input);
         if (!input.value) {
           allValid = false;
           input.classList.add('is-invalid'); // Bootstrap class to highlight invalid fields
