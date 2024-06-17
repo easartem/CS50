@@ -77,12 +77,13 @@
           </div>
         </div>
       </div>
-      <button class="edit-btn btn btn-primary my-2" type="button" onclik="enableModification()">Modifier</button>
-      <button class="edit-btn btn btn-primary my-2" type="submit" onclik="enableModification()">Confirmer</button>
+      <button class="edit-btn btn btn-primary my-2" type="button" onclick="enableModification()">Modifier</button>
+      <button class="edit-btn btn btn-primary my-2" type="submit" onclick="enableModification()">Confirmer</button>
 </form>
 
 <script>
   function enableModification() {
+    console.log('Button clicked!');
     document.querySelectorAll('input').forEach(function(input) {
       input.disabled = false;
     });
