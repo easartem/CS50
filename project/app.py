@@ -127,7 +127,7 @@ def parameters():
 def change_settings():
     if request.method == "POST":
         # Get the new values from the admin interface
-        if not new_name | not new_hours | not new_location | not new_tel | not new_mail | not new_insta:
+        if not new_name |  new_hours |  new_location |  new_tel |  new_mail |  new_insta:
             return 400
         # if empty field or no modification made return msg
         new_name = request.form.get("shop-name")
