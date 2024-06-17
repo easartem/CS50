@@ -62,27 +62,27 @@ def index():
 # Servir les fichiers du site vitrine
 @app.route("/booking", methods=["GET", "POST"])
 def booking():
-    return render_template("/showcase/booking.html")
+    return render_template("/showcase/booking.html", infos=STUDIO)
 
 @app.route("/studio", methods=["GET"])
 def studio():
-    return render_template("/showcase/studio.html")
+    return render_template("/showcase/studio.html", infos=STUDIO)
 
 @app.route("/galerie", methods=["GET"])
 def galerie():
-    return render_template("/showcase/galerie.html")
+    return render_template("/showcase/galerie.html", infos=STUDIO)
 
 @app.route("/artistes", methods=["GET"])
 def artistes():
-    return render_template("/showcase/artistes.html")
+    return render_template("/showcase/artistes.html", infos=STUDIO)
 
 @app.route("/faq", methods=["GET"])
 def faq():
-    return render_template("/showcase/faq.html")
+    return render_template("/showcase/faq.html", infos=STUDIO)
 
 @app.route("/infos", methods=["GET"])
 def infos():
-    return render_template("/showcase/infos.html")
+    return render_template("/showcase/infos.html", infos=STUDIO)
 
 
 # Servir les fichiers de l'interface d'administration
