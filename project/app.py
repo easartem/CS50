@@ -123,7 +123,7 @@ def parameters():
     return render_template("/admin/parameters.html", infos=STUDIO)
 
 
-@app.route("/change_settings", methods=["GET", "POST"])
+@app.route("/admin/change_settings", methods=["GET", "POST"])
 def change_settings():
     if request.method == "POST":
         # Get the new values from the admin interface
