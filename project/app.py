@@ -118,13 +118,8 @@ def artists():
 def gallery():
     return render_template("/admin/gallery.html")
 
-@app.route("/admin/parameters", methods=["GET"])
+@app.route("/admin/parameters", methods=["GET", "POST"])
 def parameters():
-    return render_template("/admin/parameters.html", infos=STUDIO)
-
-
-@app.route("/admin/change_settings", methods=["GET", "POST"])
-def change_settings():
     if request.method == "POST":
         # Get the new values from the admin interface
         # if not new_name |  new_hours |  new_location |  new_tel |  new_mail |  new_insta:
