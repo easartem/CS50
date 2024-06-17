@@ -91,7 +91,7 @@ def infos():
 # Servir les fichiers de l'interface d'administration
 @app.route("/admin")
 def admin_index():
-    return render_template("/admin/index.html")
+    return render_template("/admin/index.html", indos=STUDIO)
 
 @app.route("/admin/clients", methods=["GET"])
 def clients():
