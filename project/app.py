@@ -133,6 +133,7 @@ def change_settings():
     new_mail = request.form.get("shop-mail")
     new_insta = request.form.get("shop-insta")
 
-    # update
-    db.execute("UPDATE studio SET ")
+    # Update the global informations directly into the database
+    db.execute("UPDATE studio SET name=?, address=?, telephone=?, email=?, instagram=?, openhours=? WHERE id=?;",
+                new_name, new_location, new_tel, new_mail, new_insta, new_hours, 1)
 
