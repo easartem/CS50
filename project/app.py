@@ -125,11 +125,12 @@ def parameters():
 
 @app.route("/change_settings", methods=["GET", "POST"])
 def change_settings():
+    # Get the new values from the admin interface
     new_name = request.form.get("shop-name")
-    new_name = request.form.get("shop-hours ")
-    new_name = request.form.get("shop-location")
-    new_name = request.form.get("shop-tel")
-    new_name = request.form.get("shop-mail")
-    new_name = request.form.get("shop-insta")
+    new_hours = request.form.get("shop-hours ")
+    new_location = request.form.get("shop-location")
+    new_tel = request.form.get("shop-tel")
+    new_mail = request.form.get("shop-mail")
+    new_insta = request.form.get("shop-insta")
     # update
 
