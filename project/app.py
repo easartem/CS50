@@ -131,6 +131,8 @@ def change_settings():
         #     return 400
         # if empty field or no modification made return msg
         print("entered")
+        if not request.form.get("shop-name"):
+            print("error")
         new_name = request.form.get("shop-name")
         new_hours = request.form.get("shop-hours")
         new_location = request.form.get("shop-location")
@@ -139,8 +141,7 @@ def change_settings():
         new_insta = request.form.get("shop-insta")
 
         # Update the global informations directly into the database
-        db.execute("UPDATE studio SET name=?, address=?, telephone=?, email=?, instagram=?, openhours=? WHERE id=?;",
-                    new_name, new_location, new_tel, new_mail, new_insta, new_hours, 1)
+        db.execute("UPDATE studio SET name=?, address=?, telephone=?, email=?, instagram=?, openhours=? WHERE id=?;", new_name, new_location, new_tel, new_mail, new_insta, new_hours, 1)
 
         get_studio()
         return render_template("/admin/parameters.html", infos=STUDIO)
