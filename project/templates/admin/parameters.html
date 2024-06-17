@@ -83,7 +83,9 @@
 
 <script>
   function enableModification() {
-    document.querySelectorAll('input').disabled = False;
+    document.querySelectorAll('input').forEach(function(input) {
+      input.disabled = false;
+    });
   };
 
   const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
