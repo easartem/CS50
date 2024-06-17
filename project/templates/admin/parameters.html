@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block main %}
-<form action="/change_settings" method="post">
+<form action="/change_settings" method="post" id="form-parameters">
     <h5>Informations globales</h5>
     <!--View mode : disabled form -->
     <!--Edit mode : enabled form and button pop up to confirm saving modifications-->
@@ -107,8 +107,8 @@
       document.getElementById('confirmButton').style.display = 'none';
   };
 
-  document.getElementById('myForm').addEventListener('submit', function(event) {
-      const inputs = document.querySelectorAll('#myForm input[required]');
+  document.getElementById('form-parameters').addEventListener('submit', function(event) {
+      const inputs = document.querySelectorAll('#form-parameters input[required]');
       let allValid = true;
       inputs.forEach(function(input) {
         if (!input.value) {
