@@ -107,6 +107,18 @@
       document.getElementById('confirmButton').style.display = 'none';
   };
 
+  const alert = (message, type) => {
+    const wrapper = document.createElement('div')
+    wrapper.innerHTML = [
+      `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+      `   <div>${message}</div>`,
+      '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+      '</div>'
+    ].join('')
+
+    document.getElementById('liveAlertPlaceholder').append(wrapper)
+  }
+
   document.getElementById('form-parameters').addEventListener('submit', function(event) {
       const inputs = document.querySelectorAll('#form-parameters input[required]');
       let allValid = true;
@@ -121,32 +133,9 @@
 
       if (!allValid) {
         event.preventDefault(); // Prevent form submission
-        alert('Please fill in all required fields.');
+        alert('Please fill in all required fields.', 'danger');
       }
     });
-
-
-
-  const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-
-  const alert = (message, type) => {
-    const wrapper = document.createElement('div')
-    wrapper.innerHTML = [
-      `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-      `   <div>${message}</div>`,
-      '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-      '</div>'
-    ].join('')
-
-    alertPlaceholder.append(wrapper)
-  }
-
-  const alertTrigger = document.getElementById('liveAlertBtn')
-  if (alertTrigger) {
-    alertTrigger.addEventListener('click', () => {
-      alert('Nice, you triggered this alert message!', 'success')
-    })
-  }
 </script>
 
 {% endblock %}
