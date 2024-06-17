@@ -128,6 +128,9 @@
       if (!allValid) {
         event.preventDefault(); // Prevent form submission
         alert('Please fill in all required fields.', 'danger');
+      } else {
+        // You can add any additional logic here if needed before form submission
+        console.log('Form is valid, submitting...');
       }
     });
 </script>
