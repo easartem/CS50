@@ -131,6 +131,8 @@ def change_settings():
         #     return 400
         # if empty field or no modification made return msg
         print("entered")
+        if not request.form:
+            print("no form")
         if not request.form.get("shop-name"):
             print("error")
         new_name = request.form.get("shop-name")
