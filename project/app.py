@@ -63,7 +63,10 @@ def index():
 @app.route("/booking", methods=["GET", "POST"])
 def booking():
     if request.method == "POST":
-        pass
+        if not request.form.get("fullname"):
+            print('fucking mistake somewhere')
+        print("good")
+        return render_template("/showcase/booking.html", infos=STUDIO)
     else:
         return render_template("/showcase/booking.html", infos=STUDIO)
 
@@ -121,7 +124,7 @@ def artists():
 def gallery():
     return render_template("/admin/gallery.html")
 
-@app.route("/admin/parameters", methods=["GET", "POST"])
+@app.route("/parameters", methods=["GET", "POST"])
 def parameters():
     if request.method == "POST":
         # Get the new values from the admin interface
