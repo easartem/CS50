@@ -22,6 +22,9 @@
           <div id="studio-settings-collapse" class="accordion-collapse collapse show" aria-labelledby="studio-settings-heading">
             <div class="accordion-body">
               <div class="form-group">
+                <div id="liveAlertPlaceholder"></div>
+                <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+
                 <label for="shop-name">Nom du studio</label>
                 <input id="shop-name" type="text" class="form-control" disabled>
               </div>
@@ -78,5 +81,28 @@
       </div>
       <button class="edit-btn btn btn-primary my-2" type="submit">Modifier</button>
 </form>
+
+<script>
+  const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+  const alert = (message, type) => {
+    const wrapper = document.createElement('div')
+    wrapper.innerHTML = [
+      `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+      `   <div>${message}</div>`,
+      '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+      '</div>'
+    ].join('')
+
+    alertPlaceholder.append(wrapper)
+  }
+
+  const alertTrigger = document.getElementById('liveAlertBtn')
+  if (alertTrigger) {
+    alertTrigger.addEventListener('click', () => {
+      alert('Nice, you triggered this alert message!', 'success')
+    })
+  }
+</script>
 
 {% endblock %}
