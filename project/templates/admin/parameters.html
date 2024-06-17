@@ -107,7 +107,23 @@
       document.getElementById('confirmButton').style.display = 'none';
   };
 
+  document.getElementById('myForm').addEventListener('submit', function(event) {
+      const inputs = document.querySelectorAll('#myForm input[required]');
+      let allValid = true;
+      inputs.forEach(function(input) {
+        if (!input.value) {
+          allValid = false;
+          input.classList.add('is-invalid'); // Bootstrap class to highlight invalid fields
+        } else {
+          input.classList.remove('is-invalid');
+        }
+      });
 
+      if (!allValid) {
+        event.preventDefault(); // Prevent form submission
+        alert('Please fill in all required fields.');
+      }
+    });
 
 
 
