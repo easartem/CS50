@@ -62,7 +62,10 @@ def index():
 # Servir les fichiers du site vitrine
 @app.route("/booking", methods=["GET", "POST"])
 def booking():
-    return render_template("/showcase/booking.html", infos=STUDIO)
+    if request.method == "POST":
+        pass
+    else:
+        return render_template("/showcase/booking.html", infos=STUDIO)
 
 @app.route("/studio", methods=["GET"])
 def studio():
