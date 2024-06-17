@@ -132,5 +132,7 @@ def change_settings():
     new_tel = request.form.get("shop-tel")
     new_mail = request.form.get("shop-mail")
     new_insta = request.form.get("shop-insta")
+
     # update
+    db.execute("UPDATE studio SET ")
 
