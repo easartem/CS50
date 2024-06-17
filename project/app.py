@@ -143,3 +143,6 @@ def change_settings():
     else:
         return render_template("/admin/parameters.html")
 
+
+def alert(message, type):
+    
