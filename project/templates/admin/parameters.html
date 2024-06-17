@@ -78,7 +78,7 @@
         </div>
       </div>
       <button class="edit-btn btn btn-primary my-2" type="button" onclick="enableModification()">Modifier</button>
-      <button class="edit-btn btn btn-primary my-2" type="submit" onclick="enableModification()">Confirmer</button>
+      <button class="edit-btn btn btn-primary my-2" type="submit" onclick="alertEmpty()">Confirmer</button>
 </form>
 
 <script>
@@ -88,6 +88,12 @@
       input.disabled = false;
     });
   };
+
+
+  function alertEmpty() {
+    console.log('Button clicked!');
+  };
+
 
   const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
