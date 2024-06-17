@@ -144,5 +144,5 @@ def change_settings():
         return render_template("/admin/parameters.html")
 
 
-def alert(message, type):
-    
+#def alert(message, type):
+

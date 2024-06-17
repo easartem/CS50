@@ -77,10 +77,15 @@
           </div>
         </div>
       </div>
-      <button class="edit-btn btn btn-primary my-2" type="submit">Modifier</button>
+      <button class="edit-btn btn btn-primary my-2" onclik="enableModification()">Modifier</button>
+      <button class="edit-btn btn btn-primary my-2" onclik="enableModification()">Confirmer</button>
 </form>
 
 <script>
+
+
+
+
   const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
   const alert = (message, type) => {
