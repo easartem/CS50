@@ -130,8 +130,9 @@ def change_settings():
         # if not new_name |  new_hours |  new_location |  new_tel |  new_mail |  new_insta:
         #     return 400
         # if empty field or no modification made return msg
+        print("entered")
         new_name = request.form.get("shop-name")
-        new_hours = request.form.get("shop-hours ")
+        new_hours = request.form.get("shop-hours")
         new_location = request.form.get("shop-location")
         new_tel = request.form.get("shop-tel")
         new_mail = request.form.get("shop-mail")
