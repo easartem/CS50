@@ -140,6 +140,7 @@ def change_settings():
         # Update the global informations directly into the database
         db.execute("UPDATE studio SET name=?, address=?, telephone=?, email=?, instagram=?, openhours=? WHERE id=?;",
                     new_name, new_location, new_tel, new_mail, new_insta, new_hours, 1)
+        return render_template("/admin/parameters.html")
     else:
         return render_template("/admin/parameters.html")
 
