@@ -6,4 +6,84 @@
 
 {% block main %}
 
+<section class="hero text-center d-flex flex-column justify-content-center align-items-center">
+    <h1>Bienvenue au Nouveau Studio de Tatouage</h1>
+    <p>Découvrez l'art du tatouage dans un cadre moderne et accueillant</p>
+    <a href="#about" class="btn btn-primary">En savoir plus</a>
+</section>
+
+<section id="about" class="about p-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="tattoo_studio.jpg" alt="Tattoo Studio" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <h2>À propos de nous</h2>
+                <p>Notre studio de tatouage allie créativité, expertise et hygiène pour vous offrir une expérience unique. Nos artistes talentueux sont là pour transformer vos idées en œuvres d'art permanentes.</p>
+                <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services p-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Nos Services</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="service-box p-4">
+                    <h3>Tatouages Personnalisés</h3>
+                    <p>Des créations uniques sur mesure pour chaque client.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="service-box p-4">
+                    <h3>Restauration de Tatouages</h3>
+                    <p>Redonnez vie à vos anciens tatouages avec nos techniques de restauration.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="service-box p-4">
+                    <h3>Conseils et Consultation</h3>
+                    <p>Discutez de vos idées avec nos artistes pour un résultat parfait.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact p-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Nous Contacter</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <form action="/submit_form" method="post">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <h3>Adresse</h3>
+                <p>123 Rue du Tatouage, 75000 Paris, France</p>
+                <h3>Téléphone</h3>
+                <p>+33 1 23 45 67 89</p>
+                <h3>Email</h3>
+                <p>info@tattoostudio.com</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}
