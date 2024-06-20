@@ -149,7 +149,7 @@ def artists():
 def gallery():
     return render_template("/admin/gallery.html")
 
-@app.route("/admin/parameters", methods=["GET", "POST"])
+@app.route("/parameters", methods=["GET", "POST"])
 def parameters():
     if request.method == "POST":
         # Get the new values from the admin interface
