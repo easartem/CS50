@@ -76,7 +76,7 @@
         </div>
     </div>
     <button id="modifyButton" class="edit-btn btn btn-primary my-2" type="button" onclick="enableModification()">Modifier</button>
-    <button id="confirmButton" class="edit-btn btn btn-primary my-2" type="submit" onclick="confirmModification()" style="display: none;">Confirmer</button>
+    <button id="confirmButton" class="edit-btn btn btn-primary my-2" type="submit">Confirmer</button>
 </form>
 
 <script>
@@ -87,16 +87,6 @@
     });
     document.getElementById('modifyButton').style.display = 'none';
     document.getElementById('confirmButton').style.display = 'inline-block';
-  };
-
-  function confirmModification() {
-    console.log('Button clicked!');
-    const inputs = document.querySelectorAll('input');
-      inputs.forEach(function(input) {
-        input.disabled = true;
-      });
-      document.getElementById('modifyButton').style.display = 'inline-block';
-      document.getElementById('confirmButton').style.display = 'none';
   };
 </script>
 
