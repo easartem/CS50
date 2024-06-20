@@ -5,6 +5,60 @@
 {% endblock %}
 
 {% block main %}
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.hero {
+    background: url('hero_background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.about img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.services {
+    background-color: #f9f9f9;
+}
+
+.service-box {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+}
+
+.contact h3 {
+    margin-top: 2rem;
+}
+
+.contact form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+</style>
 
 <section class="hero text-center d-flex flex-column justify-content-center align-items-center">
     <h1>Bienvenue au Nouveau Studio de Tatouage</h1>
