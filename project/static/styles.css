@@ -170,7 +170,7 @@ body {
 
 
 .hero {
-  background: url('hero_background.jpg') no-repeat center center/cover;
+  background: url('/static/assets/hero_background.jpg') no-repeat center center/cover;
   height: 100vh;
   color: white;
 }
