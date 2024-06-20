@@ -190,22 +190,6 @@
       <!-- Grid container -->
     </footer>
     <!-- Footer -->
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        fetch('/api/coordinates')
-          .then(response => response.json())
-          .then(data => {
-            document.getElementById('studio-address').textContent = data.address;
-            document.getElementById('studio-phone1').textContent = data.phone;
-            document.getElementById('studio-email').textContent = data.email;
-          })
-          .catch(error => {
-            console.error('Error:', error);
-          });
-      });
-    </script>
-
     </body>
 
 </html>
