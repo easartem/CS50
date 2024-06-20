@@ -6,41 +6,33 @@
 
 {% block main %}
 <style>
-    .coming-soon {
-        max-width: 600px;
-        padding: 20px;
-        border-radius: 10px;
-        background: rgba(0, 0, 0, 0.75);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f8f9fa;
     }
-    .coming-soon h1 {
-        font-size: 3rem;
-        margin-bottom: 20px;
-    }
-    .coming-soon p {
-        font-size: 1.25rem;
-        margin-bottom: 30px;
-    }
-    .coming-soon .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 1rem;
-        color: white;
-        background-color: #007bff;
+    .card {
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
         border: none;
-        border-radius: 5px;
-        text-decoration: none;
-        transition: background-color 0.3s;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
-    .coming-soon .btn:hover {
-        background-color: #0056b3;
+    .card-body {
+        text-align: center;
     }
 </style>
 
-<div class="coming-soon container text-center d-flex flex-column justify-content-center align-items-center m-4">
-    <h1>Coming Soon</h1>
-    <p>We are working hard to bring you this new section. Stay tuned!</p>
-    <a href="/" class="btn">Back to Home</a>
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title">Coming Soon</h1>
+        <p class="card-text">We are working hard to bring you this new section. Stay tuned!</p>
+        <a href="/" class="btn btn-primary">Back to Home</a>
+    </div>
 </div>
 
 {% endblock %}
