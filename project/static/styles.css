@@ -157,3 +157,54 @@ body {
 .image-item:hover .overlay {
   transform: scale(1);
 }
+
+
+
+
+
+.herodiv {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  }
+
+
+.hero {
+  background: url('hero_background.jpg') no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.about img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.services {
+  background-color: #f9f9f9;
+}
+
+.service-box {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+}
+
+.contact h3 {
+  margin-top: 2rem;
+}
