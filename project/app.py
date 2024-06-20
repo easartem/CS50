@@ -83,7 +83,8 @@ def booking():
         artist = request.form.get("artist")
         medium = request.form.get("medium")
         print("All fields have been retrieved !")
-
+        print(fullname, phone, email)
+        print(description, location, size)
         # insert new form into database
         try:
             #db.execute()
