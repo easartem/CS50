@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block main %}
-<form action="/admin/parameters" method="post">
+<form action="/admin/parameters" method="post" id="form-parameters">
     <h5>Informations globales</h5>
     <!--View mode : disabled form -->
     <!--Edit mode : enabled form and button pop up to confirm saving modifications-->
@@ -89,9 +89,42 @@
     document.getElementById('confirmButton').style.display = 'inline-block';
   };
 
+  const alert = (message, type) => {
+    const wrapper = document.createElement('div')
+    wrapper.innerHTML = [
+      `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+      `   <div>${message}</div>`,
+      '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+      '</div>'
+    ].join('')
+
+    document.getElementById('liveAlertPlaceholder').append(wrapper)
+  }
+
+  document.getElementById('form-parameters').addEventListener('submit', function(event) {
+      const inputs = document.querySelectorAll('#form-parameters input[required]');
+      let allValid = true;
+      inputs.forEach(function(input) {
+        console.log('input verif entered!');
+        console.log(input);
+        if (!input.value) {
+          allValid = false;
+          input.classList.add('is-invalid'); // Bootstrap class to highlight invalid fields
+        } else {
+          input.classList.remove('is-invalid');
+        }
+      });
+
+      if (!allValid) {
+        event.preventDefault(); // Prevent form submission
+        alert('Please fill in all required fields.', 'danger');
+      } else {
+        // You can add any additional logic here if needed before form submission
+        console.log('Form is valid, submitting...');
+      }
+    });
 
 
-  
 </script>
 
 {% endblock %}
