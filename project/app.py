@@ -63,11 +63,25 @@ def index():
 @app.route("/booking", methods=["GET", "POST"])
 def booking():
     if request.method == "POST":
-        # check for mandatory fields correct submission
-        fullname = request.form.get("")
-        if not request.form.get("fullname"):
-            print('fucking mistake somewhere')
-        print("good")
+        # retrieve mandatory fields value
+        fullname = request.form.get("fullname")
+        phone = request.form.get("phone")
+        email = request.form.get("email")
+        # check for mandatory fields completion state
+        if not fullname or not phone or not email:
+            print('Mandatory fields are empty')
+        # check for mandatory fields correct form submission
+
+        # retrieve the rest of the form
+        description = request.form.get("description")
+        location = request.form.get("location")
+        size = request.form.get("size")
+        availability = request.form.get("availability")
+        artist = request.form.get("artist")
+        medium = request.form.get("medium")
+
+
+        print("All fields have been retrieved !")
         return render_template("/showcase/booking.html", infos=STUDIO)
     else:
         return render_template("/showcase/booking.html", infos=STUDIO)
