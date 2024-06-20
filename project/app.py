@@ -63,6 +63,8 @@ def index():
 @app.route("/booking", methods=["GET", "POST"])
 def booking():
     if request.method == "POST":
+        # check for mandatory fields correct submission
+        fullname = request.form.get("")
         if not request.form.get("fullname"):
             print('fucking mistake somewhere')
         print("good")
