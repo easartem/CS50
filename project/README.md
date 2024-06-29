@@ -40,6 +40,17 @@ of CS50’s Web Programming with Python and JavaScript.
 
 ### The admin interface
 
+### **Base de Données :**
+
+- **Tables/Collections** :
+    - **Users** : Informations sur les utilisateurs (clients et artistes).
+    - **Artists** : Profils et portfolios des artistes.
+    - **Tattoos** : Informations et images des tatouages.
+    - **Appointments** : Informations sur les rendez-vous (dates, heures, clients).
+    - **BlogPosts** : Articles de blog et leurs métadonnées.
+    - **Products** (optionnel) : Détails des produits de la boutique.
+    - **FAQ** : Questions et réponses fréquemment posées.
+
 ## Usage
 
 ### Admin Panel
