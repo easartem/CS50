@@ -26,17 +26,21 @@ of CS50’s Web Programming with Python and JavaScript.
 - **Node.js** avec **Express.js** : Pour le serveur et les API RESTful.
 - **Python** with **Flask** : Alternativement pour le back-end et les API.
 - **Database**: SQLite
-- API used :
-- **Payments**: Square API (coming soon)
-- **Bookings**: Square API (coming soon)
+- **API used**:
+    - **Payments**: Square API (coming soon)
+    - **Bookings**: Square API (coming soon)
 
 3. Infrastructure & Deployment
-- **during development:** cs50.dev
+- **During development:** cs50.dev
 - **Hosting**: To be determined but most likely AWS or Heroku
 
 ### Architecture
 
+1. Global structure
 
+2. The showcase website
+
+3. The admin interface
 - **Homepage**: A welcoming page with information about the studio.
 - **About**: Detailed information about the studio and its artists.
 - **Services**: Information on the various tattoo services offered.
