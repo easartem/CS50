@@ -16,9 +16,25 @@ of CS50’s Web Programming with Python and JavaScript.
 ## Technologies Used
 
 - **Frontend**: HTML, CSS with Bootstrap, JavaScript
+
+- **HTML/CSS** : Pour la structure et le design de la page.
+- **JavaScript** : Pour les interactions dynamiques et les fonctionnalités avancées.
+- **Frameworks/Libraries** :
+    - **React.js** ou **Vue.js** : Pour une interface utilisateur dynamique et réactive.
+    - **Bootstrap** ou **Tailwind CSS** : Pour un design réactif et esthétique.
+
 - **Backend**: Python and Flask
+
+- **Node.js** avec **Express.js** : Pour le serveur et les API RESTful.
+- **Python** avec **Django** ou **Flask** : Alternativement pour le back-end et les API.
+- **Base de Données** :
+    - **MongoDB** : Pour une base de données NoSQL.
+    - **PostgreSQL** ou **MySQL** : Pour une base de données relationnelle.
+
 - **Database**: SQLite
+
 - **Payments**: Square API (coming soon)
+- **Bookings**: Square API (coming soon)
 - **Hosting**: To be determined but most likely AWS or Heroku
 
 ### Architecture
