@@ -58,7 +58,7 @@ of CS50’s Web Programming with Python and JavaScript.
 For any questions or inquiries, please contact me at:
 
 - **Email**: emeline_bgs@hotmail.com
-- **github username**: easartem
-- **edX username**: easartem
-
-- **location**: Paris, France
+- **Name**: Emeline BAGORIS
+- **Github username**: easartem
+- **EdX username**: emeline_bgs
+- **Location**: Paris, France
