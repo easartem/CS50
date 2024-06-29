@@ -35,7 +35,30 @@ of CS50’s Web Programming with Python and JavaScript.
 - **Online Payments**: Secure online payment system for booking and services.
 
 
+
 ### The showcase website
 
 ### The admin interface
 
+## Usage
+
+### Admin Panel
+
+1. **Login**: Navigate to `http://127.0.0.1:5000/admin` and log in with your admin credentials.
+2. **Manage Content**: Use the admin panel to manage website content, view appointments, and handle payments.
+
+### Booking an Appointment
+
+1. **Navigate to the Booking Page**: Go to the appointment booking page on the website.
+2. **Select a Slot**: Choose an available time slot and fill in your details.
+3. **Make a Payment**: Complete the booking by making an online payment.
+
+## Contact
+
+For any questions or inquiries, please contact me at:
+
+- **Email**: emeline_bgs@hotmail.com
+- **github username**: easartem
+- **edX username**: easartem
+
+- **location**: Paris, France
