@@ -8,12 +8,32 @@ of CS50’s Web Programming with Python and JavaScript.
 
 ## Table of Contents
 
-- [Features](#features)
 - [Technologies Used](#technologies-used)
+- [Architecture](#architecture)
 - [Usage](#usage)
 - [Contact](#contact)
 
-### Architecture & Technologies:
+## Technologies Used
+
+- **Frontend**: HTML, CSS with Bootstrap, JavaScript
+- **Backend**: Python and Flask
+- **Database**: SQLite
+- **Payments**: Square API (coming soon)
+- **Hosting**: To be determined but most likely AWS or Heroku
+
+### Architecture
+
+
+- **Homepage**: A welcoming page with information about the studio.
+- **About**: Detailed information about the studio and its artists.
+- **Services**: Information on the various tattoo services offered.
+- **Portfolio**: Gallery showcasing previous tattoo work.
+- **Blog/News**: Updates and news related to the studio.
+- **Contact**: Contact form for inquiries.
+- **Admin Panel**: Interface for managing the website content, appointments, and payments.
+- **Appointment Booking**: System for clients to book appointment slots online.
+- **Online Payments**: Secure online payment system for booking and services.
+
 
 ### The showcase website
 
