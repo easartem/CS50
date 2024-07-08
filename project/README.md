@@ -55,7 +55,8 @@ Thus, we have the following features :
 
 
 3. The admin interface
-The admin interface access is limited to the studio staff. This 
+The admin interface access is limited to the studio staff. This interface allows the user to manage the showcase site parameters as well as the artist planning and bookings.
+Thus, we have the following features :
 - **Homepage**: A welcoming page with information about the studio.
 - **About**: Detailed information about the studio and its artists.
 - **Services**: Information on the various tattoo services offered.
