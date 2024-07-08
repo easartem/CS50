@@ -33,6 +33,28 @@ of CS50’s Web Programming with Python and JavaScript.
 - **Hosting**: To be determined but most likely AWS or Heroku
 
 ### Architecture
+Features
+Homepage: A welcoming page with information about the studio.
+About: Detailed information about the studio and its artists.
+Services: Information on the various tattoo services offered.
+Portfolio: Gallery showcasing previous tattoo work.
+Blog/News: Updates and news related to the studio.
+Contact: Contact form for inquiries.
+Admin Panel: Interface for managing the website content, appointments, and payments.
+Appointment Booking: System for clients to book appointment slots online.
+Online Payments: Secure online payment system for booking and services.
+Additional Functionalities
+Système de Réservation de Créneaux
+
+Frontend: Interfaces for clients to view and book available slots.
+Backend: Software to manage bookings, cancellations, and notifications.
+Admin Interface: Tools for admins to manage slots, view bookings, and modify schedules.
+Système de Paiement en Ligne
+
+Integration with payment gateways such as Stripe or PayPal.
+Backend: System to process payments, manage refunds, and generate receipts/invoices.
+Security: Implementation of security measures to protect client payment information.
+This architecture provides a comprehensive structure for the website, ensuring both user-facing and administrative functionalities are well-integrated.
 
 1. Global structure
 
