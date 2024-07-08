@@ -34,7 +34,7 @@ of CS50’s Web Programming with Python and JavaScript.
 
 ## Architecture
 
-1. Global structure
+### Global structure
 
 The showcase website and admin panel both originate from the same root file: app.py.
 By leveraging Flask, we create distinct routes to handle different sections of the site, ensuring a seamless navigation experience.
@@ -55,15 +55,17 @@ Thus, we have the following features :
 
 
 ### The admin interface
-The admin interface access is limited to the studio staff. This interface allows the user to manage the showcase site parameters as well as the artist planning and bookings.
-Thus, we have the following features :
-- **Homepage**: A welcoming page with information about the studio.
-- **About**: Detailed information about the studio and its artists.
-- **Services**: Information on the various tattoo services offered.
-- **Portfolio**: Gallery showcasing previous tattoo work.
-- **Blog/News**: Updates and news related to the studio.
-- **Contact**: Contact form for inquiries.
-- **Admin Panel**: Interface for managing the website content, appointments, and payments.
+The admin interface access is limited to the studio staff. This interface allows the user to manage the showcase site parameters as well as the artist planning and bookings. The features of the website are divided into three main categories : site management, studio management and personal management.
+Site management features :
+
+Studio management features :
+
+Personal management features :
+
+- **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
+- **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
+- **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
+- **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
 - **Appointment Booking**: System for clients to book appointment slots online.
 - **Online Payments**: Secure online payment system for booking and services.
 
