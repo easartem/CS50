@@ -58,6 +58,11 @@ This architecture provides a comprehensive structure for the website, ensuring b
 
 1. Global structure
 
+The showcase website and admin panel both originate from the same root file: app.py.
+By leveraging Flask, we create distinct routes to handle different sections of the site, ensuring a seamless navigation experience.
+This centralized approach not only simplifies the architecture but also allows for a single database connection, enhancing data management and integration.
+This unified structure ensures consistency and efficiency, making it easier to maintain and scale the application as needed.
+
 2. The showcase website
 
 3. The admin interface
