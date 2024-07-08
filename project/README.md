@@ -56,18 +56,19 @@ Thus, we have the following features :
 
 ### The admin interface
 The admin interface access is limited to the studio staff. This interface allows the user to manage the showcase site parameters as well as the artist planning and bookings. The features of the website are divided into three main categories : site management, studio management and personal management.
-Site management features :
 
-Studio management features :
-
-Personal management features :
-
-- **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
-- **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
-- **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
-- **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
-- **Appointment Booking**: System for clients to book appointment slots online.
-- **Online Payments**: Secure online payment system for booking and services.
+- **Personal management features** :
+    - **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
+    - **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
+    - **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
+- **Studio management features** :
+    - **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
+    - **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
+    - **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
+- **Site management features** :
+    - **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
+    - **Appointment Booking**: System for clients to book appointment slots online.
+    - **Online Payments**: Secure online payment system for booking and services.
 
 ### Database
 
