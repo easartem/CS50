@@ -84,6 +84,11 @@ The admin interface access is limited to the studio staff. This interface allows
 
 ## Usage
 
+client go to showcase site, complete the form and click the button submit.
+then the admin interface will receive the form and the artist will check the demand, potentially
+contact the client to discuss their project, give them their price and availabilities.
+it the client agrees, the artist can directly book a slot in its in app calendar. 
+
 ### Admin Panel
 
 1. **Login**: Navigate to `http://127.0.0.1:5000/admin` and log in with your admin credentials.
