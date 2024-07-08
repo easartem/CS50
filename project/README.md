@@ -57,7 +57,7 @@ The showcase website is a multi-page site designed to present the tattoo studio 
 Access to the admin interface is limited to studio staff. This interface allows users to manage the showcase site parameters, as well as artist planning and bookings. The features are divided into three main categories: site management, studio management, and personal management.
 
 - **Personal Management Features**:
-  - **Admin Dashboard**: Interface for managing website content, appointments, and payments.
+  - **Admin Dashboard**: Interface for managing incoming forms, appointments, and payments.
   - **My Clients**: Interface for managing client information.
   - **My Bookings**: Interface for managing personal bookings.
 
