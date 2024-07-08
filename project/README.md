@@ -71,8 +71,6 @@ Access to the admin interface is limited to studio staff. This interface allows 
   - **Site Gallery**: Interface for managing the site's gallery.
   - **Site Parameters**: Interface for managing site settings.
 
-    - **Appointment Booking**: System for clients to book appointment slots online.
-    - **Online Payments**: Secure online payment system for booking and services.
 
 ### Database
 
@@ -88,11 +86,6 @@ Access to the admin interface is limited to studio staff. This interface allows 
 Clients visit the showcase site, complete the booking form, and submit it. The admin interface then receives the form, and an artist reviews the request. The artist may contact the client to discuss their project, provide pricing, and confirm availability. If the client agrees, the artist can book a slot directly in the in-app calendar.
 
 ## Usage
-
-client go to showcase site, complete the form and click the button submit.
-then the admin interface will receive the form and the artist will check the demand, potentially
-contact the client to discuss their project, give them their price and availabilities.
-it the client agrees, the artist can directly book a slot in its in app calendar.
 
 ### Admin Panel
 
