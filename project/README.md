@@ -42,18 +42,20 @@ This centralized approach not only simplifies the architecture but also allows f
 
 2. The showcase website
 
-The showcase website is a x pages site designed to present the tattoo studio and art.
+The showcase website is a x pages site designed to present the tattoo studio and art to the clients.
 2 goals : on one hand, it is a great way to present the tattoo artist, their style and works. On the other hand, it allows the potential client to contact the studio with a detailed form of their personal project.
 Thus, we have the following features :
 - **Homepage**: A welcoming page with information about the studio.
 - **Studio**: Detailed information about the studio.
 - **Artists**: Detailed information about the artists.
 - **Portfolio**: Gallery showcasing previous tattoo work.
-- **FAQ**: Updates and news related to the studio.
-- **Contact**: Contact form for inquiries.
+- **FAQ**: Answers about frequently asked questions.
+- **Infos**: Information about incoming guest.
+- **Booking**: Contact form for inquiries.
 
 
 3. The admin interface
+The admin interface access is limited to the studio staff. This 
 - **Homepage**: A welcoming page with information about the studio.
 - **About**: Detailed information about the studio and its artists.
 - **Services**: Information on the various tattoo services offered.
