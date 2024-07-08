@@ -16,15 +16,13 @@ of CS50’s Web Programming with Python and JavaScript.
 ## Technologies Used
 
 1. Front-end technologies
-- **HTML/CSS** : structure and design of the pages
-- **JavaScript** : Pour les interactions dynamiques et les fonctionnalités avancées.
-- **Frameworks Bootstrap** : Pour un design réactif et esthétique.
+- **HTML/CSS** : Structure and design of the pages
+- **JavaScript** : For dynamic interactions and advanced functionalities
+- **Frameworks Bootstrap** : For responsive and aesthetic design
 
 2. Back-end technologies
 
-- **Backend**: Python and Flask
-- **Node.js** avec **Express.js** : Pour le serveur et les API RESTful.
-- **Python** with **Flask** : Alternativement pour le back-end et les API.
+- **Python** with **Flask** : For the back-end and APIs
 - **Database**: SQLite
 - **API used**:
     - **Payments**: Square API (coming soon)
@@ -64,9 +62,6 @@ of CS50’s Web Programming with Python and JavaScript.
     - **Artists** : Profils et portfolios des artistes.
     - **Tattoos** : Informations et images des tatouages.
     - **Appointments** : Informations sur les rendez-vous (dates, heures, clients).
-    - **BlogPosts** : Articles de blog et leurs métadonnées.
-    - **Products** (optionnel) : Détails des produits de la boutique.
-    - **FAQ** : Questions et réponses fréquemment posées.
 
 ## Usage
 
