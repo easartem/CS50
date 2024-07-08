@@ -75,11 +75,11 @@ Access to the admin interface is limited to studio staff. This interface allows 
 ### Database
 
 - **Tables/Collections** :
-    - **Users** : Informations sur les utilisateurs (clients et artistes).
-    - **Artists** : Profils et portfolios des artistes.
-    - **Tattoos** : Informations et images des tatouages.
-    - **Appointments** : Informations sur les rendez-vous (dates, heures, clients).
-    studio
+    - **Users** : User information (clients and artists)
+    - **Artists** : Profiles of the artists and works
+    - **Tattoos** : Tattoo project details and pictures
+    - **Appointments** : Bookings details (dates, hours, clients).
+    - **Studio** : General information of the studio
 
 ## Workflow
 
@@ -87,16 +87,20 @@ Clients visit the showcase site, complete the booking form, and submit it. The a
 
 ## Usage
 
-### Admin Panel
+### Booking an Appointment
+
+1. **Navigate to the Booking Page**: Go to the appointment booking page on the website.
+2. **Complete the form**: Enter all information related to your tattoo project in the form.
+3. **Wait for a call**: The artist you choose will contact you to provide pricing and confirm its availability.
+4. **Read the email**: When the project is confirmed, you will receive an email with the artist availabilities.
+2. **Select a Slot**: Choose an available time slot.
+3. **Make a Payment**: Complete the booking by making an online.payment.
+
+### Admin Panel (incoming)
 
 1. **Login**: Navigate to `http://127.0.0.1:5000/admin` and log in with your admin credentials.
 2. **Manage Content**: Use the admin panel to manage website content, view appointments, and handle payments.
 
-### Booking an Appointment
-
-1. **Navigate to the Booking Page**: Go to the appointment booking page on the website.
-2. **Select a Slot**: Choose an available time slot and fill in your details.
-3. **Make a Payment**: Complete the booking by making an online payment.
 
 ## Contact
 
