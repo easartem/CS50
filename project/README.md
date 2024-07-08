@@ -59,14 +59,17 @@ The admin interface access is limited to the studio staff. This interface allows
 
 - **Personal management features** :
     - **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
-    - **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
-    - **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
+    - **My clients**: Interface for managing the website content, appointments, and payments.
+    - **My bookings**: Interface for managing the website content, appointments, and payments.
 - **Studio management features** :
-    - **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
-    - **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
-    - **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
+    - **Team**: Interface for managing the website content, appointments, and payments.
+    - **KPI**: Interface for managing the website content, appointments, and payments.
+    - **Finances**: Interface for managing the website content, appointments, and payments.
 - **Site management features** :
-    - **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
+    - **Site artists**: Interface for managing the website content, appointments, and payments.
+    - **Site gallery**: Interface for managing the website content, appointments, and payments.
+    - **Site parameters**: Interface for managing the website content, appointments, and payments.
+
     - **Appointment Booking**: System for clients to book appointment slots online.
     - **Online Payments**: Secure online payment system for booking and services.
 
@@ -77,6 +80,7 @@ The admin interface access is limited to the studio staff. This interface allows
     - **Artists** : Profils et portfolios des artistes.
     - **Tattoos** : Informations et images des tatouages.
     - **Appointments** : Informations sur les rendez-vous (dates, heures, clients).
+    studio
 
 ## Usage
 
