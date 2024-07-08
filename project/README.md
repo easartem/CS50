@@ -41,10 +41,8 @@ By leveraging Flask, we create distinct routes to handle different sections of t
 This centralized approach not only simplifies the architecture but also allows for a single database connection, enhancing data management and integration.
 
 ### The showcase website
+The showcase website is a multi-page site designed to present the tattoo studio and its art to clients. It has two main goals: to present the tattoo artists, their styles, and works, and to allow potential clients to contact the studio with a detailed form about their personal projects. The features include:
 
-The showcase website is a x pages site designed to present the tattoo studio and art to the clients.
-2 goals : on one hand, it is a great way to present the tattoo artist, their style and works. On the other hand, it allows the potential client to contact the studio with a detailed form of their personal project.
-Thus, we have the following features :
 - **Homepage**: A welcoming page with information about the studio.
 - **Studio**: Detailed information about the studio.
 - **Artists**: Detailed information about the artists.
@@ -55,20 +53,23 @@ Thus, we have the following features :
 
 
 ### The admin interface
-The admin interface access is limited to the studio staff. This interface allows the user to manage the showcase site parameters as well as the artist planning and bookings. The features of the website are divided into three main categories : site management, studio management and personal management.
 
-- **Personal management features** :
-    - **Admin Dashboard**: Interface for managing the website content, appointments, and payments.
-    - **My clients**: Interface for managing the website content, appointments, and payments.
-    - **My bookings**: Interface for managing the website content, appointments, and payments.
-- **Studio management features** :
-    - **Team**: Interface for managing the website content, appointments, and payments.
-    - **KPI**: Interface for managing the website content, appointments, and payments.
-    - **Finances**: Interface for managing the website content, appointments, and payments.
-- **Site management features** :
-    - **Site artists**: Interface for managing the website content, appointments, and payments.
-    - **Site gallery**: Interface for managing the website content, appointments, and payments.
-    - **Site parameters**: Interface for managing the website content, appointments, and payments.
+Access to the admin interface is limited to studio staff. This interface allows users to manage the showcase site parameters, as well as artist planning and bookings. The features are divided into three main categories: site management, studio management, and personal management.
+
+- **Personal Management Features**:
+  - **Admin Dashboard**: Interface for managing website content, appointments, and payments.
+  - **My Clients**: Interface for managing client information.
+  - **My Bookings**: Interface for managing personal bookings.
+
+- **Studio Management Features**:
+  - **Team**: Interface for managing team members.
+  - **KPI**: Interface for viewing key performance indicators.
+  - **Finances**: Interface for managing financial information.
+
+- **Site Management Features**:
+  - **Site Artists**: Interface for managing artist profiles on the site.
+  - **Site Gallery**: Interface for managing the site's gallery.
+  - **Site Parameters**: Interface for managing site settings.
 
     - **Appointment Booking**: System for clients to book appointment slots online.
     - **Online Payments**: Secure online payment system for booking and services.
@@ -87,7 +88,7 @@ The admin interface access is limited to the studio staff. This interface allows
 client go to showcase site, complete the form and click the button submit.
 then the admin interface will receive the form and the artist will check the demand, potentially
 contact the client to discuss their project, give them their price and availabilities.
-it the client agrees, the artist can directly book a slot in its in app calendar. 
+it the client agrees, the artist can directly book a slot in its in app calendar.
 
 ### Admin Panel
 
@@ -99,6 +100,11 @@ it the client agrees, the artist can directly book a slot in its in app calendar
 1. **Navigate to the Booking Page**: Go to the appointment booking page on the website.
 2. **Select a Slot**: Choose an available time slot and fill in your details.
 3. **Make a Payment**: Complete the booking by making an online payment.
+
+## Workflow
+
+Clients visit the showcase site, complete the booking form, and submit it. The admin interface then receives the form, and an artist reviews the request. The artist may contact the client to discuss their project, provide pricing, and confirm availability. If the client agrees, the artist can book a slot directly in the in-app calendar.
+
 
 ## Contact
 
