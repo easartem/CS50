@@ -32,7 +32,7 @@ of CS50’s Web Programming with Python and JavaScript.
 - **During development:** cs50.dev
 - **Hosting**: To be determined but most likely AWS or Heroku
 
-### Architecture
+## Architecture
 
 1. Global structure
 
@@ -40,7 +40,7 @@ The showcase website and admin panel both originate from the same root file: app
 By leveraging Flask, we create distinct routes to handle different sections of the site, ensuring a seamless navigation experience.
 This centralized approach not only simplifies the architecture but also allows for a single database connection, enhancing data management and integration.
 
-2. The showcase website
+### The showcase website
 
 The showcase website is a x pages site designed to present the tattoo studio and art to the clients.
 2 goals : on one hand, it is a great way to present the tattoo artist, their style and works. On the other hand, it allows the potential client to contact the studio with a detailed form of their personal project.
@@ -54,7 +54,7 @@ Thus, we have the following features :
 - **Booking**: Contact form for inquiries.
 
 
-3. The admin interface
+### The admin interface
 The admin interface access is limited to the studio staff. This interface allows the user to manage the showcase site parameters as well as the artist planning and bookings.
 Thus, we have the following features :
 - **Homepage**: A welcoming page with information about the studio.
@@ -67,13 +67,7 @@ Thus, we have the following features :
 - **Appointment Booking**: System for clients to book appointment slots online.
 - **Online Payments**: Secure online payment system for booking and services.
 
-
-
-### The showcase website
-
-### The admin interface
-
-### **Base de Données :**
+### Database
 
 - **Tables/Collections** :
     - **Users** : Informations sur les utilisateurs (clients et artistes).
